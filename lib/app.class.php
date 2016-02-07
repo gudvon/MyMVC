@@ -11,6 +11,8 @@ class App{
     public static function run($uri){
         self::$router = new Router($uri);
 
+        Lang::load(self::$router->getLanguage());
+
         $controller_class = ucfirst(self::$router->getController()).'Controller';
         $controller_method = strtolower(self::$router->getMethodPrefix().self::$router->getAction());
 
@@ -29,4 +31,8 @@ class App{
         $layout_view_object = new View(compact('content'), $layout_path);
         echo $layout_view_object->render();
     }
+}
+
+function __($key, $default_value = ''){
+    return Lang::get($key, $default_value);
 }
