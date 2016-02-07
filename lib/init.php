@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Kirill
- * Date: 07.02.2016
- * Time: 13:25
- */
 
 require_once (ROOT.DS.'config'.DS.'config.php');
 

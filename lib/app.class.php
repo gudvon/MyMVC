@@ -1,20 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Kirill
- * Date: 07.02.2016
- * Time: 14:37
- */
 
 class App{
 
     protected static $router;
 
-    /**
-     * @return mixed
-     */
-    public static function getRouter()
-    {
+    public static function getRouter(){
         return self::$router;
     }
 
@@ -25,9 +15,11 @@ class App{
         $controller_method = strtolower(self::$router->getMethodPrefix().self::$router->getAction());
 
         $controller_object = new $controller_class();
+        
         if (method_exists($controller_object, $controller_method)){
             $result = $controller_object->$controller_method();
+        } else {
+            throw new Exception('Method '.$controller_method.' of class '.$controller_class.' does not exist.');
         }
     }
-
 }
