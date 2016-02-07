@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^$ wedroot/ [L]
+RewriteRule (.*) webroot/$1 [L]
+</IfModule>
