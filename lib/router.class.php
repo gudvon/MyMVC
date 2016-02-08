@@ -109,4 +109,9 @@ class Router{
             $this->params = $path_parts;
         }
     }
+
+    public static function redirect($location){
+        header("Location: $location");
+    }
+
 }
