@@ -21,7 +21,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><?=Config::get('site_name')?> - <?=__('lng.guest', 'Registration')?></a>
+            <a class="navbar-brand" href="/"><?=Config::get('site_name')?> - <?=__('lng.guest', 'Guest')?></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <?php if (Session::get('login')) { ?>
@@ -41,9 +41,9 @@
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/contacts/">Contact Us</a></li>
                 <li><a href="/guest/users/logout">Logout</a></li>
             </ul>
-            <?php } ?>
             <ul class="nav navbar-nav navbar-right">
             </ul>
+            <?php } ?>
         </div>
     </div>
 </nav>

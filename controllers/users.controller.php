@@ -29,30 +29,45 @@ class UsersController extends Controller{
 
     public function guest_register()
     {
-        if (isset($_POST["Registration"])) {
+        if ($_POST && !empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
-            if (!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password']) ) {
-                $login = htmlspecialchars($_POST['login']);
-                $email = htmlspecialchars($_POST['email']);
-                $password = htmlspecialchars($_POST['password']);
-                $login = trim($login);
-                $password = trim($password);
-                $sql = App::$db->query("select * from users where login='$login'");
-                $numrows = mysql_num_rows($sql);
-                if (!empty($numrows['id'])) {
-                    exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
-                }
-                // если такого нет, то сохраняем данные
-                $sql = App::$db->query("INSERT INTO users (login,password,email) VALUES ('$login','$password','$email')");
-                // Проверяем, есть ли ошибки
-                if ($sql == 'TRUE') {
-                    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт.";
-                } else {
-                    echo "Ошибка! Вы не зарегистрированы.";
-                }
+            $login = $_POST['login'];
+            $email= $_POST['email'];
+            $password= $_POST['password'];
+
+            //......................... проверка всего подряд
+            $login = stripslashes($login);
+            $login = htmlspecialchars($login);
+            $login = trim($login);
+            $email = stripslashes($email);
+            $email = htmlspecialchars($email);
+            $email = trim($email);
+            $password = stripslashes($password);
+            $password = htmlspecialchars($password);
+            $password = trim($password);
+
+            //......................... конект с базой данных
+            $log = App::$db->query("SELECT * FROM `users` WHERE login = '$login'");
+            if (!$log){
+                App::$db->query("INSERT INTO users (login,email,password) VALUES ('$login','$email','$password')");
+            } else {
+                echo "Error!!!!!!!!!!";
             }
-        }
 
+            unset($log);
+            $log = $this->model->getByLogin($login);
+            if ($log && $log['is_active']){
+                Session::set('login', $log['login']);
+                Session::set('role', $log['role']);
+
+            }
+            Router::redirect('/guest/');
+        }
+    }
+
+    public function guest_logout(){
+        Session::destroy();
+        Router::redirect('/default/');
     }
 
 }
