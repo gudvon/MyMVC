@@ -38,4 +38,6 @@ class Message extends Model{
         return $this->db->query($sql);
     }
 
+
+
 }

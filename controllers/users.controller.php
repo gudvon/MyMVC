@@ -25,4 +25,34 @@ class UsersController extends Controller{
         Router::redirect('/admin/');
     }
 
+
+
+    public function guest_register()
+    {
+        if (isset($_POST["Registration"])) {
+
+            if (!empty($_POST['login']) && !empty($_POST['email']) && !empty($_POST['password']) ) {
+                $login = htmlspecialchars($_POST['login']);
+                $email = htmlspecialchars($_POST['email']);
+                $password = htmlspecialchars($_POST['password']);
+                $login = trim($login);
+                $password = trim($password);
+                $sql = App::$db->query("select * from users where login='$login'");
+                $numrows = mysql_num_rows($sql);
+                if (!empty($numrows['id'])) {
+                    exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
+                }
+                // если такого нет, то сохраняем данные
+                $sql = App::$db->query("INSERT INTO users (login,password,email) VALUES ('$login','$password','$email')");
+                // Проверяем, есть ли ошибки
+                if ($sql == 'TRUE') {
+                    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт.";
+                } else {
+                    echo "Ошибка! Вы не зарегистрированы.";
+                }
+            }
+        }
+
+    }
+
 }

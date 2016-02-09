@@ -70,4 +70,8 @@ class PagesController extends Controller{
         Router::redirect('/admin/pages/');
     }
 
+    public function guest_index(){
+        $this->data['pages'] = $this->model->getList();
+    }
+
 }
