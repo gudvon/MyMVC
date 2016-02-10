@@ -13,7 +13,6 @@ Config::set('languages' , array('en', 'ru'));
 Config::set('routes', array(
     'default' => '',
     'admin' => 'admin_',
-    'guest' => 'guest_',
 ));
 
 Config::set('default_route', 'default');

@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<h3>Login</h3><br/>
-<form method="post" action="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+<div class="container text-center">
+
+<form method="post" action="" class="form-signin">
+    <h2 class="form-signin-heading">Please login</h2>
     <div class="from-group">
-        <label for="login">Login</label>
-        <input type="text" id="login" name="login" class="form-control" />
+        <label for="login" class="sr-only">Login</label>
+        <input type="text" id="login" name="login" class="form-control" placeholder="Login" required autofocus/>
     </div>
     <div class="from-group">
-        <label for="password">Password</label>
-        <input type="text" id="password" name="password" class="form-control" />
+        <label for="password" class="sr-only">Password</label>
+        <input type="text" id="password" name="password" class="form-control" placeholder="Password" required />
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
     </div>
     <br/>
-    <input type="submit" class="btn btn-success" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 </form>
+</div>
+</body>
 </html>
+
