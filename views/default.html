@@ -44,14 +44,7 @@
         </div>
     </div>
     <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+
 </div>
 <div class="container text-center">
     <h3>THE SITE</h3>
@@ -62,7 +55,7 @@
         <div class="col-sm-4">
             <p class="text-center"><strong>Imagen 1</strong></p><br>
             <a href="#demo" data-toggle="collapse">
-            <img src="/img/img1.jpg" class="img person" alt="Random Name" width="255" height="255">
+            <img src="/img/img1.jpg" class="img-rounded" alt="Random Name" width="255" height="255">
             </a>
             <div id="demo" class="collapse">
                 <p>Guitarist and Lead Vocalist</p>
@@ -73,7 +66,7 @@
         <div class="col-sm-4">
             <p class="text-center"><strong>Imagen 2</strong></p><br>
             <a href="#demo2" data-toggle="collapse">
-                <img src="/img/img2.jpg" class="img person" alt="Random Name" width="255" height="255">
+                <img src="/img/img2.jpg" class="img-rounded" alt="Random Name" width="255" height="255">
             </a>
             <div id="demo2" class="collapse">
                 <p>Drummer</p>
@@ -84,7 +77,7 @@
         <div class="col-sm-4">
             <p class="text-center"><strong>Imagen 3</strong></p><br>
             <a href="#demo3" data-toggle="collapse">
-                <img src="/img/img3.jpg" class="img person" alt="Random Name" width="255" height="255">
+                <img src="/img/img3.jpg" class="img-rounded" alt="Random Name" width="255" height="255">
             </a>
             <div id="demo3" class="collapse">
                 <p>Bass player</p>
@@ -107,16 +100,16 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/pages/">About</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/pages/">Projects</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/pages/projects/">Projects</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/pages/">Page</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/pages/">One more page</a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="/admin/pages/">Page 1
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="/pages/">Page 1
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/admin/pages/">Page 1-1</a></li>
-                        <li><a href="/admin/pages/">Page 1-2</a></li>
-                        <li><a href="/admin/pages/">Page 1-3</a></li>
+                        <li><a href="/pages/">Page 1-1</a></li>
+                        <li><a href="/pages/">Page 1-2</a></li>
+                        <li><a href="/pages/">Page 1-3</a></li>
                     </ul>
                 </li>
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/contacts/">Contact Us</a></li>
@@ -202,14 +195,12 @@
     </a><br><br>
     <p>Site under constraction</p>
 </footer>
-
 <script>
     $(document).ready(function(){
         // Initialize Tooltip
         $('[data-toggle="tooltip"]').tooltip();
     })
 </script>
-
 <script src="/bootstrap/js/jquery.js"></script>
 <script src="/bootstrap/js/jquery.min.js"></script>
 

@@ -74,4 +74,8 @@ class PagesController extends Controller{
         $this->data['pages'] = $this->model->getList();
     }
 
+    public function projects(){
+        $this->data['pages'] = $this->model->getList();
+    }
+
 }
