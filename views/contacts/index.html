@@ -1,7 +1,31 @@
-<h3>Contact Us</h3>
-<form action="" method="post">
-    <input type="test" class="form-control" name="name" placeholder="Your Name" /><br/>
-    <input type="test" class="form-control" name="email" placeholder="Your Email" /><br/>
-    <textarea name="message" class="form-control" placeholder="Your Message"></textarea><br/>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
-</form>
+<div class="container-fluid bg-grey">
+<h3 class="text-center">Contact Us</h3>
+    <br/>
+    <br/>
+<div class="row">
+    <div class="col-md-6">
+        <p>Fan? Drop a note.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Kiev, UA</p>
+        <p><span class="glyphicon glyphicon-phone"></span> Phone: +380 (12) 345 67 89</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> Email: mail@mail.com</p>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+                <form action="" method="post">
+                    <div class="col-sm-13 form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name" required><br/>
+                    </div>
+                    <div class="col-sm-13 form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required><br/>
+                    </div>
+                    <textarea name="message" class="form-control" placeholder="Your Message" rows="5" required></textarea><br/>
+                    <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
