@@ -32,6 +32,9 @@ class DB{
         while($row = mysqli_fetch_assoc($result)){
             $data[]= $row;
         }
+
+        mysqli_free_result($result);
+
         return $data;
     }
 

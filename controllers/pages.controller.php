@@ -70,4 +70,5 @@ class PagesController extends Controller{
         Router::redirect('/admin/pages/');
     }
 
+
 }
