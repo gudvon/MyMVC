@@ -8,6 +8,7 @@ class UsersController extends Controller{
         $this->model = new User();
     }
 
+
     public function admin_login(){
         if ($_POST && isset($_POST['login']) && isset($_POST['password'])){
             $user = $this->model->getByLogin($_POST['login']);
@@ -25,12 +26,42 @@ class UsersController extends Controller{
         Router::redirect('/admin/');
     }
 
+
+
+    /*
+    public function user_login(){
+        if ($_POST && isset($_POST['login']) && isset($_POST['password'])){
+            $userlog = $this->model->getByLogin($_POST['login']);
+            $userpass = $this->model->getByPass($_POST['password']);
+            if ($userlog && $userlog['is_active'] && $userpass == $userlog['password']){
+                Session::set('login', $userlog['login']);
+                Session::set('role', $userlog['role']);
+            }
+            Router::redirect('/user/');
+        }
+    }
+
+    public function user_logout(){
+        Session::destroy();
+        Router::redirect('/user/');
+    }
+    */
+
+
+
+
+
+
+
+
+
+
+
     public function user_register(){
         if ($_POST && isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password'])){
             if($this->model->getByLogin($_POST['login'])){
-                echo "ERROR !!!!!!!!";
-                echo "ERROR !!!!!!!!";
-                echo "ERROR !!!!!!!!";
+                echo "ВВеденный логин уже существует";
+                return false;
             }
 
             $login = stripslashes($_POST['login']);

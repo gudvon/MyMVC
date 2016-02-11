@@ -70,5 +70,9 @@ class PagesController extends Controller{
         Router::redirect('/admin/pages/');
     }
 
+    public function user_index(){
+
+    }
+
 
 }

@@ -22,6 +22,16 @@ class User extends Model{
         return false;
     }
 
+    public function getByPass($pass){
+        $pass = $this->db->escape($pass);
+        $sql = "select * from users where password = '{$pass}' limit 1";
+        $result = $this->db->query($sql);
+        if (isset($result[0])){
+            return $result[0];
+        }
+        return false;
+    }
+
     public function setUserRegistration($dataarray){
         $array = array();
         foreach ($dataarray as $data) {
