@@ -8,11 +8,10 @@ class UsersController extends Controller{
         $this->model = new User();
     }
 
-
     public function admin_login(){
         if ($_POST && isset($_POST['login']) && isset($_POST['password'])){
             $user = $this->model->getByLogin($_POST['login']);
-            $hash = md5(Config::get('salt').$_POST['password']);
+            $hash = $_POST['password'];
             if ($user && $user['is_active'] && $hash == $user['password']){
                 Session::set('login', $user['login']);
                 Session::set('role', $user['role']);
@@ -23,70 +22,49 @@ class UsersController extends Controller{
 
     public function admin_logout(){
         Session::destroy();
-        Router::redirect('/admin/');
+        Router::redirect('/');
     }
 
-
-
-    /*
     public function user_login(){
         if ($_POST && isset($_POST['login']) && isset($_POST['password'])){
             $userlog = $this->model->getByLogin($_POST['login']);
-            $userpass = $this->model->getByPass($_POST['password']);
+            $userpass = md5(Config::get('salt').$_POST['password']);
             if ($userlog && $userlog['is_active'] && $userpass == $userlog['password']){
                 Session::set('login', $userlog['login']);
                 Session::set('role', $userlog['role']);
+                Router::redirect('/user/');
+            } else {
+                Router::redirect('/user/users/login');
             }
-            Router::redirect('/user/');
         }
     }
 
     public function user_logout(){
         Session::destroy();
-        Router::redirect('/user/');
+        Router::redirect('/');
     }
-    */
-
-
-
-
-
-
-
-
-
-
 
     public function user_register(){
         if ($_POST && isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password'])){
             if($this->model->getByLogin($_POST['login'])){
-                echo "ВВеденный логин уже существует";
+                Session::setFlash("The entered login already exists");
                 return false;
             }
-
             $login = stripslashes($_POST['login']);
             $login = htmlspecialchars($login);
-
             $email = stripslashes($_POST['email']);
             $email = htmlspecialchars($email);
-
             $password = stripslashes($_POST['password']);
             $password = htmlspecialchars($password);
-
             $dataarray = array(
                 'login' => $login,
                 'email' => $email,
-                'password' => $password
+                'role' => 'user',
+                'password' => md5(Config::get('salt').$password)
             );
-            $user = $this->model->setUserRegistration($dataarray);
-
-            if ($user && $user['is_active']){
-                Session::set('login', $user['login']);
-                Session::set('role', $user['role']);
+            if ($this->model->setUserRegistration($dataarray)){
+                Session::setFlash('regestration is ok');
             }
-
         }
-
     }
-
 }

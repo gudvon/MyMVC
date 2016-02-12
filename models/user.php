@@ -32,12 +32,22 @@ class User extends Model{
         return false;
     }
 
+    public function getByRole($role){
+        $role = $this->db->escape($role);
+        $sql = "select role from users where login = '{$role}' limit 1";
+        $result = $this->db->query($sql);
+        if (isset($result[0])){
+            return $result[0];
+        }
+        return false;
+    }
+
     public function setUserRegistration($dataarray){
         $array = array();
         foreach ($dataarray as $data) {
             $array[] = "'" . $data . "'";
         }
-        $result = $this->db->query("INSERT INTO users (login,email,password) VALUES (".implode(',',$array).")");
+        $result = $this->db->query("INSERT INTO users (login,email,role,password) VALUES (".implode(',',$array).")");
         if (isset($result[0])){
             return $result[0];
         }
