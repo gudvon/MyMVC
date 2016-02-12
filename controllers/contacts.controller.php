@@ -20,4 +20,8 @@ class ContactsController extends Controller{
         $this->data = $this->model->getList();
     }
 
+    public function user_index(){
+        $this->data = $this->model->getList();
+    }
+
 }
