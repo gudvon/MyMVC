@@ -11,7 +11,7 @@ class UsersController extends Controller{
     public function admin_login(){
         if ($_POST && isset($_POST['login']) && isset($_POST['password'])){
             $user = $this->model->getByLogin($_POST['login']);
-            $hash = $_POST['password'];
+            $hash = md5(Config::get('salt').$_POST['password']);
             if ($user && $user['is_active'] && $hash == $user['password']){
                 Session::set('login', $user['login']);
                 Session::set('role', $user['role']);
@@ -25,7 +25,7 @@ class UsersController extends Controller{
         Router::redirect('/');
     }
 
-    public function user_login(){
+    public function login(){
         if ($_POST && isset($_POST['login']) && isset($_POST['password'])){
             $userlog = $this->model->getByLogin($_POST['login']);
             $userpass = md5(Config::get('salt').$_POST['password']);
@@ -34,7 +34,7 @@ class UsersController extends Controller{
                 Session::set('role', $userlog['role']);
                 Router::redirect('/user/');
             } else {
-                Router::redirect('/user/users/login');
+                Router::redirect('/users/login');
             }
         }
     }
@@ -44,7 +44,7 @@ class UsersController extends Controller{
         Router::redirect('/');
     }
 
-    public function user_register(){
+    public function register(){
         if ($_POST && isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password'])){
             if($this->model->getByLogin($_POST['login'])){
                 Session::setFlash("The entered login already exists");
