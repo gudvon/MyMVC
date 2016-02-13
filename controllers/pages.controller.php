@@ -71,8 +71,16 @@ class PagesController extends Controller{
     }
 
     public function user_index(){
-
+        $this->data['pages'] = $this->model->getList();
     }
 
+    public function user_view(){
+        $params = App::getRouter()->getParams();
+
+        if (isset($params[0])){
+            $alias = strtolower($params[0]);
+            $this->data['page'] = $this->model->getByAlias($alias);
+        }
+    }
 
 }

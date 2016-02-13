@@ -19,7 +19,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><?=Config::get('site_name')?> - <?=__('lng.user', 'User Section')?></a>
+            <a class="navbar-brand" href="/user/"><?=Config::get('site_name')?> - <?=__('lng.user', 'User Section')?></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <?php if (Session::get('login')) { ?>
@@ -28,6 +28,7 @@
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts/">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/user/profile/">Profile</a></li>
                 <li><a href="/user/users/logout">Logout</a></li>
             </ul>
             <?php } ?>
