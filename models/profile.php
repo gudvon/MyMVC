@@ -32,4 +32,22 @@ class Profile extends Model{
         return $this->db->query($sql);
     }
 
+    public function getByPass($pass){
+        $pass = $this->db->escape($pass);
+        $sql = "select * from users where password = '{$pass}' limit 1";
+        $result = $this->db->query($sql);
+        if (isset($result[0])){
+            return $result[0];
+        }
+        return false;
+    }
+
+    public function editPassword($newpass){
+        $result = $this->db->query("UPDATE users SET password = '{$newpass}' WHERE login = 'user'");
+        if (isset($result[0])){
+            return $result[0];
+        }
+        return false;
+    }
+
 }

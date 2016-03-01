@@ -1,0 +1,16 @@
+<h3>Edit Profile Information</h3><br/>
+<form action="" method="post">
+    <?php if( Session::hasFlash() ){ ?>
+    <div class="alert alert-danger text-center" role="alert">
+        <strong><?php Session::flash(); ?>!</strong>
+    </div>
+    <?php } ?>
+    <label>Your old password</label>
+    <input type="text" class="form-control" name="oldpassword" id="oldpassword" placeholder="Old password" required/>
+    <label>Your new password</label>
+    <input type="text" class="form-control" name="newpassword" id="newpassword" placeholder="New password" required/>
+    <label>Confirm new password</label>
+    <input type="text" class="form-control" name="newpasswordx2" id="newpasswordx2" placeholder="Confirm new password" required/>
+    <br/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+</form>

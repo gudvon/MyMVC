@@ -63,7 +63,7 @@ class UsersController extends Controller{
                 'password' => md5(Config::get('salt').$password)
             );
             if ($this->model->setUserRegistration($dataarray)){
-                Session::setFlash('regestration is ok');
+                Session::setFlash("regestration is ok");
             }
         }
     }

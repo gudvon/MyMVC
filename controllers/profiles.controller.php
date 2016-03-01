@@ -20,5 +20,26 @@ class ProfilesController extends Controller {
             }
         }
     }
-}
 
+    public function user_edit(){
+
+        if ($_POST && isset($_POST['oldpassword']) && isset($_POST['newpassword']) && isset($_POST['newpasswordx2'])){
+            if(!$this->model->getByPass(md5(Config::get('salt').$_POST['oldpassword']))){
+                Session::setFlash("The entered old password not exists");
+                return false;
+            }
+            if ($_POST['newpassword'] != $_POST['newpasswordx2']) {
+                Session::setFlash("The entered passwords doesn't match");
+                return false;
+            } elseif ($_POST['newpassword'] == $_POST['newpasswordx2']){
+                $newpass = md5(Config::get('salt').$_POST['newpassword']);
+                $this->model->editPassword($newpass);
+                //Router::redirect('/user/');
+                Session::setFlash("The entered password changed");
+            }
+
+        }
+
+    }
+
+}

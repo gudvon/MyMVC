@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="container">
-    <div class="starter-template">
         <?php if( Session::hasFlash() ){ ?>
         <div class="alert alert-danger text-center" role="alert">
             <strong><?php Session::flash(); ?>!</strong>
         </div>
         <?php } ?>
-    </div>
-</div>
-<div class="container">
+  <div class="container">
     <form method="post" action="" class="form-register">
         <h2 class="form-register-heading  text-center">Registration</h2>
         <br/>
