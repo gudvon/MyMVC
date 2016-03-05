@@ -21,3 +21,37 @@ form{
     width: 400px;
     max-width: 400px;
 }
+
+.navbar {
+    margin-bottom: 0;
+    background-color: black !important;
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 1px;
+    border-radius: 0;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #FFA500 !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #FFA500 !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
+}
+.dropdown-menu li a {
+    color: #FFA500 !important;
+}
+.dropdown-menu li a:hover {
+    background-color: #FFA500 !important;
+}

@@ -1,0 +1,25 @@
+<h3>Users Profiles</h3>
+<table class="table table-striped" style="width: 100%;">
+    <tr>
+        <td style="width: 5%;">#</td>
+        <td style="width: 10%;">Login</td>
+        <td style="width: 20%;">Email</td>
+        <td style="width: 20%;">Nickname</td>
+        <td style="width: 20%;">Name</td>
+        <td style="width: 15%;">Phone</td>
+        <td style="width: 15%;">vk</td>
+        <td style="width: 15%;">facebook</td>
+    </tr>
+    <?php foreach($data as $item) { ?>
+    <tr>
+        <td><?=$item['id']?></td>
+        <td><?=$item['login']?></td>
+        <td><?=$item['email']?></td>
+        <td><?=$item['nickname']?></td>
+        <td><?=$item['name']?></td>
+        <td><?=$item['phone']?></td>
+        <td><?=$item['vk']?></td>
+        <td><?=$item['facebook']?></td>
+    </tr>
+    <?php } ?>
+</table>

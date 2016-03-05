@@ -12,14 +12,17 @@ class ProfilesController extends Controller {
         $this->model = new Profile();
     }
 
-    public function user_index(){
+    public function admin_index(){
+        $this->data = $this->model->getList();
+    }
 
+    public function user_index(){
+        $this->data = $this->model->showSave();
         if ($_POST){
             if ($this->model->save($_POST)){
                 Session::setFlash('Thank you!');
             }
         }
-        $this->data = $this->model->showSave();
     }
 
     public function user_edit(){
@@ -39,6 +42,5 @@ class ProfilesController extends Controller {
             }
         }
     }
-
 
 }
