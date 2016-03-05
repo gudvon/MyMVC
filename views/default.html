@@ -3,11 +3,11 @@
 <head>
     <title><?=Config::get('site_name')?></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
-    <script src="/bootstrap/js/jquery.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webroot/css/default.css">
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
+    <script src="/webroot/bootstrap/js/jquery.min.js"></script>
+    <script src="/webroot/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -28,11 +28,9 @@
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/contacts/">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="btn btn-default navbar-btn hours"></li>
-                <li class="btn btn-default navbar-btn min"></li>
-                <li class="btn btn-default navbar-btn sec"></li>
                 <li><a href="/users/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="/users/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="/admin/"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
             </ul>
         </div>
     </div>
@@ -47,23 +45,6 @@
         <?=$data['content']?>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {
-        setInterval( function() {
-            var hours = new Date().getHours();
-            $(".hours").html(( hours < 10 ? "0" : "" ) + hours);
-        }, 1000);
-        setInterval( function() {
-            var minutes = new Date().getMinutes();
-            $(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
-        },1000);
-        setInterval( function() {
-            var seconds = new Date().getSeconds();
-            $(".sec").html(( seconds < 10 ? "0" : "" ) + seconds);
-        },1000);
-    });
-</script>
 
 </body>
 </html>

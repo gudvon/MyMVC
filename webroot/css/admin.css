@@ -1,0 +1,23 @@
+body{
+    padding-top: 50px;
+
+    background-image: url(/webroot/img/04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+}
+
+.starter-template{
+    padding: 40px 15px;
+}
+
+form{
+    width: 400px;
+    max-width: 400px;
+}
+
+.alert{
+    width: 400px;
+    max-width: 400px;
+}

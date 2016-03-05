@@ -3,11 +3,11 @@
 <head>
     <title><?=Config::get('site_name')?></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/admin.js"></script>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webroot/css/admin.css">
+    <script src="/webroot/js/admin.js"></script>
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
+    <script src="/webroot/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +20,7 @@
             <?php if (Session::get('login')) { ?>
             <ul class="nav navbar-nav">
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/admin/pages/">Pages</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/admin/forum/">Forum</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/admin/contacts/">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

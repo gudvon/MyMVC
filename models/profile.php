@@ -50,4 +50,10 @@ class Profile extends Model{
         return false;
     }
 
+    public function showSave(){
+        $login = Session::get('login');
+        $sql = "select nickname, `name`, phone, vk, facebook from users where login = '{$login}'";
+        return $this->db->query($sql);
+    }
+
 }
