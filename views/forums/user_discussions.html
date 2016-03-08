@@ -2,11 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
 </head>
+
+<table class="table table-striped" style="width: 600px;">
+    <tr>
+        <th colspan="2" class="text-center" style="font-size:20px">Discussions</th>
+    </tr>
+    <?php foreach($data['discussions'] as $page_data) { ?>
+    <tr>
+        <td ><b><a href="/user/forums/discussions?id=<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
+            <br>
+            <?=$page_data['content']?>
+        </b>
+        </td>
+
+    </tr>
+    <?php } ?>
+</table>
+
+
+<div>
+    <a href="/user/forums/addiscus/"><button class="btn btn-sm btn-success">Add discussion</button></a>
+</div>
 <body>
 
-HELLO!!!
 
 </body>
 </html>

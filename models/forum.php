@@ -59,19 +59,25 @@ class Forum extends Model{
             return false;
         }
 
-        $user_id = Session::get('id');
         $alias = $this->db->escape($data['alias']);
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
+        $user_id = Session::get('id');
         //$date = 'NOW()';
 
-        $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = '{NOW()}'";
+        $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = NOW()";
         return $this->db->query($sql);
 
     }
 
     public function getDiscussions(){
         $sql = "select * from discussions";
+        return $this->db->query($sql);
+    }
+
+    public function deleteDiscussions($id){
+        $id = (int)$id;
+        $sql = "delete from discussions where id = {$id}";
         return $this->db->query($sql);
     }
 

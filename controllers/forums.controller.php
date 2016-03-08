@@ -76,6 +76,18 @@ class ForumsController extends Controller{
         }
     }
 
+    public function admin_deletediscus(){
+        if (isset($this->params[0])){
+            $result = $this->model->deleteDiscussions($this->params[0]);
+            if ($result){
+                Session::setFlash('Page was deleted.');
+            } else {
+                Session::setFlash('Error');
+            }
+        }
+        Router::redirect('/admin/forums/discussions');
+    }
+
 
 
 
@@ -103,7 +115,37 @@ class ForumsController extends Controller{
     }
 
     public function user_discussions(){
+        $this->data['discussions'] = $this->model->getDiscussions();
+    }
 
+    public function user_addiscus(){
+        if ($_POST){
+            $result = $this->model->saveDiscussion($_POST);
+            if ($result){
+                Session::setFlash('New discussion successfully added.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            Router::redirect('/user/forums/discussions');
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public function index(){
+        $this->data['forums'] = $this->model->getCategory();
+    }
+
+    public function discussions(){
+        $this->data['discussions'] = $this->model->getDiscussions();
     }
 
 }
