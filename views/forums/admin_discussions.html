@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<table class="table table-striped" style="width: 600px;">
+    <tr>
+        <th colspan="2" class="text-center" style="font-size:20px">Discussions</th>
+    </tr>
+    <?php foreach($data['discussions'] as $page_data) { ?>
+    <tr>
+        <td ><b><a href="/admin/forums/discussions?id=<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
+            <br>
+            <?=$page_data['content']?>
+        </b>
+        </td>
+        <td align="right">
+            <a href="/admin/forums/edit/<?=$page_data['id']?>"><button class="btn btn-sm btn-primary">edit</button></a>
+            <a href="/admin/forums/delete/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-warning">delete</button></a>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
+
+<div>
+    <a href="/admin/forums/addiscus/"><button class="btn btn-sm btn-success">Add discussion</button></a>
+</div>
+<body>
+
+HELLO!!!
+
+</body>
+</html>

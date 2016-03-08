@@ -26,8 +26,8 @@
             <?php if (Session::get('login')) { ?>
             <ul class="nav navbar-nav">
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/user/pages/">Pages</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/user/forum/">Forum</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts/">Contact Us</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/user/forums/">Forum</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts/"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -37,7 +37,7 @@
                         <li><a href="/user/profiles/edit">Edit</a></li>
                     </ul>
                 </li>
-                <li><a href="/user/users/logout">Logout</a></li>
+                <li><a href="/user/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
             <?php } ?>
         </div>

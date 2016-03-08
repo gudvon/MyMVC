@@ -1,0 +1,15 @@
+<h3>Edit page</h3><br/>
+<form method="post" action="">
+    <input type="hidden" name="id" value="<?=$data['forum']['id']?>" />
+    <div class="from-group">
+        <label for="title">Category name:</label>
+        <input type="text"  id="title" name="title" class="form-control" value="<?=$data['forum']['title']?>" />
+    </div>
+    <br>
+    <div class="from-group">
+        <label for="content">Category description:</label>
+        <textarea id="content" name="content" class="form-control"><?=$data['forum']['content']?></textarea>
+    </div>
+    <br>
+    <input type="submit" class="btn btn-success"/>
+</form>

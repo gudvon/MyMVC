@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table th	{
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<head>
+
+</head>
+
+<body>
+<table class="table table-striped" style="width: 600px;">
+    <tr>
+        <th colspan="2" class="text-center" style="font-size:20px">Category</th>
+        <th class="text-center" style="font-size:20px">kaka</th>
+
+    </tr>
+    <?php foreach($data['forums'] as $page_data) { ?>
+    <tr>
+        <td class="leftpart"><b><a href="/user/forums/discussions?id=<?=$page_data['id']?>" style="font-family: Arial; font-size:30px"><?=$page_data['title']?></a>
+            <br>
+            <?=$page_data['content']?>
+        </b></td>
+
+        <td class="rightpart">
+
+
+
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
+<div>
+
+</div>
+
+</body>
+
+</html>
