@@ -7,6 +7,11 @@
 </head>
 
 <body>
+<?php if( Session::hasFlash() ){ ?>
+<div class="alert alert-danger text-center" role="alert">
+    <strong><?php Session::flash(); ?>!</strong>
+</div>
+<?php } ?>
 <form method="post" action="">
     Discussion name:
     <div class="from-group">

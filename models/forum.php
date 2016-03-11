@@ -41,6 +41,11 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public function getCategory_id(){
+        $sql = "select id from categories";
+        return $this->db->query($sql);
+    }
+
     public function getById($id){
         $id = (int)$id;
         $sql = "select * from categories where id = '{$id}' limit 1";
@@ -54,8 +59,18 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
-    public function saveDiscussion($data){
-        if (!isset($data['alias']) || !isset($data['title']) || !isset($data['content'])){
+    public function checkCategory_id($cat_id){
+        $sql = "select * from discussions WHERE category_id = '{$cat_id}'";
+        $result = $this->db->query($sql);
+        if (isset($result)){
+            return true;
+        }
+        return false;
+
+    }
+
+    public function saveDiscussion($data, $data2){
+        if (!isset($data['alias']) || !isset($data['title']) || !isset($data['content']) || !isset($data2['id']) || !is_numeric($data2['id'])){
             return false;
         }
 
@@ -63,15 +78,18 @@ class Forum extends Model{
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
         $user_id = Session::get('id');
-        //$date = 'NOW()';
 
-        $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = NOW()";
-        return $this->db->query($sql);
-
+        $category_id = $this->db->escape($data2['id']);
+        if($this->checkCategory_id($category_id)) {
+            $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = NOW(), category_id = '{$category_id}'";
+            return $this->db->query($sql);
+        }
+        return false;
     }
 
-    public function getDiscussions(){
-        $sql = "select * from discussions";
+    public function getDiscussions($data){
+        $category_id = $this->db->escape($data['id']);
+        $sql = "select * from discussions WHERE category_id = '{$category_id}'";
         return $this->db->query($sql);
     }
 

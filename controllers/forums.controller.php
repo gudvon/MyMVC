@@ -61,18 +61,23 @@ class ForumsController extends Controller{
     }
 
     public function admin_discussions(){
-        $this->data['discussions'] = $this->model->getDiscussions();
+        if($_GET) {
+            $this->data['discussions'] = $this->model->getDiscussions($_GET);
+        }
+        $this->data['forums'] = $this->model->getCategory();
     }
 
     public function admin_addiscus(){
         if ($_POST){
-            $result = $this->model->saveDiscussion($_POST);
-            if ($result){
-                Session::setFlash('New discussion successfully added.');
-            } else {
-                Session::setFlash('Error.');
+            if($_GET) {
+                $result = $this->model->saveDiscussion($_POST, $_GET);
+                if ($result) {
+                    Session::setFlash("New discussion successfully added.");
+                    Router::redirect('/admin/forums/discussions?id='.$_GET['id']);
+                } else {
+                    Session::setFlash("Error.");
+                }
             }
-            Router::redirect('/admin/forums/discussions');
         }
     }
 
@@ -85,7 +90,7 @@ class ForumsController extends Controller{
                 Session::setFlash('Error');
             }
         }
-        Router::redirect('/admin/forums/discussions');
+        Router::redirect('/admin/forums/discussions?id='.$_GET['id']);
     }
 
 
@@ -129,6 +134,10 @@ class ForumsController extends Controller{
             Router::redirect('/user/forums/discussions');
         }
     }
+
+
+
+
 
 
 

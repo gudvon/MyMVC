@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
 </head>
-
+<body>
+<?php if( Session::hasFlash() ){ ?>
+<div class="alert alert-danger text-center" role="alert">
+    <strong><?php Session::flash(); ?>!</strong>
+</div>
+<?php } ?>
 <table class="table table-striped" style="width: 600px;">
     <tr>
         <th colspan="2" class="text-center" style="font-size:20px">Discussions</th>
@@ -22,13 +27,12 @@
     <?php } ?>
 </table>
 
-
+    <?php foreach($data['forums'] as $page_data) { if($page_data['id'] == $_GET['id'] ){  ?>
 <div>
-    <a href="/admin/forums/addiscus/"><button class="btn btn-sm btn-success">Add discussion</button></a>
+    <a href="/admin/forums/addiscus?id=<?=$page_data['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
 </div>
-<body>
-
-
+<?php } ?>
+<?php } ?>
 
 </body>
 </html>
