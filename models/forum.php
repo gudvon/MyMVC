@@ -59,6 +59,13 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+
+//........................ discussions ...... discussions ...... discussions .......
+
+    public function lastDiscussion(){
+
+    }
+
     public function checkCategory_id($cat_id){
         $sql = "select * from discussions WHERE category_id = '{$cat_id}'";
         $result = $this->db->query($sql);
@@ -66,11 +73,10 @@ class Forum extends Model{
             return true;
         }
         return false;
-
     }
 
-    public function saveDiscussion($data, $data2){
-        if (!isset($data['alias']) || !isset($data['title']) || !isset($data['content']) || !isset($data2['id']) || !is_numeric($data2['id'])){
+    public function saveDiscussion($data, $id){
+        if (!isset($data['alias']) || !isset($data['title']) || !isset($data['content'])){
             return false;
         }
 
@@ -78,18 +84,16 @@ class Forum extends Model{
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
         $user_id = Session::get('id');
+        $id = (int)$id;
 
-        $category_id = $this->db->escape($data2['id']);
-        if($this->checkCategory_id($category_id)) {
-            $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = NOW(), category_id = '{$category_id}'";
-            return $this->db->query($sql);
-        }
-        return false;
+        $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = NOW(), category_id = '{$id}'";
+        return $this->db->query($sql);
+
     }
 
-    public function getDiscussions($data){
-        $category_id = $this->db->escape($data['id']);
-        $sql = "select * from discussions WHERE category_id = '{$category_id}'";
+    public function getDiscussions($id){
+        $id = (int)$id;
+        $sql = "select * from discussions WHERE category_id = '{$id}'";
         return $this->db->query($sql);
     }
 

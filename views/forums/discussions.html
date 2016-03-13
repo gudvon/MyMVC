@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
 </head>
-
+<style>
+    table tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table th	{
+        background-color: black;
+        color: white;
+    }
+</style>
 <table class="table table-striped" style="width: 600px;">
     <tr>
         <th colspan="2" class="text-center" style="font-size:20px">Discussions</th>
     </tr>
     <?php foreach($data['discussions'] as $page_data) { ?>
     <tr>
-        <td ><b><a href="/forums/discussions?id=<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
+        <td ><b><a href="/forums/discussions/<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
             <br>
             <?=$page_data['content']?>
         </b>

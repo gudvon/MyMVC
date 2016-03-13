@@ -26,7 +26,7 @@
     </tr>
     <?php foreach($data['forums'] as $page_data) { ?>
     <tr>
-        <td class="leftpart"><b><a href="/forums/discussions?id=<?=$page_data['id']?>" style="font-family: Arial; font-size:30px"><?=$page_data['title']?></a>
+        <td class="leftpart"><b><a href="/forums/discussions/<?=$page_data['id']?>" style="font-family: Arial; font-size:30px"><?=$page_data['title']?></a>
             <br>
             <?=$page_data['content']?>
         </b></td>

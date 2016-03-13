@@ -60,54 +60,39 @@ class ForumsController extends Controller{
         Router::redirect('/admin/forums/');
     }
 
+
+    //........................ discussions ...... discussions ...... discussions .......
+
     public function admin_discussions(){
-        if($_GET) {
-            $this->data['discussions'] = $this->model->getDiscussions($_GET);
-        }
-        $this->data['forums'] = $this->model->getCategory();
+        $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        $this->data['forums'] = $this->model->getById($this->params[0]);
     }
 
-    public function admin_addiscus(){
+    public function admin_add_discussions(){
         if ($_POST){
-            if($_GET) {
-                $result = $this->model->saveDiscussion($_POST, $_GET);
-                if ($result) {
-                    Session::setFlash("New discussion successfully added.");
-                    Router::redirect('/admin/forums/discussions?id='.$_GET['id']);
-                } else {
-                    Session::setFlash("Error.");
-                }
+            $id = $this->params[0];
+            $result = $this->model->saveDiscussion($_POST, $id);
+            if ($result) {
+                Session::setFlash("New discussion successfully added.");
+                Router::redirect('/admin/forums/discussions/'.$this->params[0]);
+            } else {
+                Session::setFlash("Error");
             }
         }
     }
 
-    public function admin_deletediscus(){
+    public function admin_delete_discussions(){
         if (isset($this->params[0])){
-            $result = $this->model->deleteDiscussions($this->params[0]);
+            $id = $this->params[0];
+            $result = $this->model->deleteDiscussions($id);
             if ($result){
                 Session::setFlash('Page was deleted.');
             } else {
                 Session::setFlash('Error');
             }
         }
-        Router::redirect('/admin/forums/discussions?id='.$_GET['id']);
+        Router::redirect('/admin/forums/discussions/'.$this->params[0]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -120,32 +105,22 @@ class ForumsController extends Controller{
     }
 
     public function user_discussions(){
-        $this->data['discussions'] = $this->model->getDiscussions();
+        $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        $this->data['forums'] = $this->model->getById($this->params[0]);
     }
 
-    public function user_addiscus(){
+    public function user_add_discussions(){
         if ($_POST){
-            $result = $this->model->saveDiscussion($_POST);
-            if ($result){
-                Session::setFlash('New discussion successfully added.');
+            $id = $this->params[0];
+            $result = $this->model->saveDiscussion($_POST, $id);
+            if ($result) {
+                Session::setFlash("New discussion successfully added.");
+                Router::redirect('/admin/forums/discussions/'.$this->params[0]);
             } else {
-                Session::setFlash('Error.');
+                Session::setFlash("Error");
             }
-            Router::redirect('/user/forums/discussions');
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -154,7 +129,8 @@ class ForumsController extends Controller{
     }
 
     public function discussions(){
-        $this->data['discussions'] = $this->model->getDiscussions();
+        $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        $this->data['forums'] = $this->model->getById($this->params[0]);
     }
 
 }
