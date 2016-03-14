@@ -97,9 +97,15 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public function getLastDiscussion($id){
+        $id = $id['id'];
+        $sql = "select * from discussions WHERE category_id = '{$id}' limit 1";
+        return $this->db->query($sql);
+    }
+
     public function deleteDiscussions($id){
         $id = (int)$id;
-        $sql = "delete from discussions where id = {$id}";
+        $sql = "delete from discussions where id = '{$id}'";
         return $this->db->query($sql);
     }
 

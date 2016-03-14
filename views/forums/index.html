@@ -2,13 +2,13 @@
 <html lang="en">
 <style>
     table tr:nth-child(even) {
-        background-color: #eee;
+        background-color: whitesmoke;
     }
     table tr:nth-child(odd) {
-        background-color:#fff;
+        background-color:ghostwhite;
     }
     table th	{
-        background-color: black;
+        background-color: green;
         color: white;
     }
 </style>
@@ -18,10 +18,10 @@
 </head>
 
 <body>
-<table class="table table-striped" style="width: 600px;">
+<table class="table table-striped" style="width: 1000px;">
     <tr>
         <th colspan="2" class="text-center" style="font-size:20px">Category</th>
-        <th class="text-center" style="font-size:20px">Last discussion</th>
+
 
     </tr>
     <?php foreach($data['forums'] as $page_data) { ?>
@@ -30,14 +30,14 @@
             <br>
             <?=$page_data['content']?>
         </b></td>
+        <?php } ?>
 
-        <td class="rightpart">
 
 
 
         </td>
     </tr>
-    <?php } ?>
+
 </table>
 
 <div>

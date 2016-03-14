@@ -1,18 +1,83 @@
-<h3>Your Profile</h3><br/>
+<style>
+    form:before{
+        content: '';
+        position: absolute; top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ccc url('/webroot/img/03.jpg') no-repeat;
+        background-size: cover;
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+    form{
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+    }
+</style>
 
 <form action="" method="post">
-    <?php foreach($data as $item) { ?>
-    <label>Your Nickname</label>
-    <input type="text" class="form-control" name="nickname" placeholder="Nickname*" value="<?=$item['nickname']?>" required/>
-    <label>Your Name</label>
-    <input type="text" class="form-control" name="name" placeholder="Name" value="<?=$item['name']?>"/>
-    <label>Your Phone</label>
-    <input type="text" class="form-control" name="phone" placeholder="Phone" value="<?=$item['phone']?>"/>
-    <label>Vkontakte</label>
-    <input type="text" class="form-control" name="vk" placeholder="Your profile vkontakte" value="<?=$item['vk']?>"/>
-    <label>Facebook</label>
-    <input type="text" class="form-control" name="facebook" placeholder="Your profile facebook" value="<?=$item['facebook']?>"/>
-    <?php } ?>
-    <br/>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+    <div class="container">
+        <h1>Edit Profile</h1>
+        <hr>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img class="avatar img-circle" alt="avatar" src="/webroot/img/200x200.png">
+                    <h6>Upload a different photo...</h6>
+
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+            <!-- edit form column -->
+            <div class="col-md-9 personal-info">
+                <h3 class="text-center">Personal info</h3>
+                <br/>
+                <form class="form-horizontal" role="form">
+                    <?php foreach($data as $item) { ?>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Your Nickname:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="nickname" type="text" value="<?=$item['nickname']?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Your Name:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="name" type="text" value="<?=$item['name']?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Your Phone:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="phone" type="text" value="<?=$item['phone']?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Vkontakte:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="vk" type="text" value="<?=$item['vk']?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Facebook:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" name="facebook" type="text" value="<?=$item['facebook']?>">
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-8">
+                            <br/>
+                            <input class="btn btn-primary" type="submit" value="Save Changes">
+                            <input class="btn btn-default" type="button" onClick='location.href="/user/profiles/edit"' value="Edit Password">
+                            <input class="btn btn-default" type="reset" onClick='location.href="/user/"' value="Cancel">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
 </form>

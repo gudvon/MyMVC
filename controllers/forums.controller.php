@@ -66,6 +66,7 @@ class ForumsController extends Controller{
     public function admin_discussions(){
         $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
         $this->data['forums'] = $this->model->getById($this->params[0]);
+        Session::set('category_id', $this->params[0]);
     }
 
     public function admin_add_discussions(){
@@ -83,15 +84,14 @@ class ForumsController extends Controller{
 
     public function admin_delete_discussions(){
         if (isset($this->params[0])){
-            $id = $this->params[0];
-            $result = $this->model->deleteDiscussions($id);
+            $result = $this->model->deleteDiscussions($this->params[0]);
             if ($result){
                 Session::setFlash('Page was deleted.');
             } else {
                 Session::setFlash('Error');
             }
         }
-        Router::redirect('/admin/forums/discussions/'.$this->params[0]);
+        Router::redirect('/admin/forums/discussions/'.Session::get('category_id'));
     }
 
 
