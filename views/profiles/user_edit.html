@@ -1,17 +1,56 @@
-<h3>Edit Profile Information</h3><br/>
+<style>
 
-<form action="" method="post">
-    <?php if( Session::hasFlash() ){ ?>
-    <div class="alert alert-danger text-center" role="alert">
-        <strong><?php Session::flash(); ?>!</strong>
+    form:before{
+         content: '';
+         position: absolute; top: 0; left: 0;
+         width: 100%;
+         height: 100%;
+         background: #ccc url('/webroot/img/03.jpg') no-repeat;
+         background-size: cover;
+         -webkit-filter: blur(6px);
+         filter: blur(6px);
+    }
+
+</style>
+
+
+<form class="form-horizontal" role="form" action="" method="post">
+    <div class="container">
+        <h1>Edit Password</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-9 personal-info">
+                <br/>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Your old password:</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" name="oldpassword" id="oldpassword"
+                               placeholder="Old password" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Your new password:</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" name="newpassword" id="newpassword"
+                               placeholder="New password" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Confirm new password:</label>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" name="newpasswordx2" id="newpasswordx2"
+                               placeholder="Confirm new password" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                        <br/>
+                        <input class="btn btn-primary" type="submit" value="Save Changes">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <?php } ?>
-    <label>Your old password</label>
-    <input type="text" class="form-control" name="oldpassword" id="oldpassword" placeholder="Old password" required/>
-    <label>Your new password</label>
-    <input type="text" class="form-control" name="newpassword" id="newpassword" placeholder="New password" required/>
-    <label>Confirm new password</label>
-    <input type="text" class="form-control" name="newpasswordx2" id="newpasswordx2" placeholder="Confirm new password" required/>
-    <br/>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
 </form>

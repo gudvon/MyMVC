@@ -19,9 +19,9 @@ class ProfilesController extends Controller {
     public function user_index(){
         $this->data = $this->model->showSave();
         if ($_POST){
-            if ($this->model->save($_POST)){
-                Session::setFlash('Thank you!');
-            }
+            $this->model->save($_POST);
+        } elseif ($_FILES){
+            $this->model->avatar($_FILES);
         }
     }
 

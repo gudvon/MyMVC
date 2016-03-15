@@ -27,6 +27,25 @@ class Profile extends Model{
         return $this->db->query($sql);
     }
 
+    public function avatar($file){
+
+
+
+        if(isset($file['avatar']) && $file['avatar'] !="") {
+            $whitelist = array(".gif", ".jpeg", ".png", ".jpg", ".bmp");
+
+            foreach ($whitelist as $item) {
+                if (preg_match("/$item\$/i", $file['avatar']['name']));
+            }
+
+            move_uploaded_file($file["avatar"]["tmp_name"], "/files/" . $_FILES["avatar"]["name"]);
+            $path_file = "/files/" . $file["avatar"]["name"];
+
+
+        }
+
+    }
+
     public function getList(){
         $sql = "select * from users where 1";
         return $this->db->query($sql);

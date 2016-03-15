@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 08 2016 г., 14:31
+-- Время создания: Мар 15 2016 г., 01:12
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 7.0.3
 
@@ -37,9 +37,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `title`, `content`) VALUES
-(5, 'Test Category 1', 'Test Category 1 description'),
-(6, 'Test Category 2', 'Test Category 2 description'),
-(7, 'Test Category 3', 'Test Category 3 description');
+(1, 'Apple', 'All Apple''s products'),
+(2, 'Samsung', 'All Samsung''s products'),
+(3, 'HTS', 'All HTS''s products'),
+(4, 'Microsoft', 'All Microsoft''s products');
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,7 @@ CREATE TABLE `discussions` (
   `content` text,
   `date` datetime NOT NULL,
   `category_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `user_id` smallint(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -76,8 +77,12 @@ CREATE TABLE `discussions` (
 --
 
 INSERT INTO `discussions` (`id`, `alias`, `title`, `content`, `date`, `category_id`, `user_id`) VALUES
-(2, 'Test discussion name 2', 'Test discussion title 2', 'Test discussion description 2', '0000-00-00 00:00:00', 0, 0),
-(3, 'Test discussion name 1', 'Test discussion title 1 ', 'Test discussion description 1', '0000-00-00 00:00:00', 0, 0);
+(83, 'name 1', 'title 1', 'description 1', '2016-03-13 03:00:16', 1, 1),
+(84, 'name 2', 'title 2', 'description 2', '2016-03-13 03:00:31', 1, 1),
+(85, 'name 3', 'title 3', 'description 3', '2016-03-13 03:00:52', 2, 1),
+(86, 'name 4', 'title 4', 'description 4', '2016-03-13 03:01:07', 3, 1),
+(87, 'name 5', 'title 5', 'description 5', '2016-03-13 12:19:07', 1, 1),
+(88, 'name 6', 'title 6', 'description 6', '2016-03-13 12:20:16', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -139,17 +144,22 @@ CREATE TABLE `users` (
   `name` text NOT NULL,
   `phone` text NOT NULL,
   `vk` char(40) NOT NULL,
-  `facebook` char(40) NOT NULL
+  `facebook` char(40) NOT NULL,
+  `date` datetime DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `login`, `email`, `role`, `password`, `is_active`, `nickname`, `name`, `phone`, `vk`, `facebook`) VALUES
-(1, 'admin', 'gudvon@gmail.com', 'admin', '48fb7b7996311a895502e77e9db97e1f', 1, '', '', '', '', ''),
-(2, 'user', 'user@mail', 'user', 'ee9812d1d42b18ea07f5887e969de1af', 1, 'userman', 'user', '1234567890', 'id3453452324', 'id67544'),
-(3, 'user2', 'user2@mail', 'user', '0073c7c57f5bb6a7e8b9610f7c541a35', 1, 'userman2', 'user2', '0987654321', 'id562115673', 'id2522stw3535');
+INSERT INTO `users` (`id`, `login`, `email`, `role`, `password`, `is_active`, `nickname`, `name`, `phone`, `vk`, `facebook`, `date`, `avatar`) VALUES
+(1, 'admin', 'gudvon@gmail.com', 'admin', '48fb7b7996311a895502e77e9db97e1f', 1, '', '', '', '', '', NULL, NULL),
+(2, 'user', 'user@mail', 'user', 'ee9812d1d42b18ea07f5887e969de1af', 1, 'userman', 'user', '1234567890', 'id3453452324', 'id67544', NULL, 'views/profiles/avatars/'),
+(3, 'user2', 'user2@mail', 'user', '0073c7c57f5bb6a7e8b9610f7c541a35', 1, 'userman2', 'user2', '0987654321', 'id562115673', 'id2522stw3535', NULL, NULL),
+(4, 'dasha', 'darja-b@ukr.net', 'user', 'f45fb5f812f1113c2f9089efd7496203', 1, '', '', '', '', '', NULL, NULL),
+(5, 'user3', 'user3@mail', 'user', '4d54276ea258cbe84653d4d55d778067', 1, '', '', '', '', '', NULL, NULL),
+(6, 'user4', 'user4@mail', 'user', '114385db9b3692a64f11cfce073bf51c', 1, '', '', '', '', '', '0000-00-00 00:00:00', NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -199,7 +209,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT для таблицы `comments`
 --
@@ -209,7 +219,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT для таблицы `discussions`
 --
 ALTER TABLE `discussions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 --
 -- AUTO_INCREMENT для таблицы `messages`
 --
@@ -224,7 +234,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
