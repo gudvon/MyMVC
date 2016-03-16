@@ -20,8 +20,6 @@ class ProfilesController extends Controller {
         $this->data = $this->model->showSave();
         if ($_POST){
             $this->model->save($_POST);
-        } elseif ($_FILES){
-            $this->model->avatar($_FILES);
         }
     }
 

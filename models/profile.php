@@ -13,6 +13,16 @@ class Profile extends Model{
         $vk = $this->db->escape($data['vk']);
         $facebook = $this->db->escape($data['facebook']);
         $login = Session::get('login');
+        $id = Session::get('id');
+
+
+
+        if (is_uploaded_file($_FILES["avatar"]["tmp_name"])) {
+            move_uploaded_file($_FILES["avatar"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/views/profiles/avatars/{$id}.jpg");
+        }
+
+
+        $avatar = "/views/profiles/avatars/{$id}.jpg";
 
         $sql = "
             update users
@@ -20,30 +30,12 @@ class Profile extends Model{
                name = '{$name}',
                phone = '{$phone}',
                vk = '{$vk}',
-             facebook = '{$facebook}'
+             facebook = '{$facebook}',
+             avatar = '{$avatar}'
              WHERE login = '{$login}'
             ";
 
         return $this->db->query($sql);
-    }
-
-    public function avatar($file){
-
-
-
-        if(isset($file['avatar']) && $file['avatar'] !="") {
-            $whitelist = array(".gif", ".jpeg", ".png", ".jpg", ".bmp");
-
-            foreach ($whitelist as $item) {
-                if (preg_match("/$item\$/i", $file['avatar']['name']));
-            }
-
-            move_uploaded_file($file["avatar"]["tmp_name"], "/files/" . $_FILES["avatar"]["name"]);
-            $path_file = "/files/" . $file["avatar"]["name"];
-
-
-        }
-
     }
 
     public function getList(){
@@ -71,7 +63,7 @@ class Profile extends Model{
 
     public function showSave(){
         $login = Session::get('login');
-        $sql = "select nickname, `name`, phone, vk, facebook from users where login = '{$login}'";
+        $sql = "select nickname, `name`, phone, vk, facebook, `avatar` from users where login = '{$login}'";
         return $this->db->query($sql);
     }
 

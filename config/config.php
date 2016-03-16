@@ -6,7 +6,7 @@
  * Time: 13:24
  */
 
-Config::set('site_name', 'Your Site Name');
+Config::set('site_name', 'My Site Name');
 
 Config::set('languages' , array('en', 'ru'));
 

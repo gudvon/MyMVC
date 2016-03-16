@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 15 2016 г., 01:12
+-- Время создания: Мар 16 2016 г., 01:42
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 7.0.3
 
@@ -155,7 +155,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `login`, `email`, `role`, `password`, `is_active`, `nickname`, `name`, `phone`, `vk`, `facebook`, `date`, `avatar`) VALUES
 (1, 'admin', 'gudvon@gmail.com', 'admin', '48fb7b7996311a895502e77e9db97e1f', 1, '', '', '', '', '', NULL, NULL),
-(2, 'user', 'user@mail', 'user', 'ee9812d1d42b18ea07f5887e969de1af', 1, 'userman', 'user', '1234567890', 'id3453452324', 'id67544', NULL, 'views/profiles/avatars/'),
+(2, 'user', 'user@mail', 'user', 'ee9812d1d42b18ea07f5887e969de1af', 1, 'userman', 'user', '1234567890', 'id3453452324', 'id67544', NULL, '/views/profiles/avatars/2.jpg'),
 (3, 'user2', 'user2@mail', 'user', '0073c7c57f5bb6a7e8b9610f7c541a35', 1, 'userman2', 'user2', '0987654321', 'id562115673', 'id2522stw3535', NULL, NULL),
 (4, 'dasha', 'darja-b@ukr.net', 'user', 'f45fb5f812f1113c2f9089efd7496203', 1, '', '', '', '', '', NULL, NULL),
 (5, 'user3', 'user3@mail', 'user', '4d54276ea258cbe84653d4d55d778067', 1, '', '', '', '', '', NULL, NULL),
@@ -209,7 +209,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `comments`
 --
@@ -219,7 +219,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT для таблицы `discussions`
 --
 ALTER TABLE `discussions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 --
 -- AUTO_INCREMENT для таблицы `messages`
 --
@@ -234,7 +234,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
