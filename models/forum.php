@@ -56,7 +56,7 @@ class Forum extends Model{
     }
 
 
-    //........................ discussions ..!!.. discussions ..!!.. discussions ..!!..
+    //........................ discussions ..!!.. discussions ..!!.. discussions ..!!.. discussions ..!!..
 
     public function lastDiscussion(){
 
@@ -103,7 +103,7 @@ class Forum extends Model{
     }
 
 
-    //........................ comments ..!!.. comments ..!!.. comments ..!!..
+    //........................ comments ..!!.. comments ..!!.. comments ..!!.. comments ..!!..
 
     public function getComments($id){
         $id = (int)$id;
@@ -122,8 +122,14 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
-    public function getUser($id){
+    public static function getUser($id){
         $sql = "select nickname, avatar from users WHERE id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
+    public function deleteComments($id){
+        $id = (int)$id;
+        $sql = "delete from comments where id = '{$id}'";
         return $this->db->query($sql);
     }
 

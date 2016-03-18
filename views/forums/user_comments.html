@@ -31,28 +31,28 @@
     </tr>
     <?php foreach($data['comments'] as $page_data) { ?>
     <tr>
-
-        <td >
-            <?=$page_data['user_id']?>
+        <td>
+            <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+            <?php if($user_data['avatar'] != null) { ?>
+            <img class="avatar img-circle" alt="avatar" src="<?=$user_data['avatar']?>" width="20" height="20">
+            <?php } else { ?>
+            <img class="avatar img-circle" alt="avatar" src="/webroot/img/200x200.png" width="20" height="20">
+            <?php } ?>
+            <?=$user_data['nickname']?>
+            <?php } ?>
         </td>
 
-        <td >
+        <td>
             <?=$page_data['content']?>
         </td>
 
-        <td >
+        <td>
             <?=$page_data['date']?>
         </td>
 
     </tr>
     <?php } ?>
 </table>
-
-
-
-
-
-
 
 <form method="post" action="">
     Comments:
@@ -62,7 +62,6 @@
     <br>
     <input type="submit" class="btn btn-success" value="Add Comment"/>
 </form>
-
 
 </body>
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+</head>
+
+<style>
+    table tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table th	{
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+
+<table class="table table-striped" style="width: 1000px;">
+    <tr>
+        <th colspan="4" class="text-center" style="font-size:20px">Comments</th>
+    </tr>
+    <?php foreach($data['comments'] as $page_data) { ?>
+    <tr>
+
+        <td >
+            <?=$page_data['user_id']?>
+        </td>
+
+        <td >
+            <?=$page_data['content']?>
+        </td>
+
+        <td >
+            <?=$page_data['date']?>
+        </td>
+
+        <td align="right">
+            <a href="/admin/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger">delete</button></a>
+        </td>
+
+    </tr>
+    <?php } ?>
+</table>
+
+
+
+
+
+</body>
+
+</html>

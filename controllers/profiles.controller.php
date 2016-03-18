@@ -5,6 +5,7 @@
  * Date: 13.02.2016
  * Time: 4:44
  */
+
 class ProfilesController extends Controller {
 
     public function __construct($data = array()){

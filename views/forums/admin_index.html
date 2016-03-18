@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<table class="table table-striped" style="width: 600px;">
+<table class="table table-striped" style="width: 1000px;">
     <tr>
     <th colspan="2" class="text-center" style="font-size:20px">Category</th>
 
@@ -32,8 +32,8 @@
         </b>
         </td>
         <td align="right">
-            <a href="/admin/forums/edit/<?=$page_data['id']?>"><button class="btn btn-sm btn-primary">edit</button></a>
-            <a href="/admin/forums/delete/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-warning">delete</button></a>
+            <a href="/admin/forums/edit/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning">edit</button></a>
+            <a href="/admin/forums/delete/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger">delete</button></a>
         </td>
         <?php } ?>
 

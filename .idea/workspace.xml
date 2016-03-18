@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25aa8c26-38a4-48cd-b3ab-e42f2d6ba02c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/forums/user_comments.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/profiles/avatars/2.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/forums/admin_comments.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/forums.controller.php" afterPath="$PROJECT_DIR$/controllers/forums.controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/users.controller.php" afterPath="$PROJECT_DIR$/controllers/users.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/profiles.controller.php" afterPath="$PROJECT_DIR$/controllers/profiles.controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/forum.php" afterPath="$PROJECT_DIR$/models/forum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/profile.php" afterPath="$PROJECT_DIR$/models/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_discussions.html" afterPath="$PROJECT_DIR$/views/forums/user_discussions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/admin_discussions.html" afterPath="$PROJECT_DIR$/views/forums/admin_discussions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/admin_index.html" afterPath="$PROJECT_DIR$/views/forums/admin_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_comments.html" afterPath="$PROJECT_DIR$/views/forums/user_comments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_general.html" afterPath="$PROJECT_DIR$/views/forums/user_general.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_index.html" afterPath="$PROJECT_DIR$/views/forums/user_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profiles/admin_index.html" afterPath="$PROJECT_DIR$/views/profiles/admin_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profiles/user_edit.html" afterPath="$PROJECT_DIR$/views/profiles/user_edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profiles/user_index.html" afterPath="$PROJECT_DIR$/views/profiles/user_index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.html" afterPath="$PROJECT_DIR$/views/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/users/login.html" afterPath="$PROJECT_DIR$/views/users/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/user.css" afterPath="$PROJECT_DIR$/webroot/css/user.css" />
     </list>
     <ignored path="MyMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,47 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="forum.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/forum.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.807692">
-              <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-              <folding>
-                <marker date="1458309453091" expanded="true" signature="456:557" placeholder="insert into categories... " />
-                <marker date="1458309453091" expanded="true" signature="627:751" placeholder="update categ... " />
-                <marker date="1458309453091" expanded="true" signature="879:903" placeholder="select * fro... categories" />
-                <marker date="1458309453091" expanded="true" signature="1006:1031" placeholder="select id fr... categories" />
-                <marker date="1458309453091" expanded="true" signature="1154:1205" placeholder="select * fro... categories" />
-                <marker date="1458309453091" expanded="true" signature="1392:1426" placeholder="delete from " />
-                <marker date="1458309453091" expanded="true" signature="1679:1736" placeholder="select * fro... discussions" />
-                <marker date="1458309453091" expanded="true" signature="2288:2441" placeholder="insert into discussions... " />
-                <marker date="1458309453091" expanded="true" signature="2571:2624" placeholder="select * fro... discussions" />
-                <marker date="1458309453091" expanded="true" signature="2758:2819" placeholder="select * fro... discussions" />
-                <marker date="1458309453091" expanded="true" signature="2952:2994" placeholder="delete from " />
-                <marker date="1458309453091" expanded="true" signature="3202:3254" placeholder="select * fro... comments" />
-                <marker date="1458309453091" expanded="true" signature="3558:3645" placeholder="insert into discussions... " />
-                <marker date="1458309453091" expanded="true" signature="3558:3670" placeholder="insert into discussions... " />
-                <marker date="1458309453091" expanded="true" signature="3769:3822" placeholder="insert into comments... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forums.controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/forums.controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.923077">
-              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_comments.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_comments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/forums/user_comments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46938777">
-              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+            <state vertical-scroll-proportion="-20.26923">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -95,12 +58,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/user.html">
+      <file leaf-file-name="user_discussions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_discussions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.615385">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.307692">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5510204">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#b#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webroot/css/style.css" />
         <option value="$PROJECT_DIR$/views/pages/admin_index.html" />
         <option value="$PROJECT_DIR$/webroot/css/default.css" />
         <option value="$PROJECT_DIR$/lib/app.class.php" />
@@ -140,37 +117,38 @@
         <option value="$PROJECT_DIR$/controllers/forum.controller.php" />
         <option value="$PROJECT_DIR$/views/forums/admin_add.html" />
         <option value="$PROJECT_DIR$/views/forums/admin_edit.html" />
-        <option value="$PROJECT_DIR$/views/forums/user_general.html" />
         <option value="$PROJECT_DIR$/views/forums/admin_adddiscus.html" />
         <option value="$PROJECT_DIR$/views/forums/user_addiscus.html" />
         <option value="$PROJECT_DIR$/views/forums/admin_addiscus.html" />
         <option value="$PROJECT_DIR$/webroot/css/admin.css" />
-        <option value="$PROJECT_DIR$/views/forums/admin_discussions.html" />
         <option value="$PROJECT_DIR$/views/forums/discussions.html" />
         <option value="$PROJECT_DIR$/views/forums/index.html" />
         <option value="$PROJECT_DIR$/views/profiles/user_profile.html" />
-        <option value="$PROJECT_DIR$/webroot/css/user.css" />
         <option value="$PROJECT_DIR$/views/test_page.html" />
         <option value="$PROJECT_DIR$/views/default.html" />
-        <option value="$PROJECT_DIR$/views/forums/admin_index.html" />
-        <option value="$PROJECT_DIR$/views/forums/user_index.html" />
         <option value="$PROJECT_DIR$/models/user.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/controllers/profiles.controller.php" />
         <option value="$PROJECT_DIR$/views/users/admin_login.html" />
         <option value="$PROJECT_DIR$/views/admin.html" />
         <option value="$PROJECT_DIR$/views/users/login.html" />
         <option value="$PROJECT_DIR$/models/profile.php" />
         <option value="$PROJECT_DIR$/controllers/users.controller.php" />
         <option value="$PROJECT_DIR$/views/profiles/user_edit.html" />
-        <option value="$PROJECT_DIR$/views/profiles/admin_index.html" />
-        <option value="$PROJECT_DIR$/views/profiles/user_index.html" />
         <option value="$PROJECT_DIR$/views/forums/user_dispute.html" />
         <option value="$PROJECT_DIR$/views/forums/user_add_comments.html" />
         <option value="$PROJECT_DIR$/views/forums/user_discussions.html" />
         <option value="$PROJECT_DIR$/views/user.html" />
+        <option value="$PROJECT_DIR$/views/forums/admin_comments.html" />
+        <option value="$PROJECT_DIR$/views/forums/admin_discussions.html" />
+        <option value="$PROJECT_DIR$/views/forums/admin_index.html" />
+        <option value="$PROJECT_DIR$/controllers/profiles.controller.php" />
+        <option value="$PROJECT_DIR$/views/profiles/admin_index.html" />
         <option value="$PROJECT_DIR$/models/forum.php" />
+        <option value="$PROJECT_DIR$/views/profiles/user_index.html" />
         <option value="$PROJECT_DIR$/controllers/forums.controller.php" />
+        <option value="$PROJECT_DIR$/views/forums/user_general.html" />
+        <option value="$PROJECT_DIR$/webroot/css/user.css" />
+        <option value="$PROJECT_DIR$/views/forums/user_index.html" />
         <option value="$PROJECT_DIR$/views/forums/user_comments.html" />
       </list>
     </option>
@@ -286,6 +264,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="forums" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -301,6 +297,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,20 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/forums/admin_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14099526">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/admin_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04028436">
-          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/forums/admin_add_discussions.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -503,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/forums/discussions.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
@@ -547,13 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.040767387">
           <caret line="2" column="55" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -671,17 +653,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_add_discussions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14285715">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/admin_discussions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/admin_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4489796">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/admin_comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5510204">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/profiles.controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48979592">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020408163">
+        <state vertical-scroll-proportion="-0.6923077">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <marker date="1458261513435" expanded="true" signature="873:1135" placeholder="update users... " />
@@ -695,8 +720,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/profiles/admin_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2857143">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8883553">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -712,105 +737,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/admin_index.html">
+    <entry file="file://$PROJECT_DIR$/lib/controller.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40816328">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10204082">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/profiles/user_index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85714287">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.048019208">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#input#3;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#1;n#form#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/admin_discussions.html">
+    <entry file="file://$PROJECT_DIR$/models/forum.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5102041">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state vertical-scroll-proportion="-23.538462">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding>
+            <marker date="1458339002562" expanded="true" signature="456:557" placeholder="insert into categories... " />
+            <marker date="1458339002562" expanded="true" signature="627:751" placeholder="update categ... " />
+            <marker date="1458339002562" expanded="true" signature="879:903" placeholder="select * fro... categories" />
+            <marker date="1458339002562" expanded="true" signature="1006:1031" placeholder="select id fr... categories" />
+            <marker date="1458339002562" expanded="true" signature="1154:1205" placeholder="select * fro... categories" />
+            <marker date="1458339002562" expanded="true" signature="1392:1426" placeholder="delete from " />
+            <marker date="1458339002562" expanded="true" signature="1698:1755" placeholder="select * fro... discussions" />
+            <marker date="1458339002562" expanded="true" signature="2307:2460" placeholder="insert into discussions... " />
+            <marker date="1458339002562" expanded="true" signature="2590:2643" placeholder="select * fro... discussions" />
+            <marker date="1458339002562" expanded="true" signature="2777:2838" placeholder="select * fro... discussions" />
+            <marker date="1458339002562" expanded="true" signature="2971:3013" placeholder="delete from " />
+            <marker date="1458339002562" expanded="true" signature="3237:3289" placeholder="select * fro... comments" />
+            <marker date="1458339002562" expanded="true" signature="3593:3680" placeholder="insert into discussions... " />
+            <marker date="1458339002562" expanded="true" signature="3593:3705" placeholder="insert into discussions... " />
+            <marker date="1458339002562" expanded="true" signature="3811:3864" placeholder="insert into comments... " />
+            <marker date="1458339002562" expanded="true" signature="3993:4032" placeholder="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6434574">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/user_index.html">
+    <entry file="file://$PROJECT_DIR$/controllers/forums.controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25090036">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="-28.115385">
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/user_add_discussions.html">
+    <entry file="file://$PROJECT_DIR$/webroot/css/user.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14285715">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.10204082">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_general.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20408164">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/forums/user_discussions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6530612">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.615385">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/forum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.807692">
-          <caret line="125" column="33" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-          <folding>
-            <marker date="1458309453091" expanded="true" signature="456:557" placeholder="insert into categories... " />
-            <marker date="1458309453091" expanded="true" signature="627:751" placeholder="update categ... " />
-            <marker date="1458309453091" expanded="true" signature="879:903" placeholder="select * fro... categories" />
-            <marker date="1458309453091" expanded="true" signature="1006:1031" placeholder="select id fr... categories" />
-            <marker date="1458309453091" expanded="true" signature="1154:1205" placeholder="select * fro... categories" />
-            <marker date="1458309453091" expanded="true" signature="1392:1426" placeholder="delete from " />
-            <marker date="1458309453091" expanded="true" signature="1679:1736" placeholder="select * fro... discussions" />
-            <marker date="1458309453091" expanded="true" signature="2288:2441" placeholder="insert into discussions... " />
-            <marker date="1458309453091" expanded="true" signature="2571:2624" placeholder="select * fro... discussions" />
-            <marker date="1458309453091" expanded="true" signature="2758:2819" placeholder="select * fro... discussions" />
-            <marker date="1458309453091" expanded="true" signature="2952:2994" placeholder="delete from " />
-            <marker date="1458309453091" expanded="true" signature="3202:3254" placeholder="select * fro... comments" />
-            <marker date="1458309453091" expanded="true" signature="3558:3645" placeholder="insert into discussions... " />
-            <marker date="1458309453091" expanded="true" signature="3558:3670" placeholder="insert into discussions... " />
-            <marker date="1458309453091" expanded="true" signature="3769:3822" placeholder="insert into comments... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/forums.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.923077">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/forums/user_comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46938777">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        <state vertical-scroll-proportion="-20.26923">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5510204">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#b#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <style>
+
     table tr:nth-child(even) {
         background-color: #eee;
     }
@@ -11,11 +14,11 @@
         background-color: black;
         color: white;
     }
+
 </style>
 
-
-
 <body>
+
 <h3>Users Profiles</h3>
 <br>
 <table class="table table-striped" style="width: 100%;">
@@ -33,7 +36,8 @@
     <?php foreach($data as $item) { ?>
     <tr>
         <td><?=$item['id']?></td>
-        <td><?php if($item['avatar'] != null) { ?>
+        <td>
+            <?php if($item['avatar'] != null) { ?>
             <img class="avatar" alt="avatar" src="<?=$item['avatar']?>" width="25" height="25">
             <?php } else { ?>
             <img class="avatar" alt="avatar" src="/webroot/img/200x200.png" width="25" height="25">
@@ -49,4 +53,5 @@
     </tr>
     <?php } ?>
 </table>
+
 </body>
