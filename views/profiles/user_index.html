@@ -7,8 +7,8 @@
         height: 100%;
         background: #ccc url('/webroot/img/03.jpg') no-repeat;
         background-size: cover;
-        -webkit-filter: blur(5px);
-        filter: blur(5px);
+        -webkit-filter: blur(7px);
+        filter: blur(7px);
     }
     form{
         -webkit-filter: blur(0px) !important;
@@ -42,13 +42,9 @@
                     <?php foreach($data as $item) { ?>
                     <?php if($item['avatar'] != null) { ?>
                     <img class="avatar img-circle" alt="avatar" src="<?=$item['avatar']?>" width="200" height="200">
-
-
                     <?php } else { ?>
                     <img class="avatar img-circle" alt="avatar" src="/webroot/img/200x200.png">
                     <?php } ?>
-
-
                     <br/>
                     <br/>
                     <h6>Upload a different photo...</h6>
@@ -64,7 +60,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Your Nickname:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" name="nickname" type="text" value="<?=$item['nickname']?>">
+                            <input class="form-control" name="nickname" type="text" value="<?=$item['nickname']?>" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -99,6 +95,7 @@
                             <input class="btn btn-primary" type="submit" value="Save Changes">
                             <input class="btn btn-default" type="button" onClick='location.href="/user/profiles/edit"' value="Edit Password">
                             <input class="btn btn-default" type="reset" onClick='location.href="/user/"' value="Cancel">
+                            <input class="btn btn-danger btn-xs btn-right" style="margin: -25px 0 10px 485px; display:block;" type="button" onClick='location.href="/user/"' value="Delete">
                         </div>
                     </div>
                 </form>

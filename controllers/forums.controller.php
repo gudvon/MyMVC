@@ -61,7 +61,7 @@ class ForumsController extends Controller{
     }
 
 
-    //........................ discussions ...... discussions ...... discussions .......
+    //........................ discussions ..!!.. discussions ..!!.. discussions ..!!..
 
     public function admin_discussions(){
         $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
@@ -100,13 +100,10 @@ class ForumsController extends Controller{
         $this->data['forums'] = $this->model->getCategory();
     }
 
-    public function user_general(){
-
-    }
-
     public function user_discussions(){
         $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
         $this->data['forums'] = $this->model->getById($this->params[0]);
+        Session::set('discussions_id', $this->model->getDiscussions($this->params[0]));
     }
 
     public function user_add_discussions(){
@@ -115,7 +112,7 @@ class ForumsController extends Controller{
             $result = $this->model->saveDiscussion($_POST, $id);
             if ($result) {
                 Session::setFlash("New discussion successfully added.");
-                Router::redirect('/admin/forums/discussions/'.$this->params[0]);
+                Router::redirect('/user/forums/discussions/'.$this->params[0]);
             } else {
                 Session::setFlash("Error");
             }
@@ -132,5 +129,30 @@ class ForumsController extends Controller{
         $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
         $this->data['forums'] = $this->model->getById($this->params[0]);
     }
+
+
+    //........................ comments ..!!.. comments ..!!.. comments ..!!..
+
+    public function user_comments(){
+        $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        $this->data['comments'] = $this->model->getComments($this->params[0]);
+
+
+        foreach($this->data['comments'] as $page_data) {
+            $page_data['user_id'] = $this->model->getUser($page_data['user_id']);
+        }
+
+
+        if ($_POST){
+            $id = $this->params[0];
+            $result = $this->model->addComments($_POST, $id);
+            if ($result) {
+                Router::redirect('/user/forums/comments/'.$this->params[0]);
+            } else {
+                Session::setFlash("Error");
+            }
+        }
+    }
+
 
 }

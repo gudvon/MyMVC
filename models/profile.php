@@ -18,11 +18,11 @@ class Profile extends Model{
 
 
         if (is_uploaded_file($_FILES["avatar"]["tmp_name"])) {
-            move_uploaded_file($_FILES["avatar"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/views/profiles/avatars/{$id}.jpg");
+            move_uploaded_file($_FILES["avatar"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/webroot/img/avatars/{$id}.jpg");
         }
 
 
-        $avatar = "/views/profiles/avatars/{$id}.jpg";
+        $avatar = "/webroot/img/avatars/{$id}.jpg";
 
         $sql = "
             update users

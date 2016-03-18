@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+</head>
+
+<style>
+    table tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table th	{
+        background-color: black;
+        color: orange;
+    }
+</style>
+
+<body>
+
+<table class="table table-striped" style="width: 1000px;">
+    <tr>
+        <th colspan="3" class="text-center" style="font-size:20px">Comments</th>
+    </tr>
+    <?php foreach($data['comments'] as $page_data) { ?>
+    <tr>
+
+        <td >
+            <?=$page_data['user_id']?>
+        </td>
+
+        <td >
+            <?=$page_data['content']?>
+        </td>
+
+        <td >
+            <?=$page_data['date']?>
+        </td>
+
+    </tr>
+    <?php } ?>
+</table>
+
+
+
+
+
+
+
+<form method="post" action="">
+    Comments:
+    <div class="from-group">
+        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Comment" required></textarea>
+    </div>
+    <br>
+    <input type="submit" class="btn btn-success" value="Add Comment"/>
+</form>
+
+
+</body>
+
+</html>

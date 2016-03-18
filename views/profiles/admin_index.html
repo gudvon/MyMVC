@@ -1,18 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+        background-color:#fff;
+    }
+    table th	{
+        background-color: black;
+        color: white;
+    }
+</style>
+
+
+
+<body>
 <h3>Users Profiles</h3>
+<br>
 <table class="table table-striped" style="width: 100%;">
     <tr>
-        <td style="width: 5%;">#</td>
-        <td style="width: 10%;">Login</td>
-        <td style="width: 20%;">Email</td>
-        <td style="width: 20%;">Nickname</td>
-        <td style="width: 20%;">Name</td>
-        <td style="width: 15%;">Phone</td>
-        <td style="width: 15%;">vk</td>
-        <td style="width: 15%;">facebook</td>
+        <td style="width: 2%; background-color: black; color: white;">#</td>
+        <td style="width: 5%; background-color: black; color: white;">Avatar</td>
+        <td style="width: 10%; background-color: black; color: white;">Login</td>
+        <td style="width: 15%; background-color: black; color: white;">Email</td>
+        <td style="width: 10%; background-color: black; color: white;">Nickname</td>
+        <td style="width: 10%; background-color: black; color: white;">Name</td>
+        <td style="width: 15%; background-color: black; color: white;">Phone</td>
+        <td style="width: 15%; background-color: black; color: white;">vk</td>
+        <td style="width: 15%; background-color: black; color: white;">facebook</td>
     </tr>
     <?php foreach($data as $item) { ?>
     <tr>
         <td><?=$item['id']?></td>
+        <td><?php if($item['avatar'] != null) { ?>
+            <img class="avatar" alt="avatar" src="<?=$item['avatar']?>" width="25" height="25">
+            <?php } else { ?>
+            <img class="avatar" alt="avatar" src="/webroot/img/200x200.png" width="25" height="25">
+            <?php } ?>
+        </td>
         <td><?=$item['login']?></td>
         <td><?=$item['email']?></td>
         <td><?=$item['nickname']?></td>
@@ -23,3 +49,4 @@
     </tr>
     <?php } ?>
 </table>
+</body>

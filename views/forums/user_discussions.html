@@ -21,7 +21,7 @@
     </tr>
     <?php foreach($data['discussions'] as $page_data) { ?>
     <tr>
-        <td ><b><a href="/user/forums/discussions/=<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
+        <td ><b><a href="/user/forums/comments/<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
             <br>
             <?=$page_data['content']?>
         </b>
@@ -30,7 +30,6 @@
     </tr>
     <?php } ?>
 </table>
-
 
 <div>
     <a href="/user/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>

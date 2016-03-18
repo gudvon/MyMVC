@@ -34,6 +34,7 @@ class UsersController extends Controller{
                 Session::set('login', $userlog['login']);
                 Session::set('role', $userlog['role']);
                 Session::set('id', $userlog['id']);
+                Session::set('avatar', $userlog['avatar']);
                 Router::redirect('/user/');
             } else {
                 Router::redirect('/users/login');

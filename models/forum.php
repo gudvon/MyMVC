@@ -12,11 +12,9 @@ class Forum extends Model{
         if (!isset($data['title']) || !isset($data['content'])){
             return false;
         }
-
         $id = (int)$id;
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
-
         if (!$id){
             $sql = "
             insert into categories
@@ -31,9 +29,7 @@ class Forum extends Model{
                 where id = {$id}
             ";
         }
-
         return $this->db->query($sql);
-
     }
 
     public function getCategory(){
@@ -60,7 +56,7 @@ class Forum extends Model{
     }
 
 
-//........................ discussions ...... discussions ...... discussions .......
+    //........................ discussions ..!!.. discussions ..!!.. discussions ..!!..
 
     public function lastDiscussion(){
 
@@ -79,16 +75,13 @@ class Forum extends Model{
         if (!isset($data['alias']) || !isset($data['title']) || !isset($data['content'])){
             return false;
         }
-
         $alias = $this->db->escape($data['alias']);
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
         $user_id = Session::get('id');
         $id = (int)$id;
-
         $sql = "insert into discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', user_id = '{$user_id}', `date` = NOW(), category_id = '{$id}'";
         return $this->db->query($sql);
-
     }
 
     public function getDiscussions($id){
@@ -106,6 +99,31 @@ class Forum extends Model{
     public function deleteDiscussions($id){
         $id = (int)$id;
         $sql = "delete from discussions where id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+
+    //........................ comments ..!!.. comments ..!!.. comments ..!!..
+
+    public function getComments($id){
+        $id = (int)$id;
+        $sql = "select * from comments WHERE discussion_id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+    public function addComments($data, $id){
+        if (!isset($data['content'])){
+            return false;
+        }
+        $content = $this->db->escape($data['content']);
+        $user_id = Session::get('id');
+        $id = (int)$id;
+        $sql = "insert into comments set content = '{$content}', user_id = '{$user_id}', `date` = NOW(), discussion_id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getUser($id){
+        $sql = "select nickname, avatar from users WHERE id = '{$id}'";
         return $this->db->query($sql);
     }
 

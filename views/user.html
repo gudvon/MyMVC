@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <title><?=Config::get('site_name')?></title>
     <meta charset="UTF-8">
@@ -11,6 +13,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -30,13 +33,20 @@
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts/"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/user/profiles/"><?=Session::get('login')?></a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'profiles' ) {?>class="active"<?php } ?>href="/user/profiles/">
+                    <?php if(Session::get('avatar') != null) { ?>
+                    <img class="avatar img-circle" alt="avatar" src="<?=Session::get('avatar')?>" width="20" height="20">
+                    <?php } else { ?>
+                    <img class="avatar img-circle" alt="avatar" src="/webroot/img/200x200.png" width="20" height="20">
+                    <?php } ?>
+                    <?=Session::get('login')?></a></li>
                 <li><a href="/user/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
             <?php } ?>
         </div>
     </div>
 </nav>
+
 <div class="container">
     <div class="starter-template">
         <?php if( Session::hasFlash() ){ ?>
@@ -47,5 +57,7 @@
         <?=$data['content']?>
     </div>
 </div>
+
 </body>
+
 </html>
