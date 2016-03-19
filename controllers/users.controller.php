@@ -47,7 +47,7 @@ class UsersController extends Controller{
         Router::redirect('/');
     }
 
-    public function register(){
+    public function registration(){
         if ($_POST && isset($_POST['login']) && isset($_POST['email']) && isset($_POST['password'])){
             if($this->model->getByLogin($_POST['login'])){
                 Session::setFlash("The entered login already exists");

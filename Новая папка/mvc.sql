@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 16 2016 г., 01:42
+-- Время создания: Мар 19 2016 г., 02:56
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 7.0.3
 
@@ -52,9 +52,24 @@ CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `content` text NOT NULL,
   `date` datetime NOT NULL,
-  `discussions` int(11) NOT NULL,
-  `postby` int(11) NOT NULL
+  `discussion_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `comments`
+--
+
+INSERT INTO `comments` (`id`, `content`, `date`, `discussion_id`, `user_id`) VALUES
+(15, 'Comments user 1', '2016-03-18 19:25:33', 1, 2),
+(16, 'Comments user 02', '2016-03-18 19:26:00', 1, 3),
+(17, 'Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', '2016-03-18 19:26:07', 1, 3),
+(18, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', '2016-03-18 19:26:15', 1, 3),
+(19, 'Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2016-03-18 19:27:06', 1, 2),
+(20, 'I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2016-03-19 00:14:09', 1, 3),
+(21, 'Me too! WOW!', '2016-03-19 00:14:22', 1, 5),
+(22, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', '2016-03-19 03:00:10', 1, 2),
+(23, 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2016-03-19 03:01:42', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -77,12 +92,12 @@ CREATE TABLE `discussions` (
 --
 
 INSERT INTO `discussions` (`id`, `alias`, `title`, `content`, `date`, `category_id`, `user_id`) VALUES
-(83, 'name 1', 'title 1', 'description 1', '2016-03-13 03:00:16', 1, 1),
-(84, 'name 2', 'title 2', 'description 2', '2016-03-13 03:00:31', 1, 1),
-(85, 'name 3', 'title 3', 'description 3', '2016-03-13 03:00:52', 2, 1),
-(86, 'name 4', 'title 4', 'description 4', '2016-03-13 03:01:07', 3, 1),
-(87, 'name 5', 'title 5', 'description 5', '2016-03-13 12:19:07', 1, 1),
-(88, 'name 6', 'title 6', 'description 6', '2016-03-13 12:20:16', 2, 1);
+(1, 'name 1', 'title 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2016-03-13 03:00:16', 1, 1),
+(2, 'name 2', 'title 2', 'description 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222', '2016-03-13 03:00:31', 1, 1),
+(3, 'name 3', 'title 3', 'description 3', '2016-03-13 03:00:52', 2, 1),
+(4, 'name 4', 'title 4', 'description 4', '2016-03-13 03:01:07', 3, 1),
+(5, 'name 5', 'title 5', 'description 5', '2016-03-13 12:19:07', 1, 1),
+(6, 'name 6', 'title 6', 'description 6', '2016-03-13 12:20:16', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -154,11 +169,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `email`, `role`, `password`, `is_active`, `nickname`, `name`, `phone`, `vk`, `facebook`, `date`, `avatar`) VALUES
-(1, 'admin', 'gudvon@gmail.com', 'admin', '48fb7b7996311a895502e77e9db97e1f', 1, '', '', '', '', '', NULL, NULL),
-(2, 'user', 'user@mail', 'user', 'ee9812d1d42b18ea07f5887e969de1af', 1, 'userman', 'user', '1234567890', 'id3453452324', 'id67544', NULL, '/views/profiles/avatars/2.jpg'),
+(1, 'admin', 'gudvon@gmail.com', 'admin', '48fb7b7996311a895502e77e9db97e1f', 1, 'admin', '', '', '', '', NULL, NULL),
+(2, 'user', 'user@mail', 'user', 'ee9812d1d42b18ea07f5887e969de1af', 1, 'userman', 'user', '1234567890', 'id3453452324', 'id67544', NULL, '/webroot/img/avatars/2.jpg'),
 (3, 'user2', 'user2@mail', 'user', '0073c7c57f5bb6a7e8b9610f7c541a35', 1, 'userman2', 'user2', '0987654321', 'id562115673', 'id2522stw3535', NULL, NULL),
 (4, 'dasha', 'darja-b@ukr.net', 'user', 'f45fb5f812f1113c2f9089efd7496203', 1, '', '', '', '', '', NULL, NULL),
-(5, 'user3', 'user3@mail', 'user', '4d54276ea258cbe84653d4d55d778067', 1, '', '', '', '', '', NULL, NULL),
+(5, 'user3', 'user3@mail', 'user', '4d54276ea258cbe84653d4d55d778067', 1, 'user3', '', '', '', '', NULL, '/webroot/img/avatars/5.jpg'),
 (6, 'user4', 'user4@mail', 'user', '114385db9b3692a64f11cfce073bf51c', 1, '', '', '', '', '', '0000-00-00 00:00:00', NULL);
 
 --
@@ -214,7 +229,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблицы `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT для таблицы `discussions`
 --
