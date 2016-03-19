@@ -136,7 +136,7 @@ class ForumsController extends Controller{
     public function admin_comments(){
         $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
         $this->data['comments'] = $this->model->getComments($this->params[0]);
-        Session::set('discussions_id', $this->params[0]);
+        Session::set('comments_id', $this->params[0]);
     }
 
     public function admin_delete_comments(){
@@ -148,13 +148,13 @@ class ForumsController extends Controller{
                 Session::setFlash('Error');
             }
         }
-        Router::redirect('/admin/forums/comments/'.Session::get('discussions_id'));
+        Router::redirect('/admin/forums/comments/'.Session::get('comments_id'));
     }
 
 
 
     public function user_comments(){
-        $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
         $this->data['comments'] = $this->model->getComments($this->params[0]);
         if ($_POST){
             $id = $this->params[0];
@@ -167,9 +167,16 @@ class ForumsController extends Controller{
         }
     }
 
-    public function user_general(){
-
+    public function user_delete_comments(){
+        if (isset($this->params[0])){
+            $result = $this->model->deleteComments($this->params[0]);
+            if ($result){
+                Session::setFlash('Page was deleted.');
+            } else {
+                Session::setFlash('Error');
+            }
+        }
+        Router::redirect('/user/forums/comments/'.$this->params[0]);
     }
-
 
 }

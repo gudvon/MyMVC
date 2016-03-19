@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,26 @@
 </head>
 
 <body>
+
 <form method="post" action="">
     Discussion name:
     <div class="from-group">
-        <input type="text"  id="alias" name="alias" class="form-control" placeholder="Name" />
+        <input type="text"  id="title" name="title" class="form-control" placeholder="Name" required/>
     </div>
     <br>
-    Discussion title:
+    Discussion alias:
     <div class="from-group">
-        <input type="text"  id="title" name="title" class="form-control" placeholder="Title" />
+        <input type="text"  id="alias" name="alias" class="form-control" placeholder="Alias" required/>
     </div>
     <br>
     Discussion description:
     <div class="from-group">
-        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Description"></textarea>
+        <textarea type="text"  id="content" name="content" class="form-control" rows="5" placeholder="Description" required></textarea>
     </div>
     <br>
     <input type="submit" class="btn btn-success" value="Add Discussion"/>
 </form>
 
 </body>
+
 </html>

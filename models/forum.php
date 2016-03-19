@@ -90,6 +90,12 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public function getDiscussionsId($id){
+        $id = (int)$id;
+        $sql = "select * from discussions WHERE id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
     public function getLastDiscussion($id){
         $id = $id['id'];
         $sql = "select * from discussions WHERE category_id = '{$id}' limit 1";
@@ -123,7 +129,12 @@ class Forum extends Model{
     }
 
     public static function getUser($id){
-        $sql = "select nickname, avatar from users WHERE id = '{$id}'";
+        $sql = "select nickname, avatar, id from users WHERE id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
+    public static function getCommentsCount($id){
+        $sql = "select id from comments WHERE discussion_id = '{$id}'";
         return App::$db->query($sql);
     }
 

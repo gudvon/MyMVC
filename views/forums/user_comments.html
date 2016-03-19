@@ -6,62 +6,60 @@
 
     <meta charset="UTF-8">
 
-    <title>Title</title>
-
 </head>
 
-<style>
-    table tr:nth-child(even) {
-        background-color: #eee;
-    }
-    table tr:nth-child(odd) {
-        background-color:#fff;
-    }
-    table th	{
-        background-color: black;
-        color: orange;
-    }
-</style>
 
 <body>
 
-<table class="table table-striped" style="width: 1000px;">
-    <tr>
-        <th colspan="3" class="text-center" style="font-size:20px">Comments</th>
-    </tr>
-    <?php foreach($data['comments'] as $page_data) { ?>
-    <tr>
-        <td>
-            <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
-            <?php if($user_data['avatar'] != null) { ?>
-            <img class="avatar img-circle" alt="avatar" src="<?=$user_data['avatar']?>" width="20" height="20">
-            <?php } else { ?>
-            <img class="avatar img-circle" alt="avatar" src="/webroot/img/200x200.png" width="20" height="20">
-            <?php } ?>
-            <?=$user_data['nickname']?>
-            <?php } ?>
-        </td>
-
-        <td>
-            <?=$page_data['content']?>
-        </td>
-
-        <td>
-            <?=$page_data['date']?>
-        </td>
-
-    </tr>
+<div class="col-sm-9">
+    <?php foreach($data['discussions'] as $page_data) { ?>
+    <h2><?=$page_data['title']?></h2>
+    <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+    <h5><span class="glyphicon glyphicon-time"></span> Post by <?=$user_data['nickname']?>, <?=$page_data['date']?>.</h5>
     <?php } ?>
-</table>
-
-<form method="post" action="">
-    Comments:
-    <div class="from-group">
-        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Comment" required></textarea>
-    </div>
+    <h5><span class="label label-success">Lorem</span></h5><br>
+    <p><?=$page_data['content']?></p>
+    <hr>
+    <?php } ?>
+    <h4><small>RECENT COMMENTS</small></h4>
     <br>
-    <input type="submit" class="btn btn-success" value="Add Comment"/>
-</form>
+    <p><span class="badge"><?=count(Forum::getCommentsCount($page_data['id']))?></span> Comments:</p><br>
+    <?php foreach($data['comments'] as $page_data) { ?>
+    <hr>
+    <div class="row">
+        <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+        <div class="col-sm-2 text-center">
+            <?php if($user_data['avatar'] != null) { ?>
+            <img src="<?=$user_data['avatar']?>" class="img-circle" height="65" width="65" alt="Avatar">
+            <?php } else { ?>
+            <img src="/webroot/img/200x200.png" class="img-circle" height="65" width="65" alt="Avatar">
+            <?php } ?>
+        </div>
+        <div class="col-sm-10">
+            <h4><?=$user_data['nickname']?> <small><?=$page_data['date']?></small></h4>
+            <p><?=$page_data['content']?></p>
+            <br>
+        </div>
+        <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+        <?php if($user_data['id'] == Session::get('id')) { ?>
+        <div class="col-sm-12 text-right">
+            <a href="/user/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger btn-right icon-remove">delete</button></a>
+        </div>
+        <?php } ?>
+        <?php } ?>
+        <?php } ?>
+    </div>
+    <?php } ?>
+    <br><br>
+    <h4>Leave a Comment:</h4>
+    <form method="post" action="">
+        <div class="form-group">
+            <textarea type="text" id="content" name="content" class="form-control" rows="4"  required></textarea>
+        </div>
+        <input type="submit" class="btn btn-success" value="Add Comment"/>
+    </form>
+    <br><br>
+</div>
 
 </body>
 
