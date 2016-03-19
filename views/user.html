@@ -4,7 +4,9 @@
 
 <head>
     <title><?=Config::get('site_name')?></title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/webroot/css/user.css">
     <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
@@ -28,12 +30,12 @@
         <div id="navbar" class="collapse navbar-collapse">
             <?php if (Session::get('login')) { ?>
             <ul class="nav navbar-nav">
-                <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/user/pages/">Pages</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/user/forums/">Forum</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts/"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/user/pages">Pages</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/user/forums">Forum</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a <?php if ( App::getRouter()->getController() == 'profiles' ) {?>class="active"<?php } ?>href="/user/profiles/">
+                <li><a <?php if ( App::getRouter()->getController() == 'profiles' ) {?>class="active"<?php } ?>href="/user/profiles">
                     <?php if(Session::get('avatar') != null) { ?>
                     <img class="avatar img-circle" alt="avatar" src="<?=Session::get('avatar')?>" width="20" height="20">
                     <?php } else { ?>

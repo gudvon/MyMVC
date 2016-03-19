@@ -108,6 +108,11 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public static function allDiscussion(){
+        $sql = "select * from discussions";
+        return App::$db->query($sql);
+    }
+
 
     //........................ comments ..!!.. comments ..!!.. comments ..!!.. comments ..!!..
 
@@ -129,12 +134,17 @@ class Forum extends Model{
     }
 
     public static function getUser($id){
-        $sql = "select nickname, avatar, id from users WHERE id = '{$id}'";
+        $sql = "select * from users WHERE id = '{$id}'";
         return App::$db->query($sql);
     }
 
     public static function getCommentsCount($id){
         $sql = "select id from comments WHERE discussion_id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
+    public static function getLastComment($id){
+        $sql = "select user_id, `date` from comments WHERE discussion_id = '{$id}' ORDER BY date Limit 1";
         return App::$db->query($sql);
     }
 

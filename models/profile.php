@@ -15,12 +15,9 @@ class Profile extends Model{
         $login = Session::get('login');
         $id = Session::get('id');
 
-
-
         if (is_uploaded_file($_FILES["avatar"]["tmp_name"])) {
             move_uploaded_file($_FILES["avatar"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/webroot/img/avatars/{$id}.jpg");
         }
-
 
         $avatar = "/webroot/img/avatars/{$id}.jpg";
 
@@ -63,8 +60,14 @@ class Profile extends Model{
 
     public function showSave(){
         $login = Session::get('login');
-        $sql = "select nickname, `name`, phone, vk, facebook, `avatar` from users where login = '{$login}'";
+        $sql = "select * from users where login = '{$login}'";
         return $this->db->query($sql);
+    }
+
+    public function showUser($id){
+        $id = (int)$id;
+        $sql = "select * from users WHERE id = '{$id}'";
+        return App::$db->query($sql);
     }
 
 }

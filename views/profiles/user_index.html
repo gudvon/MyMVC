@@ -18,14 +18,19 @@
         position: absolute;
         left: 35%;
         top: 10%;
-
     }
 
 </style>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <body>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data" class="form-horizontal" >
     <?php if( Session::hasFlash() ){ ?>
     <div class="alert alert-danger fade in text-center" role="alert">
         <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -33,8 +38,9 @@
     </div>
     <?php } ?>
     <div class="container">
-        <h1>Edit Profile</h1>
+        <h1><b>Edit Profile</b></h1>
         <hr>
+        <br/>
         <div class="row">
             <!-- left column -->
             <div class="col-md-3">
@@ -47,44 +53,41 @@
                     <?php } ?>
                     <br/>
                     <br/>
+                    <br/>
                     <h6>Upload a different photo...</h6>
                     <input class="form-control" name="avatar" id="avatar" type="file" accept="image/*">
                 </div>
             </div>
             <!-- edit form column -->
             <div class="col-md-9 personal-info">
-                <h3 class="text-center">Personal info</h3>
-                <br/>
-                <form class="form-horizontal" role="form">
-
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Your Nickname:</label>
-                        <div class="col-lg-8">
-                            <input class="form-control" name="nickname" type="text" value="<?=$item['nickname']?>" required>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" name="nickname" id="nickname" placeholder="Nickname" value="<?=$item['nickname']?>" required />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Your Name:</label>
-                        <div class="col-lg-8">
-                            <input class="form-control" name="name" type="text" value="<?=$item['name']?>">
+                        <div class="col-lg-7">
+                            <input class="form-control" name="name" type="text" id="name" placeholder="Name" value="<?=$item['name']?>" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Your Phone:</label>
-                        <div class="col-lg-8">
-                            <input class="form-control" name="phone" type="text" value="<?=$item['phone']?>">
+                        <div class="col-lg-7">
+                            <input class="form-control" name="phone" type="text" id="phone" placeholder="Phone" value="<?=$item['phone']?>" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Vkontakte:</label>
-                        <div class="col-lg-8">
-                            <input class="form-control" name="vk" type="text" value="<?=$item['vk']?>">
+                        <div class="col-lg-7">
+                            <input class="form-control" name="vk" type="text" id="vk" placeholder="Vkontakte ID" value="<?=$item['vk']?>" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-md-3 control-label">Facebook:</label>
-                        <div class="col-md-8">
-                            <input class="form-control" name="facebook" type="text" value="<?=$item['facebook']?>">
+                        <div class="col-md-7">
+                            <input class="form-control" name="facebook" type="text" id="facebook" placeholder="Facebook ID" value="<?=$item['facebook']?>" />
                         </div>
                     </div>
                     <?php } ?>
@@ -95,10 +98,9 @@
                             <input class="btn btn-primary" type="submit" value="Save Changes">
                             <input class="btn btn-default" type="button" onClick='location.href="/user/profiles/edit"' value="Edit Password">
                             <input class="btn btn-default" type="reset" onClick='location.href="/user/"' value="Cancel">
-                            <input class="btn btn-danger btn-xs btn-right" style="margin: -25px 0 10px 485px; display:block;" type="button" onClick='location.href="/user/"' value="Delete">
+                            <input class="btn btn-danger btn-xs btn-right" style="margin: -25px 0 10px 425px; display:block;" type="button" onClick='location.href="/user/"' value="Delete">
                         </div>
                     </div>
-                </form>
             </div>
         </div>
     </div>

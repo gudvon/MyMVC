@@ -42,4 +42,8 @@ class ProfilesController extends Controller {
         }
     }
 
+    public function user_user(){
+        $this->data = $this->model->showUser($this->params[0]);
+    }
+
 }

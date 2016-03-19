@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <style>
     table tr:nth-child(even) {
         background-color: #eee;
@@ -16,12 +19,15 @@
         color: white;
     }
 </style>
+
 <body>
+
 <?php if( Session::hasFlash() ){ ?>
 <div class="alert alert-danger text-center" role="alert">
     <strong><?php Session::flash(); ?>!</strong>
 </div>
 <?php } ?>
+
 <table class="table table-striped" style="width: 1000px;">
     <tr>
         <th colspan="2" class="text-center" style="font-size:20px">Discussions</th>
@@ -46,6 +52,6 @@
     <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
 </div>
 
-
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+table tr:nth-child(even) {
+    background-color: white;
+}
+table tr:nth-child(odd) {
+    background-color: white;
+}
+table th	{
+    background-color: black;
+    color: orange;
+}
+
+body:not(.nohover) tbody tr:hover {
+    background-color: lightgray;
+}
+
+
+
