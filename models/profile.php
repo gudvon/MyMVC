@@ -67,7 +67,17 @@ class Profile extends Model{
     public function showUser($id){
         $id = (int)$id;
         $sql = "select * from users WHERE id = '{$id}'";
-        return App::$db->query($sql);
+        return $this->db->query($sql);
+    }
+
+    public function deleteUser($id){
+        $sql1 = "delete from users WHERE id = '{$id}'";
+        $sql2 = "delete from comments WHERE user_id = '{$id}'";
+        $sql3 = "delete from discussions WHERE user_id = '{$id}'";
+        $this->db->query($sql1);
+        $this->db->query($sql2);
+        $this->db->query($sql3);
+        return $sql3;
     }
 
 }

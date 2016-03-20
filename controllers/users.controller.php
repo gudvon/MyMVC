@@ -35,9 +35,11 @@ class UsersController extends Controller{
                 Session::set('role', $userlog['role']);
                 Session::set('id', $userlog['id']);
                 Session::set('avatar', $userlog['avatar']);
+                Session::set('nickname', $userlog['nickname']);
                 Router::redirect('/user/');
             } else {
                 Router::redirect('/users/login');
+                Session::setFlash("The entered login Wrong");
             }
         }
     }
@@ -66,8 +68,11 @@ class UsersController extends Controller{
                 'password' => md5(Config::get('salt').$password)
             );
             if ($this->model->setUserRegistration($dataarray)){
-                Session::setFlash("regestration is ok");
+                Router::redirect('/users/login');
+                $this->login();
+                Router::redirect('/user/profiles');
             }
         }
     }
+
 }

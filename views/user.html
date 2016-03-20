@@ -41,7 +41,13 @@
                     <?php } else { ?>
                     <img class="avatar img-circle" alt="avatar" src="/webroot/img/200x200.png" width="20" height="20">
                     <?php } ?>
-                    <?=Session::get('login')?></a></li>
+                    <?php if(Session::get('nickname')) { ?>
+                    <?=Session::get('nickname')?>
+                    <?php } else { ?>
+                    <?=Session::get('login')?>
+                    <?php } ?>
+                    </a>
+                </li>
                 <li><a href="/user/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
             <?php } ?>

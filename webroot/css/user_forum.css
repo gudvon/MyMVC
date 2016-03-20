@@ -1,0 +1,28 @@
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color:#fff;
+}
+
+table th	{
+    background-color: black;
+    color: orange;
+}
+
+body {
+    margin: 0;
+    color: #8d9aa5;
+    background-color: #ecf0f1;
+
+}
+
+.forum-image {
+    float:left; /* Выравнивание по левому краю */
+    margin: 2px 11px 11px 10px; /* Отступы вокруг картинки */
+}
+
+body:not(.nohover) tbody tr:hover {
+    background-color: lightgray;
+}

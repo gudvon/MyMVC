@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title><?=Config::get('site_name')?></title>
         <meta charset="utf-8">
@@ -14,6 +15,7 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -44,6 +46,7 @@
         </div>
     </div>
 </nav>
+
 <div class="container">
     <div class="starter-template">
         <?php if( Session::hasFlash() ){ ?>
@@ -54,5 +57,7 @@
         <?=$data['content']?>
     </div>
 </div>
+
 </body>
+
 </html>

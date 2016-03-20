@@ -29,6 +29,11 @@
     <div class="container">
         <h1><b>Edit Password</b></h1>
         <hr>
+        <?php if( Session::hasFlash() ){ ?>
+        <div class="alert alert-info" role="alert">
+            <?php Session::flash(); ?>
+        </div>
+        <?php } ?>
         <div class="row">
             <div class="col-md-9 personal-info">
                 <br/>

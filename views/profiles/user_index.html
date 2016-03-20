@@ -22,6 +22,8 @@
 
 </style>
 
+<script src="/webroot/js/profile_delete.js"></script>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +65,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Your Nickname:</label>
                         <div class="col-lg-7">
-                            <input type="text" class="form-control" name="nickname" id="nickname" placeholder="Nickname" value="<?=$item['nickname']?>" required />
+                            <input type="text" class="form-control" name="nickname" id="nickname" placeholder="Nickname" value="<?=$item['nickname']?>" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -90,7 +92,7 @@
                             <input class="form-control" name="facebook" type="text" id="facebook" placeholder="Facebook ID" value="<?=$item['facebook']?>" />
                         </div>
                     </div>
-                    <?php } ?>
+
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-8">
@@ -98,9 +100,10 @@
                             <input class="btn btn-primary" type="submit" value="Save Changes">
                             <input class="btn btn-default" type="button" onClick='location.href="/user/profiles/edit"' value="Edit Password">
                             <input class="btn btn-default" type="reset" onClick='location.href="/user/"' value="Cancel">
-                            <input class="btn btn-danger btn-xs btn-right" style="margin: -25px 0 10px 425px; display:block;" type="button" onClick='location.href="/user/"' value="Delete">
+                            <button type="button" class="btn btn-danger btn-xs" onClick='return confirmDelete();' style="margin: -34px 0 10px 450px; display:block;"  >&#10052;</button>
                         </div>
                     </div>
+                <?php } ?>
             </div>
         </div>
     </div>

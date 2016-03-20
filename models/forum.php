@@ -55,12 +55,32 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public static function getAllDiscussionById($id){
+        $id = (int)$id;
+        $sql = "select id from discussions WHERE category_id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
+    public static function getAllCommentsById($id){
+        $id = (int)$id;
+        $sql = "select comments.id from comments, discussions WHERE comments.discussion_id = discussions.id and discussions.category_id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
+    public static function getLastUserCommentById($id){
+        $id = (int)$id;
+        $sql = "select comments.* from comments, discussions WHERE comments.discussion_id = discussions.id and discussions.category_id = '{$id}' ORDER BY comments.date DESC Limit 1";
+        return App::$db->query($sql);
+    }
+
+    public static function getLastUserDiscussionById($id){
+        $id = (int)$id;
+        $sql = "select discussions.* from comments, discussions WHERE comments.discussion_id = discussions.id and discussions.category_id = '{$id}' ORDER BY comments.date DESC Limit 1";
+        return App::$db->query($sql);
+    }
+
 
     //........................ discussions ..!!.. discussions ..!!.. discussions ..!!.. discussions ..!!..
-
-    public function lastDiscussion(){
-
-    }
 
     public function checkCategory_id($cat_id){
         $sql = "select * from discussions WHERE category_id = '{$cat_id}'";
@@ -144,7 +164,7 @@ class Forum extends Model{
     }
 
     public static function getLastComment($id){
-        $sql = "select user_id, `date` from comments WHERE discussion_id = '{$id}' ORDER BY date Limit 1";
+        $sql = "select user_id, `date` from comments WHERE discussion_id = '{$id}' ORDER BY `date` DESC limit 1";
         return App::$db->query($sql);
     }
 

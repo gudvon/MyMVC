@@ -18,6 +18,8 @@
     </div>
 </div>
 
+<br>
+
 <div class="panel panel-forum">
     <div class="panel-heading">
         </div>
@@ -35,7 +37,7 @@
             <tbody>
             <?php foreach($data['discussions'] as $page_data) { ?>
             <tr>
-                <td class="expand footable-visible footable-first-column"><span class="footable-toggle"></span>
+                <td class="expand footable-visible footable-first-column" style="width: 65%;"><span class="footable-toggle"></span>
                     <span class="icon-wrapper">
 			    <i class="row-icon-font icon-moon-default2 icon-moon-voice2 forum-read" title="No unread posts"></i>
 				</span>
@@ -49,7 +51,7 @@
                         <small>&nbsp;-&nbsp;<?=$page_data['date']?></small>
                     </div>
                 </td>
-                <td class="stats-col footable-visible active">
+                <td class="stats-col footable-visible active" style="width: 15%;">
 			 <span class="stats-wrapper "><?=count(Forum::getCommentsCount($page_data['id']))?>&nbsp;Comments&nbsp;<br></span>
                 </td>
                 <?php foreach(Forum::getLastComment($page_data['id']) as $comment_data) {?>
@@ -67,6 +69,12 @@
             </tbody>
 
         </table>
+    </div>
+</div>
+
+<div class="clearfix">
+    <div class="pull-left">
+        <a href="/user/forums/add_discussions/<?=$data['forums']['id']?>" role="button" class="btn btn-default btn-load" data-loading-text="Loading&nbsp;<i class='fa-spin fa fa-spinner fa-lg icon-white'></i>" data-original-title="" title=""><i class="fa fa-plus"></i>&nbsp;Add Topic</a>
     </div>
 </div>
 

@@ -20,7 +20,10 @@ class ProfilesController extends Controller {
     public function user_index(){
         $this->data = $this->model->showSave();
         if ($_POST){
-            $this->model->save($_POST);
+            if ($this->model->save($_POST)){
+                Router::redirect('/user/profiles');
+                Session::set('nickname', $_POST['nickname']);
+            }
         }
     }
 
@@ -40,6 +43,16 @@ class ProfilesController extends Controller {
                 Session::setFlash("The entered password changed");
             }
         }
+    }
+
+    public function user_delete(){
+        $result = $this->model->deleteUser(Session::get('id'));
+        if ($result) {
+            Session::setFlash('Page was deleted.');
+        } else {
+            Session::setFlash('Error');
+        }
+        Router::redirect('/users/registration');
     }
 
     public function user_user(){

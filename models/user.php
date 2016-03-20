@@ -47,11 +47,8 @@ class User extends Model{
         foreach ($dataarray as $data) {
             $array[] = "'" . $data . "'";
         }
-        $result = $this->db->query("INSERT INTO users (login,email,role,password) VALUES (".implode(',',$array).")");
-        if (isset($result[0])){
-            return $result[0];
-        }
-        return false;
+        $sql = $this->db->query("INSERT INTO users (login,email,role,password) VALUES (".implode(',',$array).")");
+        return $sql;
     }
 
 }
