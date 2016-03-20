@@ -2,16 +2,7 @@
 <html lang="en">
 
 <style>
-    table tr:nth-child(even) {
-        background-color: whitesmoke;
-    }
-    table tr:nth-child(odd) {
-        background-color:ghostwhite;
-    }
-    table th	{
-        background-color: green;
-        color: white;
-    }
+
 </style>
 
 <head>
@@ -20,31 +11,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+<link rel="stylesheet" href="/webroot/css/user_forum.css">
+
 <body>
 
-<table class="table table-striped" style="width: 1000px;">
-    <tr>
-        <th colspan="2" class="text-center" style="font-size:20px">Category</th>
+<div class="panel panel-forum">
 
+    <div class="panel-heading">
+        <a href="" data-original-title="" title="">First category</a>
+    </div>
 
-    </tr>
-    <?php foreach($data['forums'] as $page_data) { ?>
-    <tr>
-        <td class="leftpart"><b><a href="/forums/discussions/<?=$page_data['id']?>" style="font-family: Arial; font-size:30px"><?=$page_data['title']?></a>
-            <br>
-            <?=$page_data['content']?>
-        </b></td>
-        <?php } ?>
+    <div class="panel-inner">
+        <table class="footable table table-striped table-primary table-hover footable-loaded tablet">
 
+            <thead>
+            <tr>
+                <th data-class="expand" class="footable-visible footable-first-column">Title</th>
+                <th class="large110 footable-visible" data-hide="phone">Statistics</th>
+                <th class="large21 footable-visible footable-last-column" data-hide="phone">Last post</th>
+            </tr>
+            </thead>
 
+            <tbody>
+            <?php foreach($data['forums'] as $page_data) { ?>
+            <tr>
+                <td title="No unread posts" class="expand footable-visible footable-first-column" style="width: 60%;"><span class="footable-toggle"></span>
+                    <span class="forum-image"><img src="/webroot/img/forum_avatars/printer.png" width="45" height="45" alt="No unread posts"></span>
+                    <a href="/forums/discussions/<?=$page_data['id']?>" class="forumtitle" data-original-title="" title="" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: darkred; font-size: 20px;"><?=$page_data['title']?></a>
+                    <br>
+                    <span class="description" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: black;"><?=$page_data['content']?></span>
+                    <br>
+                </td>
+                <td class="stats-col footable-visible active" style="width: 15%;>
+			 <span class="stats-wrapper">
+                <?=count(Forum::getAllDiscussionById($page_data['id']))?>&nbsp;Topics&nbsp;<br><?=count(Forum::getAllCommentsById($page_data['id']))?>&nbsp;Posts
+                </span>
+                </td>
+                <?php foreach(Forum::getLastUserCommentById($page_data['id']) as $comment_data) {?>
+                <?php foreach(Forum::getUser($comment_data['user_id']) as $user_data) {?>
+                <?php foreach(Forum::getLastUserDiscussionById($page_data['id']) as $discus_data) {?>
+                <td class="footable-visible footable-last-column">
+			  <span class="last-wrapper text-overflow"><a href="/forums/comments/<?=$discus_data['id']?>" title="" class="lastsubject" data-original-title="">Re: <?=$discus_data['title']?></a><br>
+                  by&nbsp;<a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
+                  <br>
+                  <span class="forum-time"><?=$comment_data['date']?></span>
+              </span>
+                </td>
+                <?php } ?>
+                <?php } ?>
+                <?php } ?>
+            </tr>
+            <?php } ?>
+            </tbody>
 
-
-        </td>
-    </tr>
-
-</table>
-
-<div>
+        </table>
+    </div>
 
 </div>
 

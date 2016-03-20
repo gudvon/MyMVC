@@ -10,6 +10,16 @@
 <body>
 
 <form method="post" action="">
+    <select name="issuetype" id="issuetype">
+        <option value="1" class="imagebacked" style="background-image: url(/webroot/img/forum_avatars/bill.png);" selected>  </option>
+        <option value="2" class="imagebacked" style="background-image: url(/webroot/img/forum_avatars/cart.png);">    </option>
+        <option value="3" class="imagebacked" style="background-image: url(/webroot/img/forum_avatars/colorwheel.png);">    </option>
+        <option value="4" class="imagebacked" style="background-image: url(/webroot/img/forum_avatars/folder.png);">   </option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
     Category name:
     <div class="from-group">
         <label  class="sr-only">Name</label>
@@ -19,7 +29,7 @@
     Category description:
     <div class="from-group">
         <label class="sr-only">Description</label>
-        <textarea type="text"  name="content" class="form-control" placeholder="Description"></textarea>
+        <textarea type="text"  name="content" class="form-control" placeholder="Description" rows="6"></textarea>
     </div>
     <br>
     <input type="submit" class="btn btn-success" value="Add category"/>

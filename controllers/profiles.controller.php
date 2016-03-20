@@ -17,6 +17,10 @@ class ProfilesController extends Controller {
         $this->data = $this->model->getList();
     }
 
+    public function admin_user(){
+        $this->data = $this->model->showUser($this->params[0]);
+    }
+
     public function user_index(){
         $this->data = $this->model->showSave();
         if ($_POST){

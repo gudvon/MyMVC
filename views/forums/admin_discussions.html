@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,49 +8,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<style>
-    table tr:nth-child(even) {
-        background-color: #eee;
-    }
-    table tr:nth-child(odd) {
-        background-color:#fff;
-    }
-    table th	{
-        background-color: black;
-        color: white;
-    }
-</style>
+<link rel="stylesheet" href="/webroot/css/admin_discuss.css">
 
 <body>
 
-<?php if( Session::hasFlash() ){ ?>
-<div class="alert alert-danger text-center" role="alert">
-    <strong><?php Session::flash(); ?>!</strong>
+<div class="clearfix">
+    <div>
+        <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
+    </div>
 </div>
-<?php } ?>
 
-<table class="table table-striped" style="width: 1000px;">
-    <tr>
-        <th colspan="2" class="text-center" style="font-size:20px">Discussions</th>
-    </tr>
-    <?php foreach($data['discussions'] as $page_data) { ?>
-    <tr>
-        <td ><b><a href="/admin/forums/comments/<?=$page_data['id']?>" style="font-family: Arial; font-size:20px"><?=$page_data['title']?></a>
-            <br>
-            <?=$page_data['alias']?>
-            <br>
-            <?=$page_data['content']?>
-        </b>
-        </td>
-        <td align="right">
-            <a href="/admin/forums/delete_discussions/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger">delete</button></a>
-        </td>
-    </tr>
-    <?php } ?>
-</table>
+<br>
 
-<div>
-    <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
+<div class="panel panel-forum">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-inner">
+        <table class="table table-primary table-hover tablet">
+
+            <thead>
+            <tr>
+                <th data-class="expand" class="footable-visible footable-first-column">Title</th>
+                <th class="large110 footable-visible" data-hide="phone">Statistics</th>
+                <th class="large21 footable-visible footable-last-column" data-hide="phone">Last post</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <?php foreach($data['discussions'] as $page_data) { ?>
+            <tr>
+                <td class="expand footable-visible footable-first-column" style="width: 65%;"><span class="footable-toggle"></span>
+                    <span class="icon-wrapper">
+			    <i class="row-icon-font icon-moon-default2 icon-moon-voice2 forum-read" title="No unread posts"></i>
+				</span>
+                    <i class="row-icon-font-mini" title="No unread posts"></i>
+                    <div class="desc-wrapper">
+                        <a href="/admin/forums/comments/<?=$page_data['id']?>" style="color: black;" class="topictitle" data-original-title="" title="<?=$page_data['alias']?>">&nbsp;<?=$page_data['title']?></a>
+                        <br>
+                        <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+                        by&nbsp;<a href="/admin/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
+                        <?php } ?>
+                        <small>&nbsp;-&nbsp;<?=$page_data['date']?></small>
+                        <a href="/admin/forums/delete_discussions/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger">delete</button></a>
+                    </div>
+                </td>
+                <td class="stats-col footable-visible active" style="width: 15%;">
+                    <span class="stats-wrapper "><?=count(Forum::getCommentsCount($page_data['id']))?>&nbsp;Comments&nbsp;<br></span>
+                </td>
+                <?php foreach(Forum::getLastComment($page_data['id']) as $comment_data) {?>
+                <td class="footable-visible footable-last-column">
+			<span class="last-wrapper text-overflow">
+                <?php foreach(Forum::getUser($comment_data['user_id']) as $user_data) {?>
+                by&nbsp;<a href="/admin/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
+                <?php } ?>
+                <br><small><?=$comment_data['date']?></small>
+			</span>
+                </td>
+                <?php } ?>
+            </tr>
+            <?php } ?>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<div class="clearfix">
+    <div>
+        <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
+    </div>
 </div>
 
 </body>

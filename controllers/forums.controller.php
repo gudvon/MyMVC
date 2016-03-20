@@ -120,6 +120,7 @@ class ForumsController extends Controller{
     }
 
 
+    //........................ default ..!!.. default ..!!.. default ..!!.. default ..!!..
 
     public function index(){
         $this->data['forums'] = $this->model->getCategory();
@@ -130,11 +131,16 @@ class ForumsController extends Controller{
         $this->data['forums'] = $this->model->getById($this->params[0]);
     }
 
+    public function comments(){
+        $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
+        $this->data['comments'] = $this->model->getComments($this->params[0]);
+    }
+
 
     //........................ comments ..!!.. comments ..!!.. comments ..!!.. comments ..!!..
 
     public function admin_comments(){
-        $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
         $this->data['comments'] = $this->model->getComments($this->params[0]);
         Session::set('comments_id', $this->params[0]);
     }
