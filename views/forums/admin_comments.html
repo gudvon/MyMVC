@@ -14,7 +14,9 @@
     <?php foreach($data['discussions'] as $page_data) { ?>
     <h2><?=$page_data['title']?></h2>
     <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
-    <h5><span class="glyphicon glyphicon-time"></span> Post by <?=$user_data['nickname']?>, <?=$page_data['date']?>.</h5>
+    <h5><span class="glyphicon glyphicon-time"></span> Post by
+        <a href="/admin/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title="">
+        <?=$user_data['nickname']?></a>, <?=$page_data['date']?>.</h5>
     <?php } ?>
     <h5><span class="label label-success">Lorem</span></h5><br>
     <p><?=$page_data['content']?></p>
@@ -46,6 +48,10 @@
         <?php } ?>
     </div>
     <?php } ?>
+    <br><br>
+    <div  class="form-group" >
+        <input class="btn btn-default" type="reset" onclick="history.back()" value="Back">
+    </div>
     <br><br>
 </div>
 
