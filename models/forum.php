@@ -9,26 +9,34 @@
 class Forum extends Model{
 
     public function saveCategory($data, $id = null){
-        if (!isset($data['title']) || !isset($data['content'])){
+        if (!isset($data['title']) || !isset($data['content']) || !isset($data['category_picture'])){
             return false;
         }
+
         $id = (int)$id;
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
+        $category_picture = $data['category_picture'];
+
+        $category_avatar = "/webroot/img/forum_avatars/{$category_picture}.png";
+
         if (!$id){
             $sql = "
             insert into categories
                 set title = '{$title}',
-                content = '{$content}'
+                content = '{$content}',
+                avatar = '{$category_avatar}'
                 ";
         } else {
             $sql = "
             update categories
                 set title = '{$title}',
-                content = '{$content}'
+                content = '{$content}',
+                avatar = '{$category_avatar}'
                 where id = {$id}
             ";
         }
+
         return $this->db->query($sql);
     }
 

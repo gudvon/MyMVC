@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 20 2016 г., 17:57
+-- Время создания: Мар 21 2016 г., 15:02
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 7.0.3
 
@@ -29,19 +29,21 @@ SET time_zone = "+00:00";
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
   `title` varchar(100) DEFAULT NULL,
-  `content` text
+  `content` text,
+  `avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Дамп данных таблицы `categories`
 --
 
-INSERT INTO `categories` (`id`, `title`, `content`) VALUES
-(1, 'Apple', 'All Apple''s products'),
-(2, 'Samsung', 'All Samsung''s products'),
-(3, 'HTS', 'All HTS''s products'),
-(4, 'Microsoft', 'All Microsoft''s products'),
-(5, 'FLUD FOR ALL', 'Testing this forum');
+INSERT INTO `categories` (`id`, `title`, `content`, `avatar`) VALUES
+(1, 'Apple', 'All Apple''s products', NULL),
+(2, 'Samsung', 'All Samsung''s products', NULL),
+(3, 'HTS', 'All HTS''s products', NULL),
+(4, 'Microsoft', 'All Microsoft''s products', NULL),
+(5, 'FLUD FOR ALL', 'Testing this forum', '/webroot/img/forum_avatars/twit.png'),
+(8, 'test Category ', 'test description', '/webroot/img/forum_avatars/roadblock.png');
 
 -- --------------------------------------------------------
 
@@ -74,23 +76,18 @@ INSERT INTO `comments` (`id`, `content`, `date`, `discussion_id`, `user_id`) VAL
 (44, 'Qweerty', '2016-03-19 20:39:09', 2, 2),
 (45, 'it was way too saucy and I moved it! :-) Funny isn''t it???', '2016-03-20 00:36:35', 5, 5),
 (46, 'Normal Announcement. You can see the icon status in the main topic list. The sky is blue as the grass is Green!!!!!!!!!!!', '2016-03-20 00:36:53', 7, 3),
-(47, 'my comment', '2016-03-20 02:01:59', 1, 7),
-(48, 'enter to your profile and edit you nickname)', '2016-03-20 02:04:12', 1, 2),
 (49, 'and i have problems whith avatars from last time)', '2016-03-20 02:04:49', 1, 2),
-(50, 'comment', '2016-03-20 02:06:01', 6, 7),
-(51, 'comment', '2016-03-20 02:06:20', 4, 7),
-(52, 'hi', '2016-03-20 02:07:28', 90, 7),
 (53, 'Ð½Ð°Ñ„Ð¸Ð³ Ð¿Ð¸Ð»Ð¸Ñ‚ÑŒ ÐºÐ°ÐºÐ¾Ð¹Ñ‚Ð¾ Ñ‚Ð°Ð¼ Ð°Ð»Ð¸Ð°Ñ ÐµÑÐ»Ð¸ Ñ‚Ñ‹ ÐµÐ³Ð¾ Ð½Ðµ Ð²Ñ‹Ð²Ð¾Ð´Ð¸ÑˆÑŒ ÐµÐ¿Ñ‚', '2016-03-20 02:15:19', 92, 8),
 (54, 'Bug about registration no redirect\r\nAnother bug about litle avatar at the top panel', '2016-03-20 02:15:25', 91, 2),
 (55, 'Ð¸ ÐºÐ°ÐºÐ¾Ð¹ Ð½Ð°Ñ… ÐµÑ‰Ðµ Ð»Ð¾Ñ€ÐµÐ¼ Ð² Ð·ÐµÐ»ÐµÐ½Ð¾Ðµ Ð¿Ð¾ÐµÐ±Ð¾Ñ‚Ðµ', '2016-03-20 02:15:45', 92, 8),
-(56, 'there isn`t little Alisa on the top of page!', '2016-03-20 02:16:11', 91, 7),
 (57, 'Ð´Ð° Ñ‚Ð¾ Ð·Ð°Ð±ÐµÐ¹ - Ð±ÑƒÐ´Ñƒ ÑƒÐ±Ð¸Ñ€Ð°Ñ‚ÑŒ\r\nÐ° Ñ Ð¿Ð¾Ð»ÑÐ¼Ð¸ Ð½Ðµ Ð¿Ð¾Ð½ÑÐ» - Ñƒ Ð¼ÐµÐ½Ñ Ð²ÑÐµ Ð¾Ðº', '2016-03-20 02:16:17', 92, 2),
 (58, 'ÐžÐºÐ°Ð·Ñ‹Ð²Ð°ÐµÑ‚ÑÑ Ñ€ÑƒÑ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚)', '2016-03-20 02:16:53', 91, 2),
 (59, 'Ð¸ Ð½Ð¸Ðº ÑÐ²Ð¾Ð¹ Ð¿Ð¾ÑÑ‚Ð°Ð²ÑŒ Ð² Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ðµ - Ð½Ðµ Ð²Ð¸Ð´Ð½Ð¾ Ð¶ ÐºÑ‚Ð¾ Ð¿Ð¸ÑˆÐµÑ‚', '2016-03-20 02:17:20', 92, 2),
 (60, 'ÐºÑÑ‚Ð°Ñ‚Ð¸ Ð´Ð° - Ð¿Ð¾ Ð´ÐµÑ„Ð¾Ð»Ñ‚Ñƒ Ð½Ð°Ð´Ð¾ Ð¿Ð¾ÑÑ‚Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¸Ðº ÑŽÐ·ÐµÑ€Ð°', '2016-03-20 02:18:03', 92, 2),
 (64, 'fghrtyrtyryr', '2016-03-20 17:59:14', 91, 5),
 (65, 'ghjghjghjghj', '2016-03-20 18:00:27', 2, 5),
-(66, 'fghfghfghf', '2016-03-20 18:00:41', 2, 5);
+(66, 'fghfghfghf', '2016-03-20 18:00:41', 2, 5),
+(73, 'Ñ‹Ð¿Ñ€Ð°Ñ€Ð°Ð¿Ñ€Ð°Ð¿Ð¿Ð¸Ð°Ð¸', '2016-03-20 20:41:31', 1, 22);
 
 -- --------------------------------------------------------
 
@@ -120,7 +117,6 @@ INSERT INTO `discussions` (`id`, `alias`, `title`, `content`, `date`, `category_
 (5, 'alias  alias  alias', 'RESPONSIVE IMAGES - RESIZED AUTOMATICALLY', 'it was way too saucy and I moved it! :-) Funny isn''t it???', '2016-03-13 12:19:07', 1, 3),
 (6, 'name 6', 'title 6', 'description 6', '2016-03-13 12:20:16', 2, 1),
 (7, 'alias  alias  alias', 'NORMAL ANNOUNCEMENT EXAMPLE - NOTE THE FONT ICON STATUS', 'Normal Announcement. You can see the icon status in the main topic list.\r\nThe sky is blue as the grass is\r\nGreen!!!!!!!!!!!', '2016-03-19 18:34:24', 1, 5),
-(90, 'bla bla', 'my topic', 'bla bla bla', '2016-03-20 02:07:17', 4, 7),
 (91, 'Bugs', 'Bugs', 'Forum Bugs and Errors', '2016-03-20 02:12:32', 5, 2),
 (92, 'Ð° Ñ Ñ„Ð¸Ð³Ð»Ð¸ Ð¾Ð½Ð¾ Ð¾Ñ‚Ð´ÐµÐ»ÑŒÐ½Ð¾ Ñ‚Ð¾', 'Ð´Ð° Ñ‚Ñ‹ Ð±Ð¾Ð»ÐµÐ½ Ñ‚Ð°ÐºÐ¸Ðµ Ð¿Ð¾Ð»Ñ Ð¿Ð¸Ð»Ð¸Ñ‚ÑŒ', 'Ñ Ñƒ Ð¼Ð°Ð¼Ñ‹ ÑÐ¾Ð»Ð½Ñ‹ÑˆÐºÐ¾, Ð° Ñ‚Ñ‹ - Ð½ÐµÑ‚', '2016-03-20 02:14:44', 5, 8);
 
@@ -164,7 +160,8 @@ CREATE TABLE `pages` (
 
 INSERT INTO `pages` (`id`, `alias`, `title`, `content`, `is_published`) VALUES
 (1, 'Bug report Ver. 2.4 (1.0)', 'Bug report Ver. 2.4 (1.0)', 'Ver. 2.4 (1.0)\r\n---Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ€ÐµÐ´Ð¸Ñ€ÐµÐºÑ‚ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ð¸ (Ð¸ Ð¾Ð¿Ð¾Ð²ÐµÑ‰ÐµÐ½Ð¸Ðµ);  \r\n---Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ð¼Ð°Ð»ÐµÐ½ÑŒÐºÐ°Ñ ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ° ÑŽÐ·ÐµÑ€Ð° Ð²Ð¾Ð·Ð»Ðµ Ð½Ð¸ÐºÐ° ÑÐ²ÐµÑ€Ñ…Ñƒ;  \r\n---Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ñ ÑŽÐ·ÐµÑ€Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð½ÐµÐ½Ð¸Ñ;  \r\n', 1),
-(4, 'Bug report Ver. 2.4.1 (1.0.1)', 'Bug report Ver. 2.4.1 (1.0.1)', 'Ver. 2.4.1 (1.0.1)\r\n+++(Done)Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ€ÐµÐ´Ð¸Ñ€ÐµÐºÑ‚ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ð¸ (Ð¸ Ð¾Ð¿Ð¾Ð²ÐµÑ‰ÐµÐ½Ð¸Ðµ);  \r\n+++(Done)Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ð¼Ð°Ð»ÐµÐ½ÑŒÐºÐ°Ñ ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ° ÑŽÐ·ÐµÑ€Ð° Ð²Ð¾Ð·Ð»Ðµ Ð½Ð¸ÐºÐ° ÑÐ²ÐµÑ€Ñ…Ñƒ;  \r\n+++(Done)Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ñ ÑŽÐ·ÐµÑ€Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð½ÐµÐ½Ð¸Ñ;  \r\n+++ÐºÐ½Ð¾Ð¿ÐºÐ° Ð½Ð°Ð·Ð°Ð´ Ð² Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ\r\n+++Ð³Ð»Ð°Ð²Ð½Ð°Ñ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ð° Ñ„Ð¾Ñ€ÑƒÐ¼Ð°\r\n+++ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ñ', 1);
+(4, 'Ver. 2.4.1 (1.0.1)', 'Ver. 2.4.1 (1.0.1)', 'Ver. 2.4.1 (1.0.1)\r\n+++(Done)Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ€ÐµÐ´Ð¸Ñ€ÐµÐºÑ‚ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ð¸ (Ð¸ Ð¾Ð¿Ð¾Ð²ÐµÑ‰ÐµÐ½Ð¸Ðµ);  \r\n+++(Done)Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ð¼Ð°Ð»ÐµÐ½ÑŒÐºÐ°Ñ ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ° ÑŽÐ·ÐµÑ€Ð° Ð²Ð¾Ð·Ð»Ðµ Ð½Ð¸ÐºÐ° ÑÐ²ÐµÑ€Ñ…Ñƒ;  \r\n+++(Done)Ð½Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ñ ÑŽÐ·ÐµÑ€Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð½ÐµÐ½Ð¸Ñ;  \r\n+++ÐºÐ½Ð¾Ð¿ÐºÐ° Ð½Ð°Ð·Ð°Ð´ Ð² Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð³Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ\r\n+++Ð³Ð»Ð°Ð²Ð½Ð°Ñ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ð° Ñ„Ð¾Ñ€ÑƒÐ¼Ð° (ÑŽÐ·ÐµÑ€ Ð¸ Ð´ÐµÑ„Ð°Ð»Ñ‚ (Ð¿Ñ€Ð¾Ñ„Ð¸Ð»ÑŒ ÑŽÐ·ÐµÑ€Ð° Ð´Ð»Ñ Ð´ÐµÑ„Ð°Ð»Ñ‚ Ð½ÐµÐ´Ð¾ÑÑ‚ÑƒÐ¿ÐµÐ½))\r\n+++ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ñ„Ð¸Ð»Ñ\r\n+++Ð¿Ð¾Ð´Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½ Contact Us\r\n+++Ñ„Ð¾Ñ€ÑƒÐ¼ Ð°Ð´Ð¼Ð¸Ð½Ð¸ÑÑ‚Ñ€Ð°Ñ‚Ð¾Ñ€Ð°', 1),
+(6, 'Ver. 2.4.2 (1.0.2)', 'Ver. 2.4.2 (1.0.2)', 'Ver. 2.4.2 (1.0.2) +++Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð° Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð²Ñ‹Ð±Ð¾Ñ€Ð° Ð°Ð²Ð°Ñ‚Ð°Ñ€ÐºÐ¸ Ð´Ð»Ñ ÐºÐ°Ñ‚ÐµÐ³Ð¾Ñ€Ð¸Ð¸ Ð¸ Ð¿ÐµÑ€ÐµÐ´ÐµÐ»Ð°Ð½Ð½Ð¾ ÑÐ°Ð¼Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ', 1);
 
 -- --------------------------------------------------------
 
@@ -198,8 +195,8 @@ INSERT INTO `users` (`id`, `login`, `email`, `role`, `password`, `is_active`, `n
 (3, 'user2', 'user2@mail', 'user', '0073c7c57f5bb6a7e8b9610f7c541a35', 1, 'Griwyn', 'Артём Адамович', '0987654321', 'id562115673', 'id2522stw3535', NULL, NULL),
 (4, 'dasha', 'darja-b@ukr.net', 'user', 'f45fb5f812f1113c2f9089efd7496203', 1, '', '', '', '', '', NULL, NULL),
 (5, 'user3', 'user3@mail', 'user', '4d54276ea258cbe84653d4d55d778067', 1, 'Shaktir', '???? ?????????', '02543737543', '', '', NULL, '/webroot/img/avatars/5.jpg'),
-(7, 'dashka', 'dashka@gmail.com', 'user', '05dad949e0757975674a41886812c116', 1, 'dashka', 'dasha', '123', '123', '123', NULL, '/webroot/img/avatars/7.jpg'),
-(8, 'fff', 'fff', 'user', '55cfe64cb98a032938aa97478ae561cb', 1, 'ÐºÐ°ÐºÐ¾Ð³Ð¾ Ñ…ÐµÑ€Ð° Ñ‚ÑƒÑ‚ Ñ‚Ð°ÐºÐ°Ñ ', 'Ð½Ñƒ Ñ Ð¸Ð¼ÐµÐ½ÐµÐ¼ ÑÑÐ½Ð¾', '', '', '', NULL, '/webroot/img/avatars/8.jpg');
+(8, 'fff', 'fff', 'user', '55cfe64cb98a032938aa97478ae561cb', 1, 'ÐºÐ°ÐºÐ¾Ð³Ð¾ Ñ…ÐµÑ€Ð° Ñ‚ÑƒÑ‚ Ñ‚Ð°ÐºÐ°Ñ ', 'Ð½Ñƒ Ñ Ð¸Ð¼ÐµÐ½ÐµÐ¼ ÑÑÐ½Ð¾', '', '', '', NULL, '/webroot/img/avatars/8.jpg'),
+(22, 'dashka', 'darja-b@ukr.net', 'user', 'f45fb5f812f1113c2f9089efd7496203', 1, 'dasha', 'dasha2', '123', '123', '123', NULL, '/webroot/img/avatars/22.jpg');
 
 --
 -- Индексы сохранённых таблиц
@@ -249,12 +246,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT для таблицы `discussions`
 --
@@ -264,17 +261,17 @@ ALTER TABLE `discussions`
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

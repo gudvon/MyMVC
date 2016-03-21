@@ -1,21 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+
+    body:before{
+        content: '';
+        position: absolute; top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ccc url('/webroot/img/05.jpg') no-repeat;
+        background-size: cover;
+        -webkit-filter: blur(7px);
+        filter: blur(7px);
+    }
+    form{
+        -webkit-filter: blur(0px) !important;
+        filter: blur(0px) !important;
+    }
+
+</style>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/webroot/css/dd.css" />
+    <script src="/webroot/js/jquery.dd.min.js"></script>
 </head>
 
-<h3>Edit page</h3><br/>
-<form method="post" action="">
+<script>
+
+    $(document).ready(function(e) {
+        $("#category_picture").msDropdown({visibleRows:7});
+        $("#tech").msDropdown();
+    });
+
+</script>
+
+<body>
+
+<form class="form-horizontal" role="form" action="" method="post" >
     <input type="hidden" name="id" value="<?=$data['forum']['id']?>" />
-    <div class="from-group">
-        <label for="title">Category name:</label>
-        <input type="text"  id="title" name="title" class="form-control" value="<?=$data['forum']['title']?>" />
+    <div class="container" >
+        <h1><b>Edit Category</b></h1>
+        <hr>
+        <div class="row" >
+            <div class="col-md-9 personal-info">
+                <br/>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Select Category picture</label>
+                    <div class="col-lg-6">
+                        <select id="category_picture" name="category_picture" style="width:265px;">
+                            <option value="" data-description="Choose your Category picture">Category picture</option>
+                            <option value="bill" id="bill" data-image="/webroot/img/forum_avatars/bill.png">bill</option>
+                            <option value="cart" id="cart" data-image="/webroot/img/forum_avatars/cart.png">cart</option>
+                            <option value="colorwheel" id="colorwheel" data-image="/webroot/img/forum_avatars/colorwheel.png">colorwheel</option>
+                            <option value="documentations" id="documentations" data-image="/webroot/img/forum_avatars/documentations.png">documentations</option>
+                            <option value="folder" id="folder" data-image="/webroot/img/forum_avatars/folder.png">folder</option>
+                            <option value="hazard" id="hazard" data-image="/webroot/img/forum_avatars/hazard.png">hazard</option>
+                            <option value="heart" id="heart" data-image="/webroot/img/forum_avatars/heart.png">heart</option>
+                            <option value="magicwand" id="magicwand" data-image="/webroot/img/forum_avatars/magicwand.png">magicwand</option>
+                            <option value="printer" id="printer" data-image="/webroot/img/forum_avatars/printer.png">printer</option>
+                            <option value="roadblock" id="roadblock" data-image="/webroot/img/forum_avatars/roadblock.png">roadblock</option>
+                            <option value="smart-watch" id="smart-watch" data-image="/webroot/img/forum_avatars/smart-watch.png">smart-watch</option>
+                            <option value="theatre" id="theatre" data-image="/webroot/img/forum_avatars/theatre.png">theatre</option>
+                            <option value="thumbs-up" id="thumbs-up" data-image="/webroot/img/forum_avatars/thumbs-up.png">thumbs-up</option>
+                            <option value="twit" id="twit" data-image="/webroot/img/forum_avatars/twit.png">twit</option>
+                            <option value="unlocked" id="unlocked" data-image="/webroot/img/forum_avatars/unlocked.png">unlocked</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Category name:</label>
+                    <div class="col-lg-6">
+                        <input type="text" id="title" name="title" class="form-control" placeholder="Name" value="<?=$data['forum']['title']?>" required autofocus/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Category description:</label>
+                    <div class="col-lg-6">
+                        <textarea type="text" id="content" name="content" class="form-control" placeholder="Description" rows="6" required><?=$data['forum']['content']?></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-6">
+                        <br/>
+                        <input type="submit" class="btn btn-success" value="Edit category"/>
+                        <input class="btn btn-default" type="reset" onclick="history.back()" value="Back">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <div class="from-group">
-        <label for="content">Category description:</label>
-        <textarea id="content" name="content" class="form-control"><?=$data['forum']['content']?></textarea>
-    </div>
-    <br>
-    <input type="submit" class="btn btn-success"/>
 </form>
+
+</body>
+
+</html>
