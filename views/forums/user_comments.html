@@ -6,6 +6,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/webroot/js/tinymce/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({ selector:'textarea',
+        height : 200,
+        width: 800
+        });
+    </script>
+
 </head>
 
 <body>
@@ -14,7 +24,12 @@
     <?php foreach($data['discussions'] as $page_data) { ?>
     <h2><?=$page_data['title']?></h2>
     <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
-    <h5><span class="glyphicon glyphicon-time"></span> Post by <?=$user_data['nickname']?>, <?=$page_data['date']?>.</h5>
+    <h5><span class="glyphicon glyphicon-time"></span>
+        Post by <a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title="">
+            <?=$user_data['nickname']?>
+        </a>,
+        <?=$page_data['date']?>.
+    </h5>
     <?php } ?>
     <h5><span class="label label-success">Lorem</span></h5><br>
     <p><?=$page_data['content']?></p>
@@ -50,13 +65,14 @@
     </div>
     <?php } ?>
     <br><br>
-    <h4>Leave a Comment:</h4>
+    <h4><b>Leave a Comment:</b></h4>
     <form method="post" action="">
         <div class="form-group">
-            <textarea type="text" id="content" name="content" class="form-control" rows="4"  required></textarea>
+            <textarea id="content" name="content" class="form-control" ></textarea>
         </div>
-        <input type="submit" class="btn btn-success" value="Add Comment"/>
+        <input type="submit" class="btn btn-default icon-white" value="Add Comment"/>
     </form>
+    <br><br>
     <br><br>
 </div>
 

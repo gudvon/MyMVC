@@ -162,6 +162,7 @@ class ForumsController extends Controller{
     public function user_comments(){
         $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
         $this->data['comments'] = $this->model->getComments($this->params[0]);
+        Session::set('discussions_id', $this->params[0]);
         if ($_POST){
             $id = $this->params[0];
             $result = $this->model->addComments($_POST, $id);
@@ -182,7 +183,7 @@ class ForumsController extends Controller{
                 Session::setFlash('Error');
             }
         }
-        Router::redirect('/user/forums/comments/'.$this->params[0]);
+        Router::redirect('/user/forums/comments/'.Session::get('discussions_id'));
     }
 
 }

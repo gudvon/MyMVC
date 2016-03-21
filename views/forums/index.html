@@ -36,7 +36,11 @@
             <?php foreach($data['forums'] as $page_data) { ?>
             <tr>
                 <td title="No unread posts" class="expand footable-visible footable-first-column" style="width: 60%;"><span class="footable-toggle"></span>
-                    <span class="forum-image"><img src="/webroot/img/forum_avatars/printer.png" width="45" height="45" alt="No unread posts"></span>
+                    <?php if($page_data['avatar'] != null) { ?>
+                    <span class="forum-image"><img src="<?=$page_data['avatar']?>" width="45" height="45" alt="No unread posts"></span>
+                    <?php } else { ?>
+                    <span class="forum-image"><img src="/webroot/img/forum_avatars/folder.png" width="45" height="45" alt="No unread posts"></span>
+                    <?php } ?>
                     <a href="/forums/discussions/<?=$page_data['id']?>" class="forumtitle" data-original-title="" title="" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: darkred; font-size: 20px;"><?=$page_data['title']?></a>
                     <br>
                     <span class="description" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: black;"><?=$page_data['content']?></span>
