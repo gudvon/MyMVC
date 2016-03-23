@@ -165,6 +165,18 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public function editDiscussion($data, $id){
+        if (!isset($data['alias']) || !isset($data['title']) || !isset($data['content'])){
+            return false;
+        }
+        $id = (int)$id;
+        $alias = $this->db->escape($data['alias']);
+        $title = $this->db->escape($data['title']);
+        $content = $this->db->escape($data['content']);
+        $sql = "update discussions set alias = '{$alias}', title = '{$title}', content = '{$content}', `date` = NOW() where id = {$id}";
+        return $this->db->query($sql);
+    }
+
     public function getDiscussions($id){
         $id = (int)$id;
         $sql = "select * from discussions WHERE category_id = '{$id}'";
@@ -206,6 +218,12 @@ class Forum extends Model{
         return $this->db->query($sql);
     }
 
+    public function getIdComments($id){
+        $id = (int)$id;
+        $sql = "select * from comments WHERE id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
     public function addComments($data, $id){
         if (!isset($data['content'])){
             return false;
@@ -215,6 +233,22 @@ class Forum extends Model{
         $id = (int)$id;
         $sql = "insert into comments set content = '{$content}', user_id = '{$user_id}', `date` = NOW(), discussion_id = '{$id}'";
         return $this->db->query($sql);
+    }
+
+    public function editComments($data, $id){
+
+        if (!isset($data['content'])){
+            return false;
+        }
+
+        $id = (int)$id;
+
+        $content = $this->db->escape($data['content']);
+
+        $sql = "update comments set content = '{$content}', `date` = NOW() where id = {$id}";
+
+        return $this->db->query($sql);
+
     }
 
     public static function getUser($id){

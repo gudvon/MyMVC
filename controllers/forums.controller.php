@@ -149,25 +149,23 @@ class ForumsController extends Controller{
 
     public function admin_edit_discussions (){
         if ($_POST){
-            $id = isset($_POST['id']) ? $_POST['id'] : null;
-            $result = $this->model->saveDiscussion($_POST, $id);
+            $id = $this->params[0];
+            $result = $this->model->editDiscussion($_POST, $id);
             if ($result){
-                Session::setFlash('Page was saved.');
+                Session::setFlash('Discussion was saved.');
             } else {
                 Session::setFlash('Error.');
             }
-            Router::redirect('/admin/forums/discussions/'.$this->params[0]);
+            $this->data['forums'] = $this->model->getById($this->params[0]);
+            $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
         }
         if (isset($this->params[0])){
-            $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
-            $this->data['forums'] = $this->model->getById($this->params[0]);
+            $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
+
         } else {
             Session::setFlash('Wrong page id.');
-            Router::redirect('/admin/forums/discussions/'.$this->params[0]);
         }
     }
-
-
 
     public function user_index(){
         $this->data['forums'] = $this->model->getCategory();
@@ -229,6 +227,26 @@ class ForumsController extends Controller{
         }
     }
 
+    public function admin_edit_comments (){
+        if ($_POST){
+            $id = $this->params[0];
+            $result = $this->model->editComments($_POST, $id);
+            if ($result){
+                Session::setFlash('Comment was saved.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
+            $this->data['comments'] = $this->model->getComments($this->params[0]);
+        }
+        if (isset($this->params[0])){
+            $this->data['comments'] = $this->model->getIdComments($this->params[0]);
+
+        } else {
+            Session::setFlash('Wrong page id.');
+        }
+    }
+
     public function admin_delete_comments(){
         if (isset($this->params[0])){
             $result = $this->model->deleteComments($this->params[0]);
@@ -255,6 +273,26 @@ class ForumsController extends Controller{
             } else {
                 Session::setFlash("Error");
             }
+        }
+    }
+
+    public function user_edit_comments (){
+        if ($_POST){
+            $id = $this->params[0];
+            $result = $this->model->editComments($_POST, $id);
+            if ($result){
+                Session::setFlash('Comment was saved.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
+            $this->data['comments'] = $this->model->getComments($this->params[0]);
+        }
+        if (isset($this->params[0])){
+            $this->data['comments'] = $this->model->getIdComments($this->params[0]);
+
+        } else {
+            Session::setFlash('Wrong page id.');
         }
     }
 

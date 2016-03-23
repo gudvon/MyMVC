@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/webroot/js/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="/webroot/css/user_comments.css">
+
+
+
+
+
+
+
+    <script>
+        tinymce.init({ selector:'textarea',
+            height : 200,
+            width: 800,
+            plugins : 'advlist autolink link code 	media	pagebreak, style, layer, table, save, advhr, advimage, advlink, emotions, iespell, inlinepopups, insertdatetime, preview, media, searchreplace, print, contextmenu, paste, directionality, fullscreen, noneditable, visualchars, nonbreaking, xhtmlxtras, template, wordcount, advlist, autosave	table	paste	colorpicker imagetools image lists charmap print preview 	textcolor codesample',
+
+        });
+    </script>
+
+
+
+
+</head>
+<body>
+
+
+
+<input type="hidden" name="id" id="id" value="<?=$data['comments']['id']?>" />
+
+
+
+
+
+
+<section>
+    <h4><b>Edit a Comment:</b></h4>
+    <form method="post" action="">
+        <div  class="form-group" >
+            <textarea id="content" name="content" class="form-control" ><?=$data['comments'][0]['content']?></textarea>
+        </div>
+        <input type="submit" class="btn btn-default icon-white" value="Add Comment"/>
+
+        <input class="btn btn-default" type="reset" onclick="history.back(); history.back()" value="Back">
+    </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

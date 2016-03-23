@@ -14,8 +14,7 @@ table th	{
 body {
     margin: 0;
     color: #8d9aa5;
-    background-image: url(/webroot/img/forum/index_forum.jpg);
-
+    background-image: url(/webroot/img/forum/1.png);
 }
 
 .forum-image {
@@ -28,7 +27,15 @@ body:not(.nohover) tbody tr:hover {
 }
 
 .panel-heading{
-    background-color: green;
-    color: white;
+    background-color: darkgreen;
+    color: lightgreen;
     border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+
 }
+.panel-forum{
+    background-color: green;
+    border-radius: 10px 10px 10px 10px;
+}
+

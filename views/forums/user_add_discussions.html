@@ -25,6 +25,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/webroot/js/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="/webroot/css/user_comments.css">
+    <script>
+        tinymce.init({ selector:'textarea',
+            height : 200,
+            width: 600,
+            plugins : 'advlist autolink link code 	media	pagebreak, style, layer, table, save, advhr, advimage, advlink, emotions, iespell, inlinepopups, insertdatetime, preview, media, searchreplace, print, contextmenu, paste, directionality, fullscreen, noneditable, visualchars, nonbreaking, xhtmlxtras, template, wordcount, advlist, autosave	table	paste	colorpicker imagetools image lists charmap print preview 	textcolor codesample',
+
+        });
+    </script>
 </head>
 
 <body>
@@ -33,11 +43,7 @@
     <div class="container">
         <h1><b>Add new Discussion</b></h1>
         <hr>
-        <?php if( Session::hasFlash() ){ ?>
-        <div class="alert alert-danger text-center" role="alert">
-            <strong><?php Session::flash(); ?>!</strong>
-        </div>
-        <?php } ?>
+
         <div class="row">
             <div class="col-md-9 personal-info">
                 <br/>
@@ -57,7 +63,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Discussion description:</label>
                     <div class="col-lg-6">
-                        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Description" rows="7" required></textarea>
+                        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Description" rows="7" ></textarea>
                     </div>
                 </div>
                 <div class="form-group">

@@ -12,7 +12,9 @@
     <script>
         tinymce.init({ selector:'textarea',
         height : 200,
-        width: 800
+        width: 800,
+            plugins : 'advlist autolink link code 	media	pagebreak, style, layer, table, save, advhr, advimage, advlink, emotions, iespell, inlinepopups, insertdatetime, preview, media, searchreplace, print, contextmenu, paste, directionality, fullscreen, noneditable, visualchars, nonbreaking, xhtmlxtras, template, wordcount, advlist, autosave	table	paste	colorpicker imagetools image lists charmap print preview 	textcolor codesample',
+
         });
         $(document).ready(function() {
             $('a[href^="#"]').click(function(){
@@ -67,6 +69,7 @@
         <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
         <?php if($user_data['id'] == Session::get('id')) { ?>
         <div class="col-sm-12 text-right">
+            <a href="/user/forums/edit_comments/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">e</button></a>
             <a href="/user/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-default btn-right icon-remove">&#10008;</button></a>
         </div>
         <?php } ?>
