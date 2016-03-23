@@ -25,13 +25,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/user/"><?=Config::get('site_name')?> - <?=__('lng.user', 'User Section')?></a>
+            <a class="navbar-brand" href="/user/"><?=Config::get('site_name')?> - <?=__('lng.user', 'User')?></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <?php if (Session::get('login')) { ?>
             <ul class="nav navbar-nav">
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/user/pages">Pages</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/user/forums">Forum</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'gallery' ) {?>class="active"<?php } ?> href="/user/gallery">Gallery</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

@@ -26,3 +26,9 @@ body {
 body:not(.nohover) tbody tr:hover {
     background-color: lightgray;
 }
+
+.panel-heading{
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}

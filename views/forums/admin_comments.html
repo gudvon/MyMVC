@@ -6,13 +6,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/webroot/js/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="/webroot/css/user_comments.css">
+
+    <script>
+        tinymce.init({ selector:'textarea',
+            height : 200,
+            width: 800
+        });
+        $(document).ready(function() {
+            $('a[href^="#"]').click(function(){
+                var el = $(this).attr('href');
+                $('body').animate({
+                    scrollTop: $(el).offset().top}, 2000);
+                return false;
+            });
+        });
+    </script>
 </head>
 
 <body>
 
 <div class="col-sm-9">
     <?php foreach($data['discussions'] as $page_data) { ?>
-    <h2><?=$page_data['title']?></h2>
+    <h2><b><?=$page_data['title']?></b></h2>
     <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
     <h5><span class="glyphicon glyphicon-time"></span> Post by
         <a href="/admin/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title="">
@@ -26,6 +43,7 @@
     <br>
     <p><span class="badge"><?=count(Forum::getCommentsCount($page_data['id']))?></span> Comments</p><br>
     <?php foreach($data['comments'] as $page_data) { ?>
+    <hr>
     <div class="row">
         <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
         <div class="col-sm-2 text-center">
@@ -39,7 +57,7 @@
             <h4><a href="/admin/profiles/user/<?=$user_data['id']?>"><?=$user_data['nickname']?></a> <small><?=$page_data['date']?></small></h4>
             <p><?=$page_data['content']?></p>
             <br>
-            <a href="/admin/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger">delete</button></a>
+            <a href="/admin/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger">&#10008;</button></a>
         </div>
         <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
         <?php if($user_data['id'] == Session::get('id')) { ?>
@@ -49,9 +67,13 @@
     </div>
     <?php } ?>
     <br><br>
-    <div  class="form-group" >
+    <form method="post" action="">
+        <div  class="form-group" >
+            <textarea id="content" name="content" class="form-control" ></textarea>
+        </div>
+        <input type="submit" class="btn btn-default icon-white" value="Add Comment"/>
         <input class="btn btn-default" type="reset" onclick="history.back()" value="Back">
-    </div>
+    </form>
     <br><br>
 </div>
 

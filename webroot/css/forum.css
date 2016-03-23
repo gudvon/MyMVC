@@ -8,13 +8,13 @@ table tr:nth-child(odd) {
 
 table th	{
     background-color: black;
-    color: lightsalmon;
+    color: lightgreen;
 }
 
 body {
     margin: 0;
     color: #8d9aa5;
-    background-color: #ecf0f1;
+    background-image: url(/webroot/img/forum/index_forum.jpg);
 
 }
 
@@ -28,7 +28,7 @@ body:not(.nohover) tbody tr:hover {
 }
 
 .panel-heading{
-    background-color: grey;
-    color: orange;
+    background-color: green;
+    color: white;
     border-radius: 10px 10px 0 0;
 }

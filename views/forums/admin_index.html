@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-
-</style>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +11,20 @@
 
 <body>
 
+<div>
+    <a href="/admin/forums/add_topic/"><button class="btn btn-sm btn-default">Add Topic</button></a>
+</div>
+
+<?php foreach($data['topics'] as $topics_data) { ?>
+
+<br>
+
 <div class="panel panel-forum">
 
-    <div>
-        <a href="/admin/forums/add/"><button class="btn btn-sm btn-success">Add category</button></a>
-    </div>
-
-    <div class="panel-heading">
-        <a href="" data-original-title="" title="">First category</a>
+    <div class="panel-heading" >
+        <th data-original-title="" style="color: white" ><?=$topics_data['name']?></th>
+        <a href="/admin/forums/edit_topic/<?=$topics_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">edit</button></a>
+        <a href="/admin/forums/delete_topic/<?=$topics_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">delete</button></a>
     </div>
 
     <div class="panel-inner">
@@ -38,6 +40,7 @@
 
             <tbody>
             <?php foreach($data['forums'] as $page_data) { ?>
+            <?php if($topics_data['id'] == $page_data['topics_id']) { ?>
             <tr>
                 <td title="No unread posts" class="expand footable-visible footable-first-column" style="width: 60%;"><span class="footable-toggle"></span>
 
@@ -75,16 +78,19 @@
                 <?php } ?>
             </tr>
             <?php } ?>
+            <?php } ?>
             </tbody>
 
         </table>
     </div>
 
-    <div>
-        <a href="/admin/forums/add/"><button class="btn btn-sm btn-success">Add category</button></a>
-    </div>
-
 </div>
+
+<div>
+    <a href="/admin/forums/add/<?=$topics_data['id']?>"><button class="btn btn-sm btn-success">Add category</button></a>
+</div><br><br>
+
+<?php } ?>
 
 </body>
 

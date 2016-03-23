@@ -15,10 +15,12 @@
 
 <body>
 
+<?php foreach($data['topics'] as $topics_data) { ?>
+
 <div class="panel panel-forum">
 
     <div class="panel-heading">
-        <a href="" data-original-title="" title="">First category</a>
+        <th data-original-title="" style="color: white" ><?=$topics_data['name']?></th>
     </div>
 
     <div class="panel-inner">
@@ -34,6 +36,7 @@
 
             <tbody>
             <?php foreach($data['forums'] as $page_data) { ?>
+            <?php if($topics_data['id'] == $page_data['topics_id']) { ?>
             <tr>
                 <td title="No unread posts" class="expand footable-visible footable-first-column" style="width: 60%;"><span class="footable-toggle"></span>
                     <?php if($page_data['avatar'] != null) { ?>
@@ -58,7 +61,9 @@
 			  <span class="last-wrapper text-overflow"><a href="/user/forums/comments/<?=$discus_data['id']?>" title="" class="lastsubject" data-original-title="">Re: <?=$discus_data['title']?></a><br>
                   by&nbsp;<a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
                   <br>
+
                   <span class="forum-time"><?=$comment_data['date']?></span>
+
               </span>
                 </td>
                 <?php } ?>
@@ -66,12 +71,15 @@
                 <?php } ?>
             </tr>
             <?php } ?>
+            <?php } ?>
             </tbody>
 
         </table>
     </div>
 
 </div>
+
+<?php } ?>
 
 </body>
 

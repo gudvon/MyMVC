@@ -11,19 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<link rel="stylesheet" href="/webroot/css/user_forum.css">
+<link rel="stylesheet" href="/webroot/css/forum.css">
 
 <body>
-
+<?php foreach($data['topics'] as $topics_data) { ?>
 <div class="panel panel-forum">
-
     <div class="panel-heading">
-        <a href="" data-original-title="" title="">First category</a>
+        <th data-original-title="" style="color: green" ><b><?=$topics_data['name']?></b></th>
     </div>
-
     <div class="panel-inner">
         <table class="footable table table-striped table-primary table-hover footable-loaded tablet">
-
             <thead>
             <tr>
                 <th data-class="expand" class="footable-visible footable-first-column">Title</th>
@@ -31,9 +28,9 @@
                 <th class="large21 footable-visible footable-last-column" data-hide="phone">Last post</th>
             </tr>
             </thead>
-
             <tbody>
             <?php foreach($data['forums'] as $page_data) { ?>
+            <?php if($topics_data['id'] == $page_data['topics_id']) { ?>
             <tr>
                 <td title="No unread posts" class="expand footable-visible footable-first-column" style="width: 60%;"><span class="footable-toggle"></span>
                     <?php if($page_data['avatar'] != null) { ?>
@@ -41,7 +38,11 @@
                     <?php } else { ?>
                     <span class="forum-image"><img src="/webroot/img/forum_avatars/folder.png" width="45" height="45" alt="No unread posts"></span>
                     <?php } ?>
+                    <?php if($page_data['is_published'] == true) { ?>
                     <a href="/forums/discussions/<?=$page_data['id']?>" class="forumtitle" data-original-title="" title="" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: darkred; font-size: 20px;"><?=$page_data['title']?></a>
+                    <?php } else { ?>
+                    <a href="/users/login" class="forumtitle" data-original-title="" title="" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: darkred; font-size: 20px;"><?=$page_data['title']?></a>
+                    <?php } ?>
                     <br>
                     <span class="description" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: black;"><?=$page_data['content']?></span>
                     <br>
@@ -66,13 +67,12 @@
                 <?php } ?>
             </tr>
             <?php } ?>
+            <?php } ?>
             </tbody>
-
         </table>
     </div>
-
 </div>
-
+<?php } ?>
 </body>
 
 </html>

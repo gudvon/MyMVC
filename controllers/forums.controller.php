@@ -15,6 +15,7 @@ class ForumsController extends Controller{
 
     public function admin_index(){
         $this->data['forums'] = $this->model->getCategory();
+        $this->data['topics'] = $this->model->getTopic();
     }
 
     public function admin_add(){
@@ -25,6 +26,12 @@ class ForumsController extends Controller{
             } else {
                 Session::setFlash('Error.');
             }
+            Router::redirect('/admin/forums/');
+        }
+        if (isset($this->params[0])){
+            $this->data['topics'] = $this->model->getTopicById($this->params[0]);
+        } else {
+            Session::setFlash('Wrong page id.');
             Router::redirect('/admin/forums/');
         }
     }
@@ -51,6 +58,52 @@ class ForumsController extends Controller{
     public function admin_delete(){
         if (isset($this->params[0])){
             $result = $this->model->deleteCategory($this->params[0]);
+            if ($result){
+                Session::setFlash('Page was deleted.');
+            } else {
+                Session::setFlash('Error');
+            }
+        }
+        Router::redirect('/admin/forums/');
+    }
+
+
+    //........................ topics ..!!.. topics ..!!.. topics ..!!.. topics ..!!..
+
+    public function admin_add_topic(){
+        if ($_POST){
+            $result = $this->model->saveTopic($_POST);
+            if ($result){
+                Session::setFlash('New category successfully added.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            Router::redirect('/admin/forums/');
+        }
+    }
+
+    public function admin_edit_topic(){
+        if ($_POST){
+            $id = isset($_POST['id']) ? $_POST['id'] : null;
+            $result = $this->model->saveTopic($_POST, $id);
+            if ($result){
+                Session::setFlash('Page was saved.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            Router::redirect('/admin/forums/');
+        }
+        if (isset($this->params[0])){
+            $this->data['topics'] = $this->model->getTopicById($this->params[0]);
+        } else {
+            Session::setFlash('Wrong page id.');
+            Router::redirect('/admin/forums/');
+        }
+    }
+
+    public function admin_delete_topic(){
+        if (isset($this->params[0])){
+            $result = $this->model->deleteTopic($this->params[0]);
             if ($result){
                 Session::setFlash('Page was deleted.');
             } else {
@@ -94,10 +147,31 @@ class ForumsController extends Controller{
         Router::redirect('/admin/forums/discussions/'.Session::get('category_id'));
     }
 
+    public function admin_edit_discussions (){
+        if ($_POST){
+            $id = isset($_POST['id']) ? $_POST['id'] : null;
+            $result = $this->model->saveDiscussion($_POST, $id);
+            if ($result){
+                Session::setFlash('Page was saved.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            Router::redirect('/admin/forums/discussions/'.$this->params[0]);
+        }
+        if (isset($this->params[0])){
+            $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+            $this->data['forums'] = $this->model->getById($this->params[0]);
+        } else {
+            Session::setFlash('Wrong page id.');
+            Router::redirect('/admin/forums/discussions/'.$this->params[0]);
+        }
+    }
+
 
 
     public function user_index(){
         $this->data['forums'] = $this->model->getCategory();
+        $this->data['topics'] = $this->model->getTopic();
     }
 
     public function user_discussions(){
@@ -124,6 +198,7 @@ class ForumsController extends Controller{
 
     public function index(){
         $this->data['forums'] = $this->model->getCategory();
+        $this->data['topics'] = $this->model->getTopic();
     }
 
     public function discussions(){
@@ -143,6 +218,15 @@ class ForumsController extends Controller{
         $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
         $this->data['comments'] = $this->model->getComments($this->params[0]);
         Session::set('comments_id', $this->params[0]);
+        if ($_POST){
+            $id = $this->params[0];
+            $result = $this->model->addComments($_POST, $id);
+            if ($result) {
+                Router::redirect('/admin/forums/comments/'.$this->params[0]);
+            } else {
+                Session::setFlash("Error");
+            }
+        }
     }
 
     public function admin_delete_comments(){

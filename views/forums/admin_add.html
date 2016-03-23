@@ -41,6 +41,7 @@
 <body>
 
 <form class="form-horizontal" role="form" action="" method="post">
+    <input type="hidden" name="topics_id" value="<?=$data['topics']['id']?>" />
     <div class="container">
         <h1><b>Add new Category</b></h1>
         <hr>
@@ -48,7 +49,7 @@
             <div class="col-md-9 personal-info">
                 <br/>
                 <div class="form-group">
-                    <label class="col-lg-3 control-label">Select Category picture</label>
+                    <label class="col-lg-3 control-label">Select Category picture:</label>
                     <div class="col-lg-6">
                         <select id="category_picture" name="category_picture" style="width:265px;">
                             <option value="" data-description="Choose your Category picture">Category picture</option>
@@ -81,6 +82,12 @@
                     <label class="col-lg-3 control-label">Category description:</label>
                     <div class="col-lg-6">
                         <textarea type="text" id="content" name="content" class="form-control" placeholder="Description" rows="6" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Category Public?</label>
+                    <div class="col-lg-6">
+                        <input type="checkbox" name="is_published" id="is_published" checked="checked" />
                     </div>
                 </div>
                 <div class="form-group">

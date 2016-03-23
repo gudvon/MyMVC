@@ -17,6 +17,8 @@ class Forum extends Model{
         $title = $this->db->escape($data['title']);
         $content = $this->db->escape($data['content']);
         $category_picture = $data['category_picture'];
+        $topics_id = $data['topics_id'];
+        $is_published = isset($data['is_published']) ? 1 : 0;
 
         $category_avatar = "/webroot/img/forum_avatars/{$category_picture}.png";
 
@@ -25,14 +27,17 @@ class Forum extends Model{
             insert into categories
                 set title = '{$title}',
                 content = '{$content}',
-                avatar = '{$category_avatar}'
+                avatar = '{$category_avatar}',
+                topics_id = '{$topics_id}',
+                is_published = '{$is_published}'
                 ";
         } else {
             $sql = "
             update categories
                 set title = '{$title}',
                 content = '{$content}',
-                avatar = '{$category_avatar}'
+                avatar = '{$category_avatar}',
+                is_published = '{$is_published}'
                 where id = {$id}
             ";
         }
@@ -59,8 +64,15 @@ class Forum extends Model{
 
     public function deleteCategory($id){
         $id = (int)$id;
-        $sql = "delete from categories where id = {$id}";
-        return $this->db->query($sql);
+
+        $sql1 = "delete from categories WHERE id = '{$id}'";
+
+        $sql2 = "delete from discussions WHERE category_id = '{$id}'";
+
+        $this->db->query($sql1);
+        $this->db->query($sql2);
+        return $sql2;
+
     }
 
     public static function getAllDiscussionById($id){
@@ -85,6 +97,47 @@ class Forum extends Model{
         $id = (int)$id;
         $sql = "select discussions.* from comments, discussions WHERE comments.discussion_id = discussions.id and discussions.category_id = '{$id}' ORDER BY comments.date DESC Limit 1";
         return App::$db->query($sql);
+    }
+
+
+    //........................ topics ..!!.. topics ..!!.. topics ..!!.. topics ..!!..
+
+    public function saveTopic($data, $id = null){
+        if (!isset($data['name']) || !isset($data['alias'])){
+            return false;
+        }
+
+        $id = (int)$id;
+        $name = $this->db->escape($data['name']);
+        $alias = $this->db->escape($data['alias']);
+        $is_published = isset($data['is_published']) ? 1 : 0;
+
+        if (!$id){
+            $sql = "insert into topics set name = '{$name}', alias = '{$alias}'";
+        } else {
+            $sql = "update topics set name = '{$name}', alias = '{$alias}' where id = {$id}";
+        }
+
+        return $this->db->query($sql);
+
+    }
+
+    public function getTopic(){
+        $sql = "select * from topics";
+        return $this->db->query($sql);
+    }
+
+    public function getTopicById($id){
+        $id = (int)$id;
+        $sql = "select * from topics where id = '{$id}' limit 1";
+        $result = $this->db->query($sql);
+        return isset($result[0]) ? $result[0] : null;
+    }
+
+    public function deleteTopic($id){
+        $id = (int)$id;
+        $sql = "delete from topics where id = {$id}";
+        return $this->db->query($sql);
     }
 
 
@@ -132,8 +185,11 @@ class Forum extends Model{
 
     public function deleteDiscussions($id){
         $id = (int)$id;
-        $sql = "delete from discussions where id = '{$id}'";
-        return $this->db->query($sql);
+        $sql1 = "delete from comments where discussion_id = '{$id}'";
+        $sql2 = "delete from discussions where id = '{$id}'";
+        $this->db->query($sql1);
+        $this->db->query($sql2);
+        return $sql2;
     }
 
     public static function allDiscussion(){
@@ -170,6 +226,17 @@ class Forum extends Model{
         $sql = "select id from comments WHERE discussion_id = '{$id}'";
         return App::$db->query($sql);
     }
+
+
+
+
+    public static function getUserCommentsCount($id){
+        $sql = "select id from comments WHERE user_id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
+
+
 
     public static function getLastComment($id){
         $sql = "select user_id, `date` from comments WHERE discussion_id = '{$id}' ORDER BY `date` DESC limit 1";

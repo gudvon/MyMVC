@@ -30,3 +30,13 @@
     background: linear-gradient(to top, #e0e0e0, #e0e0e0);
     color: black;
 }
+body {
+    margin: 0;
+    background-color: #ecf0f1;
+}
+hr {
+    background:
+            linear-gradient(90deg, lightgray,  lightgray, gray, lightgray, lightgray);
+    border:0;
+    height:1px
+}
