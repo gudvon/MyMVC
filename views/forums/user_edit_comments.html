@@ -10,28 +10,41 @@
     <link rel="stylesheet" href="/webroot/css/user_comments.css">
     <script>
         tinymce.init({ selector:'textarea',
-            height : 200,
-            width: 800,
+            height : 300,
+            width: 1000,
             plugins : 'advlist autolink link code 	media	pagebreak, style, layer, table, save, advhr, advimage, advlink, emotions, iespell, inlinepopups, insertdatetime, preview, media, searchreplace, print, contextmenu, paste, directionality, fullscreen, noneditable, visualchars, nonbreaking, xhtmlxtras, template, wordcount, advlist, autosave	table	paste	colorpicker imagetools image lists charmap print preview 	textcolor codesample',
-
         });
     </script>
 </head>
 
 <body>
 
-<input type="hidden" name="id" id="id" value="<?=$data['comments']['id']?>" />
-
-<section>
-    <h4><b>Edit a Comment:</b></h4>
-    <form method="post" action="">
-        <div  class="form-group" >
-            <textarea id="content" name="content" class="form-control" ><?=$data['comments'][0]['content']?></textarea>
+<form class="form-horizontal" role="form" action="" method="post">
+    <input type="hidden" name="id" value="<?=$data['comments']['id']?>" />
+    <div class="container">
+        <h1><b>Edit Comment</b></h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-9 personal-info">
+                <br/>
+                <br>
+                <div class="form-group">
+                    <div class="col-lg-6">
+                        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Description" rows="7" value="<?=$data['comments'][0]['content']?>"><?=$data['comments'][0]['content']?></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-6">
+                        <br/>
+                        <input type="submit" class="btn btn-info" value="Edit Comment"/>
+                        <input class="btn btn-default" type="reset" onclick="history.back(); history.back()" value="Back">
+                    </div>
+                </div>
+            </div>
         </div>
-        <input type="submit" class="btn btn-default icon-white" value="Add Comment"/>
-        <input class="btn btn-default" type="reset" onclick="history.back(); history.back()" value="Back">
-    </form>
-</section>
+    </div>
+</form>
 
 </body>
 

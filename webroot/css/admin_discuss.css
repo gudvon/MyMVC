@@ -19,5 +19,9 @@ body {
     margin: 0;
     background-color: #ecf0f1;
 }
+.panel-forum{
+    background-color: lightgray;
+    border-radius: 10px 10px 10px 10px;
+}
 
 

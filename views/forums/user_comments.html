@@ -69,7 +69,7 @@
         <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
         <?php if($user_data['id'] == Session::get('id')) { ?>
         <div class="col-sm-12 text-right">
-            <a href="/user/forums/edit_comments/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">e</button></a>
+            <a href="/user/forums/edit_comments/<?=$page_data['id']?>"><button class="btn btn-sm btn-default btn-xs">&#9998;</button></a>
             <a href="/user/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-default btn-right icon-remove">&#10008;</button></a>
         </div>
         <?php } ?>

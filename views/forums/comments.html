@@ -6,13 +6,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/webroot/css/user_comments.css">
 </head>
 
 <body>
 
 <div class="col-sm-9">
     <?php foreach($data['discussions'] as $page_data) { ?>
-    <h2><?=$page_data['title']?></h2>
+    <h2><b><?=$page_data['title']?></b></h2>
     <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
     <h5><span class="glyphicon glyphicon-time"></span> Post by
         <a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title="">
@@ -48,7 +49,7 @@
     <?php } ?>
     <br><br>
     <div  class="form-group" >
-    <input class="btn btn-default" type="reset" onclick="history.back()" value="Back">
+    <input class="btn btn-success" type="reset" onclick="history.back()" value="Back">
     </div>
     <br><br>
 

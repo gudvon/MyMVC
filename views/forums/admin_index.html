@@ -12,7 +12,7 @@
 <body>
 
 <div>
-    <a href="/admin/forums/add_topic/"><button class="btn btn-sm btn-default">Add Topic</button></a>
+    <a href="/admin/forums/add_topic/"><button class="btn btn-sm btn-success">Add Topic</button></a>
 </div>
 
 <?php foreach($data['topics'] as $topics_data) { ?>
@@ -22,9 +22,9 @@
 <div class="panel panel-forum">
 
     <div class="panel-heading" >
-        <th data-original-title="" style="color: white" ><?=$topics_data['name']?></th>
-        <a href="/admin/forums/edit_topic/<?=$topics_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">edit</button></a>
-        <a href="/admin/forums/delete_topic/<?=$topics_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">delete</button></a>
+        <th data-original-title="" style="color: white" ><b><?=$topics_data['name']?></b></th>
+        <a href="/admin/forums/edit_topic/<?=$topics_data['id']?>"><button class="btn btn-sm btn-default btn-xs">&#9998;</button></a>
+        <a href="/admin/forums/delete_topic/<?=$topics_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-default btn-xs">&#10008;</button></a>
     </div>
 
     <div class="panel-inner">
@@ -54,8 +54,8 @@
                     <br>
                     <span class="description" style="font-family: 'Source Sans Pro','Arial','Helvetica',sans-serif; color: black;"><?=$page_data['content']?></span>
                     <br>
-                    <a href="/admin/forums/edit/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">edit</button></a>
-                    <a href="/admin/forums/delete/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">delete</button></a>
+                    <a href="/admin/forums/edit/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">&#9998;</button></a>
+                    <a href="/admin/forums/delete/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">&#10008;</button></a>
                 </td>
                 <td class="stats-col footable-visible active" style="width: 15%;>
 			 <span class="stats-wrapper">
@@ -87,7 +87,7 @@
 </div>
 
 <div>
-    <a href="/admin/forums/add/<?=$topics_data['id']?>"><button class="btn btn-sm btn-success">Add category</button></a>
+    <a href="/admin/forums/add/<?=$topics_data['id']?>"><button class="btn btn-sm btn-default">Add category</button></a>
 </div><br><br>
 
 <?php } ?>

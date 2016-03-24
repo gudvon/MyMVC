@@ -32,3 +32,8 @@ body:not(.nohover) tbody tr:hover {
     color: orange;
     border-radius: 10px 10px 0 0;
 }
+
+.panel-forum{
+    background-color: #ecf0f1;
+    border-radius: 10px 10px 10px 10px;
+}

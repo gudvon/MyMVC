@@ -59,7 +59,7 @@
             <h4><a href="/admin/profiles/user/<?=$user_data['id']?>"><?=$user_data['nickname']?></a> <small><?=$page_data['date']?></small></h4>
             <p><?=$page_data['content']?></p>
             <br>
-            <a href="/admin/forums/edit_comments/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">e</button></a>
+            <a href="/admin/forums/edit_comments/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">&#9998;</button></a>
             <a href="/admin/forums/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger">&#10008;</button></a>
         </div>
         <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>

@@ -161,7 +161,25 @@ class ForumsController extends Controller{
         }
         if (isset($this->params[0])){
             $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
+        } else {
+            Session::setFlash('Wrong page id.');
+        }
+    }
 
+    public function user_edit_discussions (){
+        if ($_POST){
+            $id = $this->params[0];
+            $result = $this->model->editDiscussion($_POST, $id);
+            if ($result){
+                Session::setFlash('Discussion was saved.');
+            } else {
+                Session::setFlash('Error.');
+            }
+            $this->data['forums'] = $this->model->getById($this->params[0]);
+            $this->data['discussions'] = $this->model->getDiscussions($this->params[0]);
+        }
+        if (isset($this->params[0])){
+            $this->data['discussions'] = $this->model->getDiscussionsId($this->params[0]);
         } else {
             Session::setFlash('Wrong page id.');
         }

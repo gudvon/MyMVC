@@ -28,7 +28,12 @@ body:not(.nohover) tbody tr:hover {
 }
 
 .panel-heading{
-    background-color: black;
-    color: white;
+    background-color: lightgray;
+    color: black;
     border-radius: 10px 10px 0 0;
+}
+
+.panel-forum{
+    background-color: lightgray;
+    border-radius: 10px 10px 10px 10px;
 }

@@ -11,21 +11,17 @@
 <link rel="stylesheet" href="/webroot/css/admin_discuss.css">
 
 <body>
-
 <div class="clearfix">
     <div>
-        <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
+        <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-default">Add discussion</button></a>
     </div>
 </div>
-
 <br>
-
 <div class="panel panel-forum">
     <div class="panel-heading">
     </div>
     <div class="panel-inner">
         <table class="table table-primary table-hover tablet">
-
             <thead>
             <tr>
                 <th data-class="expand" class="footable-visible footable-first-column">Title</th>
@@ -33,7 +29,6 @@
                 <th class="large21 footable-visible footable-last-column" data-hide="phone">Last post</th>
             </tr>
             </thead>
-
             <tbody>
             <?php foreach($data['discussions'] as $page_data) { ?>
             <tr>
@@ -49,10 +44,8 @@
                         by&nbsp;<a href="/admin/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
                         <?php } ?>
                         <small>&nbsp;-&nbsp;<?=$page_data['date']?></small>
-
-
-                        <a href="/admin/forums/edit_discussions/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">edit</button></a>
-                        <a href="/admin/forums/delete_discussions/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger">delete</button></a>
+                        <a href="/admin/forums/edit_discussions/<?=$page_data['id']?>"><button class="btn btn-sm btn-warning btn-xs">&#9998;</button></a>
+                        <a href="/admin/forums/delete_discussions/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-danger">&#10008;</button></a>
                     </div>
                 </td>
                 <td class="stats-col footable-visible active" style="width: 15%;">
@@ -71,14 +64,12 @@
             </tr>
             <?php } ?>
             </tbody>
-
         </table>
     </div>
 </div>
-
 <div class="clearfix">
     <div>
-        <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-success">Add discussion</button></a>
+        <a href="/admin/forums/add_discussions/<?=$data['forums']['id']?>"><button class="btn btn-sm btn-default">Add discussion</button></a>
     </div>
 </div>
 <br>
@@ -86,7 +77,6 @@
 <div  class="form-group" >
     <input class="btn btn-default" type="reset" onclick="history.back()" value="Back">
 </div>
-
 </body>
 
 </html>
