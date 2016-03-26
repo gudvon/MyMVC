@@ -108,13 +108,13 @@
                 }
                 pic.is_hover = null;
                 pic.hover(function() {
-                    pic.stop().addClass('gp-gallery-picture-hover');
-                    container.addClass('gp-gallery-hover');
+                    pic.stop().addClass('gp-blogs-picture-hover');
+                    container.addClass('gp-blogs-hover');
 
                     if (item.original_height > item.height && item.original_width > item.width) {
                         pic.is_hover = setTimeout(function() {
-                            pic.removeClass('gp-gallery-picture-hover');
-                            pic.addClass('gp-gallery-picture-zoom');
+                            pic.removeClass('gp-blogs-picture-hover');
+                            pic.addClass('gp-blogs-picture-zoom');
 
                             if (pic.is_hover) {
                                 pic.animate({
@@ -132,21 +132,21 @@
                         clearTimeout(pic.is_hover)
                         pic.is_hover = null;
                     }
-                    if (item.original_height > item.height && item.original_width > item.width && pic.hasClass('gp-gallery-picture-zoom')) {
+                    if (item.original_height > item.height && item.original_width > item.width && pic.hasClass('gp-blogs-picture-zoom')) {
                         pic.stop().animate({
                             marginTop: '-6px',
                             marginLeft: '-6px',
                             width: item.width + 'px',
                             height: item.height + 'px',
                         }, 50, function() {
-                            container.removeClass('gp-gallery-hover');
-                            pic.removeClass('gp-gallery-picture-hover').removeClass('gp-gallery-picture-zoom').css({
+                            container.removeClass('gp-blogs-hover');
+                            pic.removeClass('gp-blogs-picture-hover').removeClass('gp-blogs-picture-zoom').css({
                                 'margin': ''
                             });
                         });
                     } else {
-                        container.removeClass('gp-gallery-hover');
-                        pic.removeClass('gp-gallery-picture-hover').removeClass('gp-gallery-picture-zoom');
+                        container.removeClass('gp-blogs-hover');
+                        pic.removeClass('gp-blogs-picture-hover').removeClass('gp-blogs-picture-zoom');
                     }
                 });
             });

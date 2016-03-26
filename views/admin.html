@@ -31,8 +31,8 @@
             <?php if (Session::get('login')) { ?>
             <ul class="nav navbar-nav">
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/admin/pages/">Pages</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'blogs' ) {?>class="active"<?php } ?> href="/admin/blogs">Blog</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/admin/forums/">Forum</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'gallery' ) {?>class="active"<?php } ?> href="/admin/gallery">Gallery</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'profiles' ) {?>class="active"<?php } ?> href="/admin/profiles/">Users Profiles</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/admin/contacts/">Contact Us</a></li>
             </ul>

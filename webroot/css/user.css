@@ -38,7 +38,7 @@ form{
     color: #FFA500 !important;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #fff !important;
+    color: black !important;
     background-color: #FFA500 !important;
 }
 .navbar-default .navbar-toggle {

@@ -32,7 +32,7 @@
 
 <div class="col-sm-9">
     <?php foreach($data['discussions'] as $page_data) { ?>
-    <h2><b><?=$page_data['title']?></b>></h2>
+    <h2><b><?=$page_data['title']?></b></h2>
     <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
     <h5><span class="glyphicon glyphicon-time"></span>
         Post by <a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title="">
