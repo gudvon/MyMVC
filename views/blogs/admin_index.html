@@ -171,7 +171,7 @@
 
 
 <div style="text-align:center;">
-<h1 class="text-center"><b>Blog Chessboard</b></h1>
+<h1 class="text-center"><b>Last Blogs like Chessboard</b></h1>
     <a href="/admin/blogs/add"><button  class="btn btn-sm btn-default">Add New Blog-Vlog</button></a>
 </div>
 
@@ -196,7 +196,7 @@
 
 
 
-                <a href="http://wp.color-theme.com/trustme/the-future-of-books/">
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
                     <img src="<?=$blog_data['photo']?>"
                          style="height: 300px; width: 550px; margin: -1px;  margin-top: 0;"
                          alt="The future of books">
@@ -214,13 +214,15 @@
                         <a href="/admin/profiles/user/<?=Forum::getUser($blog_data['user_id'])[0]['id']?>" style="color: #AA0000;" data-original-title="">
                             <?=Forum::getUser($blog_data['user_id'])[0]['nickname']?>
                         </a>
+                        <a href="/admin/blogs/edit/<?=$blog_data['id']?>"><button class="btn btn-sm btn-default btn-xs" >&#9998;</button></a>
+                        <a href="/admin/blogs/delete/<?=$blog_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-default btn-xs">&#10008;</button></a>
                     </span>
                 </div> <!-- /title-block -->
 
                 <hr>
 
                 <h3 class="entry-title">
-                    <a href="http://wp.color-theme.com/trustme/the-future-of-books/" title="Permalink to The future of books"><?=$blog_data['title']?></a>
+                    <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>" title="<?=$blog_data['title']?>"><?=$blog_data['title']?></a>
                 </h3>
                 <div class="entry-content" style="padding-right: 30px">
                     <p><?=htmlspecialchars_decode(Blog::getAliasBlog($blog_data['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...</p>
@@ -231,7 +233,7 @@
             </div> <!-- /title-block -->
         </div> <!-- /span6 -->
     </article><!-- post-ID -->
-    <br>
+
     <hr>
 
     <?php } else { ?>
@@ -243,7 +245,7 @@
 
 
 
-                <a href="http://wp.color-theme.com/trustme/the-future-of-books/">
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
                     <img src="<?=$blog_data['photo']?>"
                          style="height: 300px; width: 550px; margin: -10px;  margin-top: 0;"
                          alt="The future of books">
@@ -261,13 +263,15 @@
                         <a href="/admin/profiles/user/<?=Forum::getUser($blog_data['user_id'])[0]['id']?>" style="color: #AA0000;"rel="" data-original-title="">
                             <?=Forum::getUser($blog_data['user_id'])[0]['nickname']?>
                         </a>
+                        <a href="/admin/blogs/edit/<?=$blog_data['id']?>"><button class="btn btn-sm btn-default btn-xs">&#9998;</button></a>
+                        <a href="/admin/blogs/delete/<?=$blog_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-default btn-xs">&#10008;</button></a>
                     </span>
                 </div> <!-- /title-block -->
 
                 <hr style="margin-right: 35px">
 
                 <h3 class="entry-title">
-                    <a href="http://wp.color-theme.com/trustme/the-future-of-books/" title="Permalink to The future of books"><?=$blog_data['title']?></a>
+                    <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>" title="<?=$blog_data['title']?>"><?=$blog_data['title']?></a>
                 </h3>
                 <div class="entry-content" style="padding-right: 30px">
                     <p><?=htmlspecialchars_decode(Blog::getAliasBlog($blog_data['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...</p>

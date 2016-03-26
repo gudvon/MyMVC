@@ -179,7 +179,7 @@ class Forum extends Model{
 
     public function getDiscussions($id){
         $id = (int)$id;
-        $sql = "select * from discussions WHERE category_id = '{$id}'";
+        $sql = "select * from discussions WHERE category_id = '{$id}' ORDER BY `id` DESC";
         return $this->db->query($sql);
     }
 
