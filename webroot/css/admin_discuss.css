@@ -17,7 +17,7 @@ body:not(.nohover) tbody tr:hover {
 
 body {
     margin: 0;
-    background-color: #ecf0f1;
+    background:  url('/webroot/img/blog/1000x1000.jpg') repeat;
 }
 .panel-forum{
     background-color: lightgray;

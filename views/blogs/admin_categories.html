@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<h1><b>Blog categories panel</b></h1>
+<hr>
+
+<br>
+<table class="table table-striped" style="width: 50%;">
+    <tr>
+        <td style="width: 3%; background-color: black; color: white;">#</td>
+        <td style="width: 20%; background-color: black; color: white;">Name</td>
+        <td style="width: 3%; background-color: black; color: white;">blogs_id</td>
+        <td style="width: 10%; background-color: black; color: white;">Options</td>
+    </tr>
+    <?php foreach($data['categories'] as $item) { ?>
+    <tr>
+        <td><?=$item['id']?></td>
+        <td><?=$item['name']?></td>
+        <td><?=$item['blogs_id']?></td>
+        <td>
+            <a class="btn btn-xs btn-success"
+                   href="#" data-toggle="modal"
+                   data-target="#addModal"><span class="glyphicon glyphicon-plus"></span>
+        </a>
+            <a href="/admin/blogs/delete_categories/<?=$item['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">&#10008;</button></a>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" >
+        <div class="modal-content" >
+            <div class="modal-header"><button class="close" type="button" data-dismiss="modal">x</button>
+                <h4 class="modal-title" ><b>Add new category</b></h4>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">Category name:</label>
+                            <div class="col-lg-6">
+                                <input type="text" name="name" class="form-control" placeholder="Name"
+                                       required autofocus/>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-success" value="Add Category"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+
+</html>

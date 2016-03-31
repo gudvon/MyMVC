@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/webroot/js/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="/webroot/css/user_comments.css">
+    <script>
+        tinymce.init({ selector:'textarea',
+            height : 300,
+            width: 1000,
+            plugins : 'advlist autolink link code 	media	pagebreak, style, layer, table, save, advhr, advimage, advlink, emotions, iespell, inlinepopups, insertdatetime, preview, media, searchreplace, print, contextmenu, paste, directionality, fullscreen, noneditable, visualchars, nonbreaking, xhtmlxtras, template, wordcount, advlist, autosave	table	paste	colorpicker imagetools image lists charmap print preview 	textcolor codesample',
+        });
+    </script>
+</head>
+
+<body>
+
+<form class="form-horizontal" role="form" action="" method="post">
+    <input type="hidden" name="id" value="<?=$data['blogs_comments']['id']?>" />
+
+    <div class="container">
+        <h1><b>Edit Comment</b></h1>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-9 personal-info">
+                <br/>
+                <br>
+                <div class="form-group">
+                    <div class="col-lg-6">
+                        <textarea type="text"  id="content" name="content" class="form-control" placeholder="Description" rows="7" value="<?=$data['blogs_comments'][0]['content']?>"><?=$data['blogs_comments'][0]['content']?></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-6">
+                        <br/>
+                        <input type="submit" class="btn btn-info" value="Edit Comment"/>
+
+                        <?php if ($_POST){?>
+                        <input class="btn btn-default" type="reset" onclick="history.back(); history.back()" value="Back">
+                        <?php } else { ?>
+                        <input class="btn btn-default" type="reset" onclick="history.back();" value="Back">
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/webroot/blog/admin_blog.css">
+    <script src="/webroot/bootstrap/js/jquery.min.js"></script>
+    <script src="/webroot/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+<div class="col-sm-8 blog-main" >
+
+    <div class="row rowmain" >
+
+        <?php $i = 1; foreach($data['search'] as $blog_data) { if($i=$i%2){ ?>
+
+        <div class="row featurette">
+            <div class="col-md-6 col-md-push-6">
+                <h2 class="featurette-heading">
+                    <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>" title="<?=$blog_data['title']?>"><b><?=$blog_data['title']?></b></a>
+                </h2>
+                <span class="text-muted">
+                    <span class="glyphicon glyphicon-time"></span> <?=$blog_data['date']?>
+                   <br>
+                    <span class="glyphicon glyphicon-user"></span> posted by
+                        <a href="/admin/profiles/user/<?=Forum::getUser($blog_data['user_id'])[0]['id']?>" style="color: #AA0000;" data-original-title="">
+                            <?=Forum::getUser($blog_data['user_id'])[0]['nickname']?>
+                        </a>
+                    <br>
+                    <span class="glyphicon glyphicon-pencil"></span> <?=count(Blog::getCommentCount($blog_data['id']))?> Comments
+                </span>
+                <hr>
+
+            </div>
+            <div class="col-md-6 col-md-pull-6" >
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
+                    <img class="featurette-image img-responsive center-block img-thumbnail" href="/admin/blogs/blog_view/<?=$blog_data['id']?>" src="<?=$blog_data['photo']?>" data-holder-rendered="true">
+                </a>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <?php } else { ?>
+
+        <div class="row featurette">
+            <div class="col-md-6">
+                <h2 class="featurette-heading">
+                    <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>" title="<?=$blog_data['title']?>"><b><?=$blog_data['title']?></b></a>
+                </h2>
+                <span class="text-muted">
+                    <span class="glyphicon glyphicon-time"></span> <?=$blog_data['date']?>
+                    <br>
+                    <span class="glyphicon glyphicon-user"></span> posted by
+                        <a href="/admin/profiles/user/<?=Forum::getUser($blog_data['user_id'])[0]['id']?>" style="color: #AA0000;" data-original-title="">
+                            <?=Forum::getUser($blog_data['user_id'])[0]['nickname']?>
+                        </a>
+                    <br>
+                    <span class="glyphicon glyphicon-pencil"></span> <?=count(Blog::getCommentCount($blog_data['id']))?> Comments
+                </span>
+                <hr>
+
+            </div>
+            <div class="col-md-6">
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
+                    <img class="featurette-image img-responsive center-block img-thumbnail" data-src="holder.js/500x500/auto" alt="400x400" href="/admin/blogs/blog_view/<?=$blog_data['id']?>" src="<?=$blog_data['photo']?>" data-holder-rendered="true">
+                </a>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <?php } $i++; ?>
+        <?php } ?>
+
+    </div>
+
+</div>
+
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar" >
+
+    <div class="row rowmain" >
+
+
+
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Blog</b></span><b> Counters</b></h3>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="badge badge-inverse"><i class="fa fa-heart"></i><b> <?=User::getCountUsers()[0]["COUNT(id)"]?></b></span>
+                    <br><span class="fans muted-small"> Users</span>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="badge badge-inverse"><i class="fa fa-comments"></i><b> <?=Blog::getCountBlogs()[0]["COUNT(id)"]?></b></span>
+                    <br><span class="fans muted-small">Posts</span>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <span class="badge badge-inverse"><i class="fa fa-eye"></i><b> <?=Blog::getCountBlogsComments()[0]["COUNT(id)"]?></b></span>
+                    <br><span class="fans muted-small">Comments</span>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <hr>
+
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Search</b></span></h3>
+            <form method="post" action="/admin/blogs/search" class="form-search">
+                <div class="input-append">
+                    <input type="text" name="search" class="span2 search-query">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+        <hr>
+    </div>
+    </div>
+
+
+</body>
+</html>

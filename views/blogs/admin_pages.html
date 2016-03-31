@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/webroot/blog/admin_blog.css">
+    <script src="/webroot/bootstrap/js/jquery.min.js"></script>
+    <script src="/webroot/bootstrap/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="add_comment" style="text-align:center;">
+    <a href="/admin/blogs/add"><button  class="btn btn-sm btn-success">Add New Blog-Vlog</button></a>
+</div>
+
+<div class="row rowmain" >
+
+    <?php $i = 1; foreach($data['blogs'] as $blog_data) { if($i=$i%2){ ?>
+
+    <div class="row featurette">
+        <div class="col-md-6 col-md-push-6">
+            <h2 class="featurette-heading">
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>" title="<?=$blog_data['title']?>"><b><?=$blog_data['title']?></b></a>
+            </h2>
+                <span class="text-muted">
+                    <span class="glyphicon glyphicon-time"></span> <?=$blog_data['date']?>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-user"></span> posted by
+                        <a href="/admin/profiles/user/<?=Forum::getUser($blog_data['user_id'])[0]['id']?>" style="color: #AA0000;" data-original-title="">
+                            <?=Forum::getUser($blog_data['user_id'])[0]['nickname']?>
+                        </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-pencil"></span> <?=count(Blog::getCommentCount($blog_data['id']))?> Comments
+                        <a href="/admin/blogs/edit/<?=$blog_data['id']?>"><button class="btn btn-sm btn-warning btn-xs" >&#9998;</button></a>
+                        <a href="/admin/blogs/delete/<?=$blog_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">&#10008;</button></a>
+                </span>
+            <hr>
+            <p class="lead"><?=htmlspecialchars_decode(Blog::getAliasBlog($blog_data['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...</p>
+        </div>
+        <div class="col-md-6 col-md-pull-6" >
+            <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
+                <img class="featurette-image img-responsive center-block img-thumbnail" href="/admin/blogs/blog_view/<?=$blog_data['id']?>" src="<?=$blog_data['photo']?>" data-holder-rendered="true">
+            </a>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <?php } else { ?>
+
+    <div class="row featurette">
+        <div class="col-md-6">
+            <h2 class="featurette-heading">
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>" title="<?=$blog_data['title']?>"><b><?=$blog_data['title']?></b></a>
+            </h2>
+                <span class="text-muted">
+                    <span class="glyphicon glyphicon-time"></span> <?=$blog_data['date']?>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-user"></span> posted by
+                        <a href="/admin/profiles/user/<?=Forum::getUser($blog_data['user_id'])[0]['id']?>" style="color: #AA0000;" data-original-title="">
+                            <?=Forum::getUser($blog_data['user_id'])[0]['nickname']?>
+                        </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-pencil"></span> <?=count(Blog::getCommentCount($blog_data['id']))?> Comments
+                        <a href="/admin/blogs/edit/<?=$blog_data['id']?>"><button class="btn btn-sm btn-warning btn-xs" >&#9998;</button></a>
+                        <a href="/admin/blogs/delete/<?=$blog_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-danger btn-xs">&#10008;</button></a>
+                </span>
+            <hr>
+            <p class="lead"><?=htmlspecialchars_decode(Blog::getAliasBlog($blog_data['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...</p>
+        </div>
+        <div class="col-md-6">
+            <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
+                <img class="featurette-image img-responsive center-block img-thumbnail" data-src="holder.js/500x500/auto" alt="400x400" href="/admin/blogs/blog_view/<?=$blog_data['id']?>" src="<?=$blog_data['photo']?>" data-holder-rendered="true">
+            </a>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <?php } $i++; ?>
+    <?php } ?>
+
+</div>
+
+<div class="text-center">
+    <div class="text-center">
+        <ul class="pagination ">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="/admin/blogs">1</a></li>
+            <?php foreach(Blog::getPages() as $pages) { ?>
+            <li><a href="/admin/blogs/pages/<?=$pages?>"><?=$pages?></a></li>
+            <?php } ?>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+</div>
+</div>
+
+</body>
+</html>

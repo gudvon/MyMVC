@@ -51,4 +51,9 @@ class User extends Model{
         return $sql;
     }
 
+    public static function getCountUsers(){
+        $sql = "select COUNT(id) from users";
+        return App::$db->query($sql);
+    }
+
 }

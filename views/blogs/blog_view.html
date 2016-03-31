@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/webroot/js/tinymce/tinymce.min.js"></script>
+    <link rel="stylesheet" href="/webroot/blog/blog.css">
+
+</head>
+
+<body>
+
+<div class="col-sm-8 blog-main" >
+
+    <div class="row rowmain" style="padding: 23px 23px 23px 23px; border: 1px solid #CCC; background: white">
+        <input type="hidden" name="id" value="<?=$data['blogs']['id']?>" />
+        <article>
+    <span class="text-muted">
+        <span class="glyphicon glyphicon-time"></span> <?=$data['blogs']['date']?>
+        &nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-user"></span> posted by
+        <a href="/user/profiles/user/<?=Forum::getUser($data['blogs']['user_id'])[0]['id']?>" style="color: #AA0000;" data-original-title="">
+            <?=Forum::getUser($data['blogs']['user_id'])[0]['nickname']?>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-pencil"></span> <?=count(Blog::getCommentCount($data['blogs']['id']))?> Comments
+    </span>
+            <hr>
+            <h2><b><?=$data['blogs']['title']?></b></h2>
+            <div class="row">
+                <div class="group1 col-sm-6 col-md-6">
+                    <span class="glyphicon glyphicon-bookmark"></span> <a href="/blogs/category/<?=Blog::getTagsById($data['blogs']['tags_id'])[0]['id']?>"><?=Blog::getTagsById($data['blogs']['tags_id'])[0]['name']?></a>
+                </div>
+                <div class="group2 col-sm-6 col-md-6">
+
+                </div>
+            </div>
+            <hr>
+            <img src="<?=$data['blogs']['photo']?>" class="img-responsive img-thumbnail" >
+            <br />
+            <p><?=htmlspecialchars_decode($data['blogs']['content'])?></p>
+            <hr>
+        </article>
+
+        <div class="row">
+            <?php foreach(Blog::getCommentsById($data['blogs']['id']) as $page_data) {?>
+            <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+            <div class="col-sm-2 text-center">
+                <?php if($user_data['avatar'] != null) { ?>
+                <img src="<?=$user_data['avatar']?>" class="img-circle" height="65" width="65" alt="Avatar">
+                <?php } else { ?>
+                <img src="/webroot/img/200x200.png" class="img-circle" height="65" width="65" alt="Avatar">
+                <?php } ?>
+            </div>
+            <div class="col-sm-8">
+                <h4><a href="/user/profiles/user/<?=$user_data['id']?>"><?=$user_data['nickname']?></a> <small><?=$page_data['date']?></small></h4>
+                <p><?=$page_data['content']?></p>
+            </div>
+            <div class="col-sm-12 text-right">
+            </div>
+            <?php } ?>
+            <?php } ?>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar" >
+    <div class="row rowmain" >
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Blog</b></span><b> Counters</b></h3>
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <span class="badge badge-inverse"><i class="fa fa-heart"></i><b> <?=User::getCountUsers()[0]["COUNT(id)"]?></b></span>
+                    <br><span class="fans muted-small"> Users</span>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <span class="badge badge-inverse"><i class="fa fa-comments"></i><b> <?=Blog::getCountBlogs()[0]["COUNT(id)"]?></b></span>
+                    <br><span class="fans muted-small">Posts</span>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <span class="badge badge-inverse"><i class="fa fa-eye"></i><b> <?=Blog::getCountBlogsComments()[0]["COUNT(id)"]?></b></span>
+                    <br><span class="fans muted-small">Comments</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Search</b></span></h3>
+            <form method="post" action="/blogs/search" class="form-search">
+                <div class="input-append">
+                    <input type="text" name="search" class="span2 search-query">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <hr>
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Top </b></span><b> Categories</b></h3>
+            <ul class="list-group list-group-bordered list-group-noicon uppercase">
+                <li class="list-group-item"><a href="/blogs/category/<?=Blog::getTopCategoriesName()[0]['id']?>"><span class="size-11 text-muted pull-right badge">(<?=Blog::getTopCategoriesCount()[0]["count(blogs.tags_id)"]?>)</span>
+                    <?=Blog::getTopCategoriesName()[0]['name']?></a></li>
+                <li class="list-group-item"><a href="/blogs/category/<?=Blog::getTopCategoriesName()[1]['id']?>"><span class="size-11 text-muted pull-right badge">(<?=Blog::getTopCategoriesCount()[1]["count(blogs.tags_id)"]?>)</span>
+                    <?=Blog::getTopCategoriesName()[1]['name']?></a></li>
+                <li class="list-group-item"><a href="/blogs/category/<?=Blog::getTopCategoriesName()[2]['id']?>"><span class="size-11 text-muted pull-right badge">(<?=Blog::getTopCategoriesCount()[2]["count(blogs.tags_id)"]?>)</span>
+                    <?=Blog::getTopCategoriesName()[2]['name']?></a></li>
+                <li class="list-group-item"><a href="/blogs/category/<?=Blog::getTopCategoriesName()[3]['id']?>"><span class="size-11 text-muted pull-right badge">(<?=Blog::getTopCategoriesCount()[3]["count(blogs.tags_id)"]?>)</span>
+                    <?=Blog::getTopCategoriesName()[3]['name']?></a></li>
+                <li class="list-group-item"><a href="/blogs/category/<?=Blog::getTopCategoriesName()[4]['id']?>"><span class="size-11 text-muted pull-right badge">(<?=Blog::getTopCategoriesCount()[4]["count(blogs.tags_id)"]?>)</span>
+                    <?=Blog::getTopCategoriesName()[4]['name']?></a></li>
+                <li class="list-group-item"><a href="/blogs/category/<?=Blog::getTopCategoriesName()[5]['id']?>"><span class="size-11 text-muted pull-right badge">(<?=Blog::getTopCategoriesCount()[5]["count(blogs.tags_id)"]?>)</span>
+                    <?=Blog::getTopCategoriesName()[5]['name']?></a></li>
+            </ul>
+        </div>
+        <hr>
+        <hr>
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Top </b></span><b> Users</b></h3>
+            <?php foreach(Blog::getTopUsers() as $user_data) {?>
+            <div class="list-group">
+                <a href="/user/profiles/user/<?=$user_data['id']?>" class="list-group-item">
+                <span class=""><?php if($user_data['avatar'] != null) { ?>
+                    <img src="<?=$user_data['avatar']?>" class="img-circle" height="40" width="40" alt="Avatar">
+                    <?php } else { ?>
+                    <img src="/webroot/img/200x200.png" class="img-circle" height="40" width="40" alt="Avatar">
+                    <?php } ?>
+                </span> &nbsp;&nbsp;&nbsp; <?=$user_data['nickname']?>
+                </a>
+            </div>
+            <?php } ?>
+        </div>
+        <hr>
+        <hr>
+        <div class="post-atribut">
+            <h3><span class="colored-title" style="color: #98ab41;"><b>Last</b></span><b> Comments</b></h3>
+            <?php foreach(Blog::getLastBlogsComments() as $page_data) {?>
+            <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <?=$user_data['nickname']?>
+                <a href="/user/profiles/user/<?=$user_data['id']?>" class="post-thumb pull-left img-responsive">
+                    <?php if($user_data['avatar'] != null) { ?>
+                    <img src="<?=$user_data['avatar']?>" class="img-circle" height="40" width="40" alt="Avatar">
+                    <?php } else { ?>
+                    <img src="/webroot/img/200x200.png" class="img-circle" height="40" width="40" alt="Avatar">
+                    <?php } ?>
+                </a>
+                <div class="item-right">
+                    <h6 class="post-title"><a
+                            href="/blogs/blog_view/<?=$page_data['blogs_id']?>"><?=htmlspecialchars_decode($page_data['content'])?></a>
+                        <span class="kopa-date"> <?=$page_data['date']?></span>
+                    </h6>
+                </div>
+            </div>
+            <?php } ?>
+            <?php } ?>
+        </div>
+        <hr>
+        <hr>
+    </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
