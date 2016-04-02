@@ -18,7 +18,7 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,10 +31,14 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/pages/">Pages</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'blogs' ) {?>class="active"<?php } ?> href="/blogs">Blog</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/forums/">Forum</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/contacts/"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+                <li><a  <?php if (App::getRouter()->getController() == "pages") {?>class="active" <?php } ?>  href="/pages/">
+                     Pages</a></li>
+                <li><a  <?php if (App::getRouter()->getController() == "blogs") {?>class="active" <?php } ?>  href="/blogs">
+                    <span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+                <li><a  <?php if (App::getRouter()->getController() == "forums") {?>class="active" <?php } ?>  href="/forums/">
+                    <span class="glyphicon glyphicon-th-list"></span> Forum</a></li>
+                <li><a  <?php if (App::getRouter()->getController() == "contacts") {?>class="active" <?php } ?>href="/contacts/">
+                    <span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/users/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -45,7 +49,21 @@
     </div>
 </nav>
 
-<div class="container">
+
+<?php if ( App::getRouter()->getController() == 'defaults' ) { ?>
+
+<div class="starter-template">
+    <?php if( Session::hasFlash() ){ ?>
+    <div class="alert alert-info" role="alert">
+        <?php Session::flash(); ?>
+    </div>
+    <?php } ?>
+    <?=$data['content']?>
+</div>
+
+<?php } else { ?>
+
+
     <div class="starter-template">
         <?php if( Session::hasFlash() ){ ?>
         <div class="alert alert-info" role="alert">
@@ -53,6 +71,25 @@
         </div>
         <?php } ?>
         <?=$data['content']?>
+    </div>
+
+
+<?php } ?>
+
+
+
+
+
+
+
+<div id="footer" class="footer">
+    <div class="container text-center">
+        <ul class="list-inline center-block">
+            <li><a href="https://ua.linkedin.com/in/kirill-kovalenko-398259ab" class=""><img src="/webroot/img/social/in.jpg" class=""></a></li>
+            <li><a href="https://github.com/gudvon/MyMVC" class=""><img src="/webroot/img/social/g.jpg" class=""></a></li>
+            <li><a href="https://www.facebook.com/id15275601" class=""><img src="/webroot/img/social/f.jpg" class=""></a></li>
+            <li><a href="https://vk.com/is4ibertay" class=""><img src="/webroot/img/social/b.jpg" class=""></a></li>
+        </ul>
     </div>
 </div>
 

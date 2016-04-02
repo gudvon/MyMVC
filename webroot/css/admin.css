@@ -45,26 +45,26 @@ form{
     border-color: transparent;
     color: #fff !important;
 }
-
-
-
-/*
-.row.content {height: 1500px}
-
-.sidenav {
-    background-color: #f1f1f1;
-    height: 100%;
+html {
+    position: relative;
+    min-height: 100%;
 }
-footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
-@media screen and (max-width: 767px) {
-    .sidenav {
-        height: auto;
-        padding: 15px;
-    }
-    .row.content {height: auto;}
+
+.footer{
+    padding: 20px 10px 1px 5px;
+    border: 1px solid #CCC;
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    background-color: black;
+    /*
+    background: linear-gradient(to top, black, transparent);
+    */
+    -webkit-box-shadow: 10px 10px 152px 9px rgba(0,0,0,0.66);
+    -moz-box-shadow: 10px 10px 152px 9px rgba(0,0,0,0.66);
+    box-shadow: 10px 10px 152px 9px rgba(0,0,0,0.66);
 }
-*/

@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
                 <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/admin/pages/">Pages</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'blogs' ) {?>class="active"<?php } ?> href="/admin/blogs">Blog</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'forum' ) {?>class="active"<?php } ?> href="/admin/forums/">Forum</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'forums' ) {?>class="active"<?php } ?> href="/admin/forums/">Forum</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'profiles' ) {?>class="active"<?php } ?> href="/admin/profiles/">Users Profiles</a></li>
                 <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/admin/contacts/">Contact Us</a></li>
             </ul>
@@ -48,6 +48,20 @@
     </div>
 </nav>
 
+
+<?php if ( App::getRouter()->getController() == 'defaults' ) { ?>
+
+<div class="starter-template">
+    <?php if( Session::hasFlash() ){ ?>
+    <div class="alert alert-info" role="alert">
+        <?php Session::flash(); ?>
+    </div>
+    <?php } ?>
+    <?=$data['content']?>
+</div>
+
+<?php } else { ?>
+
 <div class="container">
     <div class="starter-template">
         <?php if( Session::hasFlash() ){ ?>
@@ -58,6 +72,28 @@
         <?=$data['content']?>
     </div>
 </div>
+
+<?php } ?>
+
+
+
+
+
+
+
+
+
+<div id="footer" class="footer">
+    <div class="container text-center">
+        <ul class="list-inline center-block">
+            <li><a href="https://ua.linkedin.com/in/kirill-kovalenko-398259ab" class=""><img src="/webroot/img/social/in.jpg" class=""></a></li>
+            <li><a href="https://github.com/gudvon/MyMVC" class=""><img src="/webroot/img/social/g.jpg" class=""></a></li>
+            <li><a href="https://www.facebook.com/id15275601" class=""><img src="/webroot/img/social/f.jpg" class=""></a></li>
+            <li><a href="https://vk.com/is4ibertay" class=""><img src="/webroot/img/social/b.jpg" class=""></a></li>
+        </ul>
+    </div>
+</div>
+
 
 </body>
 

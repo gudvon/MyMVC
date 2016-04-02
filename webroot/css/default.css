@@ -1,18 +1,6 @@
 body{
-    padding-top: 50px;
-
-    /*
-    background-image: url(/webroot/img/02.jpg);
-    */
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    height: 100%;
-}
-
-.starter-template{
-    padding: 40px 15px;
-}
+     padding-top: 50px;
+ }
 
 form{
     width: 400px;
@@ -36,15 +24,41 @@ form{
 }
 
 .navbar li a, .navbar .navbar-brand {
-    color: #3CB371 !important;
+    color: black !important;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #fff !important;
-    background-color: #3CB371 !important;
+    background-color: black !important;
 }
 
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;
 }
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+
+}
+
+.footer{
+    padding: 20px 10px 1px 5px;
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    background-color: black;
+    /*
+    background: linear-gradient(to top, black, transparent);
+    */
+    -webkit-box-shadow: 10px 10px 152px 9px rgba(0,0,0,0.66);
+    -moz-box-shadow: 10px 10px 152px 9px rgba(0,0,0,0.66);
+    box-shadow: 10px 10px 152px 9px rgba(0,0,0,0.66);
+}
+

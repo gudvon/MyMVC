@@ -2,37 +2,19 @@
 
 <html lang="en">
 
-
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
-    <script src="/webroot/bootstrap/js/jquery.min.js"></script>
-    <script src="/webroot/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/webroot/blog/blog.css">
-    <script>
-        $(function() {
-            $(window).scroll(function() {
-                if($(this).scrollTop() != 0) {
-                    $('#toTop').fadeIn();
-                } else {
-                    $('#toTop').fadeOut();
-                }
-            });
-            $('#toTop').click(function() {
-                $('body,html').animate({scrollTop:0},1000);
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="/webroot/css/blogs/blog.css">
 </head>
 
 <body>
 
-<div class="row rowmain" style="">
+<div class="container">
+
+<br>
+<br>
+
+<div class="row rowmain">
     <?php $i = 1; foreach($data['blogs'] as $blog_data) { if($i=$i%2){ ?>
 
     <div class="row featurette">
@@ -94,34 +76,45 @@
 
 </div>
 
-<div class="text-center">
     <div class="text-center">
-        <ul class="pagination ">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="/blogs">1</a></li>
-            <?php foreach(Blog::getPages() as $pages) { ?>
-            <li><a href="/blogs/pages/<?=$pages?>"><?=$pages?></a></li>
-            <?php } ?>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
+        <nav data-pagination>
+            <a href="/blogs"><i class=ion-chevron-left>&#9668;</i></a>
+            <ul>
+                <li><a href="/blogs">1</a>
+                    <?php foreach(Blog::getPages() as $pages) { ?>
+                <li><a href="/blogs/pages/<?=$pages?>"><?=$pages?></a>
+                    <?php } ?>
+            </ul>
+            <a href="<?=Blog::getLastPages()?>"><i class=ion-chevron-right>&#9658;</i></a>
+        </nav>
     </div>
+
 </div>
 
-<div id="footer" class="rowbot">
-    <div class="container text-center">
-        <ul class="list-inline center-block">
-            <li><a href="https://ua.linkedin.com/in/kirill-kovalenko-398259ab" class=""><img src="/webroot/img/social/in.jpg" class=""></a></li>
-            <li><a href="https://github.com/gudvon/MyMVC" class=""><img src="/webroot/img/social/g.jpg" class=""></a></li>
-            <li><a href="https://www.facebook.com/id15275601" class=""><img src="/webroot/img/social/f.jpg" class=""></a></li>
-            <li><a href="https://vk.com/is4ibertay" class=""><img src="/webroot/img/social/b.jpg" class=""></a></li>
-        </ul>
-    </div>
-</div>
+<br>
+<br>
+<br>
+<br>
 
 <ul class="nav pull-right scroll-top" id="toTop" style="">
-    <li><a href="#" title="Scroll to top" class=""><i class="glyphicon glyphicon-chevron-up"></i></a>
+    <li><a href="#" style="color: white" title="Scroll to top" class=""><i class="glyphicon glyphicon-chevron-up"></i></a>
     </li>
 </ul>
+
+<script>
+    $(function() {
+        $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
+        $('#toTop').click(function() {
+            $('body,html').animate({scrollTop:0},1000);
+        });
+    });
+</script>
 
 </body>
 

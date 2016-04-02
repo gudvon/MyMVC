@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 31 2016 г., 15:31
+-- Время создания: Апр 02 2016 г., 04:19
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 7.0.3
 
@@ -226,13 +226,6 @@ CREATE TABLE `pages` (
   `is_published` tinyint(1) UNSIGNED DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `pages`
---
-
-INSERT INTO `pages` (`id`, `alias`, `title`, `content`, `is_published`) VALUES
-(8, 'README !!! README !!! README !!! ', 'README !!! README !!! README !!! ', 'Forum --- Site Development --- All about site', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -396,7 +389,7 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT для таблицы `blogs_comments`
 --
 ALTER TABLE `blogs_comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
@@ -421,7 +414,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `tags`
 --

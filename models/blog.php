@@ -165,6 +165,16 @@ class Blog extends Model{
         return $arr;
     }
 
+    public static function getLastPages(){
+        $sql = "select COUNT(id) from blogs";
+        $num = 5;
+        $result = App::$db->query($sql);
+        $result = $result[0]["COUNT(id)"];
+        $result = (int)$result;
+        $total = intval(($result - 1) / $num) + 1;
+        return $total;
+    }
+
     public static function getTopCommentedBlogs(){
         $sql = "SELECT blogs.* FROM blogs, blogs_comments WHERE blogs_comments.blogs_id = blogs.id GROUP BY blogs.id ORDER BY count(blogs_comments.blogs_id) DESC limit 3";
         return App::$db->query($sql);

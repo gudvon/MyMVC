@@ -1,0 +1,187 @@
+/* padded section */
+.pad-section {
+    padding: 50px 0;
+}
+.pad-section img {
+    width: 100%;
+}
+/* vertical-centered text */
+.text-vcenter {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.text-vcenter h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+/* additional sections */
+#home {
+    background: url(/webroot/img/defaults/1.jpg) no-repeat center center fixed;
+    display: table;
+    height: 800px;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#about {
+}
+#services {
+    color: black;
+    background: url(/webroot/img/defaults/3.jpg) no-repeat center center fixed;
+    -webkit-box-shadow: 0px 0px 32px 31px rgba(230,230,230,1);
+    -moz-box-shadow: 0px 0px 32px 31px rgba(230,230,230,1);
+    box-shadow: 0px 0px 32px 31px rgba(230,230,230,1);
+
+}
+#services .glyphicon {
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 60px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+}
+#information {
+    background: url(/webroot/img/defaults/5.jpg) no-repeat center center fixed;
+    display: table;
+    height: 800px;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#information .panel {
+    opacity: 0.85;
+}
+#google_map {
+    height: 500px;
+}
+
+#splash {
+    background: url(/webroot/img/defaults/4.jpg) no-repeat center center fixed;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    background-repeat: repeat-y;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: splash 3s ease-in;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+}
+#loader:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    bottom: -170px;
+    width: 3px;
+    background: #fff;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    height: 200px;
+}
+#loader:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: 8px;
+    bottom: -190px;
+    width: 3px;
+    background: #000;
+    background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+    height: 200px;
+}
+#splash .anim {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    transform: translate(-50%,100%);
+    animation: loader 4s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes loader {
+    0% {
+        transform: translate(-50%,110%);
+    }
+    30% {
+        transform: translate(-50%,50%);
+    }
+    100% {
+        transform: translate(-50%,0%);
+    }
+}
+@keyframes splash {
+    0% {
+        transform: translate(0%,0%);
+    }
+    50% {
+        transform: translate(0%,0%);
+    }
+    100% {
+        transform: translate(0%,-100%);
+    }
+}
+@font-face{
+    font-family:chasing;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41114/Chasing_Embers_Demo_Version.otf);
+}
+
+.morph{
+    color:black;
+    font-family:'chasing';
+    font-size:140px;
+    position:absolute;
+    text-decoration:none;
+    width:100%;}
+
+#second{
+    -webkit-filter:blur(5px);
+    opacity:0;
+}
+
+#first{
+    -webkit-filter:blur(5px);
+    opacity:1;
+}
+#second{
+    opacity:1;
+    -webkit-filter:blur(0px);
+}
+.img2{
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+.ahref {
+    color: black;
+    padding: 5px;
+}
+.ahref:active {
+    text-decoration: none;
+    color: black;
+}
+.ahref:hover {
+    text-decoration: none;
+    color: black;
+}

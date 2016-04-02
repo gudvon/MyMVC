@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="/webroot/bootstrap/js/jquery.min.js"></script>
+    <script src="/webroot/js/defaults/circle-progress.js"></script>
+    <script src="/webroot/js/defaults/defaults.js"></script>
+    <link rel="stylesheet" href="/webroot/css/defaults/index.css">
+</head>
+<body>
+<div class="page">
+    <header>
+<div class="container-fluid">
+    <!-- first section - Home -->
+    <div id="home" class="home">
+        <div class="text-vcenter morph">
+            <a href="#about" style="color: black">
+                <span style="display:block;left:50%;position:absolute;top:200px;transform:translateX(-50%);transition:.5s ease-in-out;" id="first">WELCOME TO MY SITE</span>
+                <span style="display:block;left:50%;position:absolute;top:200px;transform:translateX(-50%);transition:.5s ease-in-out;"id="second">WELCOME TO MY SITE</span>
+            </a>
+        </div>
+    </div>
+    <!-- /first section -->
+    <!-- second section - About -->
+    <div id="about" class="pad-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img2" src="/webroot/img/defaults/2.jpg" alt="" />
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h2><b>Hi everyone! Lets talk about sites :)</b></h2>
+                    <br>
+                    <p class="lead">Lorem ipsum dolor sit ame... I made this site about two months. Do not judge me harshly - this is my first website in life (even 3 months
+                        ago I did not know what php is)  And I just decided to start doing this not bad :) site from scratch by changing themselves framework.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /second section -->
+    <!-- third section - comprises -->
+    <div id="services" class="pad-section">
+        <div class="container">
+            <a class="ahref" href="#information"><h2 class="text-center"><b>This site comprises:</b></h2> </a>
+            <hr style="background:linear-gradient(90deg, lightgray,  gray, black, gray, lightgray);border:0;height:1px">
+            <br>
+            <div class="row text-center">
+                <div class="col-sm-3 col-xs-6">
+                    <div id="circle1"></div>
+                    <script>
+                        $('#circle1').circleProgress({
+                            value: 0.36,
+                            size: 140,
+                            fill: {
+                                gradient: ["green", "white"]
+                            }
+                        });
+                    </script>
+                    <h4><b>HTML</b></h4>
+                    <p>The problem is that we had to do a lot of html pages</p>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div id="circle2"></div>
+                    <script>
+                        $('#circle2').circleProgress({
+                            value: 0.27,
+                            size: 140,
+                            fill: {
+                                gradient: ["orange", "white"]
+                            }
+                        });
+                    </script>
+                    <h4><b>JavaScript</b></h4>
+                    <p>I had to look to Google and remodel for myself</p>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div id="circle3"></div>
+                    <script>
+                        $('#circle3').circleProgress({
+                            value: 0.18,
+                            size: 140,
+                            fill: {
+                                gradient: ["purple", "white"]
+                            }
+                        });
+                    </script>
+                    <h4><b>PHP</b></h4>
+                    <p>It's easy:)</p>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div id="circle4"></div>
+                    <script>
+                        $('#circle4').circleProgress({
+                            value: 0.12,
+                            size: 140,
+                            fill: {
+                                gradient: ["lightgreen", "white"]
+                            }
+                        });
+                    </script>
+                <h4><b>CSS</b></h4>
+                    <p>At first it was hard but then...</p>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div id="circle5"></div>
+                    <script>
+                        $('#circle5').circleProgress({
+                            value: 0.08,
+                            size: 140,
+                            fill: {
+                                gradient: ["grey", "white"]
+                            }
+                        });
+                    </script>
+                    <h4><b>Else</b></h4>
+                    <p>XML, SVG, Text, JSON, ApacheConf, SQL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /third section -->
+    <!-- fourth section - Information -->
+    <div id="information" class="pad-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div id="myCarousel1" class="carousel slide" data-ride="carousel" >
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item">
+                                <img width="200" height="200" class="first-slide img-circle" src="/webroot/img/defaults/0001.jpg" alt="First slide">
+                            </div>
+                            <div class="item active">
+                                <img width="200" height="200" class="second-slide img-circle" src="/webroot/img/defaults/0002.jpg" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <img width="600" height="300" class="third-slide img-circle" src="/webroot/img/defaults/0003.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 style="color: lightcyan"><b>Blog</b></h2>
+                    <p style="color: lightcyan"><b>I tried to make a blog for yourself and how would you like to enjoy and see it.</b></p>
+                    <p><a class="btn btn-default" href="/blogs" role="button">View Blog? »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+
+
+
+
+
+
+                <div class="col-lg-4">
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="340">
+                    <h2>Forum</h2>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+
+
+
+
+
+
+                <div class="col-lg-4">
+                    <div id="myCarousel3" class="carousel slide" data-ride="carousel" >
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item">
+                                <img width="200" height="200" class="first-slide img-circle" src="/webroot/img/defaults/0004.jpg" alt="First slide">
+                            </div>
+                            <div class="item active">
+                                <img width="200" height="200" class="second-slide img-circle" src="/webroot/img/defaults/0005.jpg" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <img width="600" height="300" class="third-slide img-circle" src="/webroot/img/defaults/0006.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 style="color: lightcyan"><b>Site</b></h2>
+                    <p style="color: lightcyan"><b>Donec sed odio dui. Cras justo odio, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</b></p>
+                    <p><a class="btn btn-default" href="/" role="button">View Site? Really?:) »</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+        </div>
+    </div>
+    <!-- /fourth section -->
+</div>
+    </header>
+</div>
+<div id="splash">
+    <div class="anim">
+        <div id="loader">
+            <svg version="1.1" width="60px" height="70px" viewBox="0 0 60 70">
+                <defs>
+                    <filter id="f1" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+                    </filter>
+                </defs>
+                <g id="airplane">
+                    <path fill="#000" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+          h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+          c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+          c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+          c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+          C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(44,0) rotate(90 0 0)" />
+                </g>
+                <g id="shadow" transform="scale(.9)">
+                    <path fill="#000" fill-opacity="0.3" d="M0.677,20.977l4.355,1.631c0.281,0.104,0.579,0.162,0.88,0.16l9.76-0.004L30.46,41.58c0.27,0.34,0.679,0.545,1.112,0.541
+      		h1.87c0.992,0,1.676-0.992,1.322-1.918l-6.643-17.439l6.914,0.002l6.038,6.037c0.265,0.266,0.624,0.412,0.999,0.418l1.013-0.004
+      		c1.004-0.002,1.684-1.012,1.312-1.938l-2.911-7.277l2.912-7.278c0.372-0.928-0.313-1.941-1.313-1.938h1.017
+      		c-0.375,0-0.732,0.15-0.996,0.414l-6.039,6.039h-6.915l6.646-17.443c0.354-0.926-0.33-1.916-1.321-1.914l-1.87-0.004
+      		c-0.439,0.004-0.843,0.203-1.112,0.543L15.677,17.24l-9.765-0.002c-0.3,0.002-0.597,0.055-0.879,0.16L0.678,19.03
+      		C-0.225,19.36-0.228,20.637,0.677,20.977z" transform="translate(64,30) rotate(90 0 0)" filter="url(#f1)" />
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+</body>
+</html>
