@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
-    $(".text-vcenter [href='#about']").on('click', function(event) {
+    $("[href='#about']").on('click', function(event) {
 
         // Prevent default anchor click behavior
         event.preventDefault();
@@ -21,7 +21,7 @@ $(document).ready(function(){
             window.location.hash = hash;
         });
     });
-    $(".ahref [href='#information']").on('click', function(event) {
+    $("[href='#information']").on('click', function(event) {
 
         // Prevent default anchor click behavior
         event.preventDefault();

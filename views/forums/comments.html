@@ -4,24 +4,29 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/webroot/css/user_comments.css">
+    <link rel="stylesheet" href="/webroot/css/forums/comments.css">
 </head>
 
 <body>
 
+<div class="container">
+
+    <br>
+    <br>
+
 <div class="col-sm-9">
+    <div class="topmain">
     <?php foreach($data['discussions'] as $page_data) { ?>
-    <h2><b><?=$page_data['title']?></b></h2>
+    <h2 style="font-family:Comic Sans MS;"><b><?=$page_data['title']?></b></h2>
     <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
     <h5><span class="glyphicon glyphicon-time"></span> Post by
         <a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title="">
             <?=$user_data['nickname']?></a>
         , <?=$page_data['date']?>.</h5>
     <?php } ?>
-    <h5><span class="label label-success">Lorem</span></h5><br>
+    <br>
     <p><?=$page_data['content']?></p>
+        </div>
     <hr>
     <?php } ?>
     <h4><small>RECENT COMMENTS</small></h4>
@@ -43,17 +48,24 @@
             <p><?=$page_data['content']?></p>
             <br>
         </div>
-
         <?php } ?>
     </div>
     <?php } ?>
     <br><br>
     <div  class="form-group" >
-    <input class="btn btn-success" type="reset" onclick="history.back()" value="Back">
+    <input class="btn btn-default" type="reset" onclick="history.back()" value="Back">
     </div>
     <br><br>
 
 </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 

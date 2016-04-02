@@ -42,7 +42,9 @@
     <!-- third section - comprises -->
     <div id="services" class="pad-section">
         <div class="container">
-            <a class="ahref" href="#information"><h2 class="text-center"><b>This site comprises:</b></h2> </a>
+            <a class="ahref" href="#information">
+                <h2 class="text-center"><b>This site comprises:</b></h2>
+            </a>
             <hr style="background:linear-gradient(90deg, lightgray,  gray, black, gray, lightgray);border:0;height:1px">
             <br>
             <div class="row text-center">
@@ -61,24 +63,10 @@
                     <p>The problem is that we had to do a lot of html pages</p>
                 </div>
                 <div class="col-sm-2 col-xs-6">
-                    <div id="circle2"></div>
-                    <script>
-                        $('#circle2').circleProgress({
-                            value: 0.27,
-                            size: 140,
-                            fill: {
-                                gradient: ["orange", "white"]
-                            }
-                        });
-                    </script>
-                    <h4><b>JavaScript</b></h4>
-                    <p>I had to look to Google and remodel for myself</p>
-                </div>
-                <div class="col-sm-2 col-xs-6">
                     <div id="circle3"></div>
                     <script>
                         $('#circle3').circleProgress({
-                            value: 0.18,
+                            value: 0.27,
                             size: 140,
                             fill: {
                                 gradient: ["purple", "white"]
@@ -87,6 +75,20 @@
                     </script>
                     <h4><b>PHP</b></h4>
                     <p>It's easy:)</p>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <div id="circle2"></div>
+                    <script>
+                        $('#circle2').circleProgress({
+                            value: 0.18,
+                            size: 140,
+                            fill: {
+                                gradient: ["orange", "white"]
+                            }
+                        });
+                    </script>
+                    <h4><b>JavaScript</b></h4>
+                    <p>I had to look to Google and remodel for myself</p>
                 </div>
                 <div class="col-sm-2 col-xs-6">
                     <div id="circle4"></div>
@@ -142,25 +144,24 @@
                     <p style="color: lightcyan"><b>I tried to make a blog for yourself and how would you like to enjoy and see it.</b></p>
                     <p><a class="btn btn-default" href="/blogs" role="button">View Blog? »</a></p>
                 </div><!-- /.col-lg-4 -->
-
-
-
-
-
-
-
                 <div class="col-lg-4">
-                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="340">
-                    <h2>Forum</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel" >
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item">
+                                <img width="200" height="200" class="first-slide img-circle" src="/webroot/img/defaults/0007.jpg" alt="First slide">
+                            </div>
+                            <div class="item active">
+                                <img width="200" height="200" class="second-slide img-circle" src="/webroot/img/defaults/0008.jpg" alt="Second slide">
+                            </div>
+                            <div class="item">
+                                <img width="600" height="300" class="third-slide img-circle" src="/webroot/img/defaults/0009.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                    </div>
+                    <h2 style="color: lightcyan"><b>Forum</b></h2>
+                    <p style="color: lightcyan"><b>This forum right now is fairly steep left.</b></p>
+                    <p><a class="btn btn-default" href="/blogs/forums" role="button">View forum/forums »</a></p>
                 </div><!-- /.col-lg-4 -->
-
-
-
-
-
-
                 <div class="col-lg-4">
                     <div id="myCarousel3" class="carousel slide" data-ride="carousel" >
                         <div class="carousel-inner" role="listbox">

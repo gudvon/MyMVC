@@ -1,0 +1,61 @@
+
+body{
+    background: url('/webroot/img/forum/01.jpg') no-repeat center center fixed;
+}
+
+
+.panel-heading{
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 50px rgba(0,0,0,0.7); /* Параметры тени */
+    padding: 8px;
+}
+
+.panel-forum{
+    background-color: whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.7); /* Параметры тени */
+    padding: 0;
+}
+
+
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color:white;
+}
+
+table th	{
+    background-color: black;
+    color: white;
+}
+
+
+.forum-image {
+    float:left; /* Выравнивание по левому краю */
+    margin: 2px 11px 11px 10px; /* Отступы вокруг картинки */
+}
+
+
+body:not(.nohover) tbody tr:hover {
+    background: lightgray;
+}
+
+
+.forumtitle {
+    color: black;
+    padding: 5px;
+}
+.forumtitle:active {
+    text-decoration: none;
+    color: grey;
+}
+.forumtitle:hover {
+    text-decoration: none;
+    color: grey;
+}
+
