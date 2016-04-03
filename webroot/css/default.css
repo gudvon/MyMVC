@@ -32,6 +32,11 @@ form{
     background-color: black !important;
 }
 
+.navbar-nav li .a_admin:hover, .navbar-nav li.active .a_admin {
+    color: #fff !important;
+    background-color: #fff !important;
+}
+
 .navbar-default .navbar-toggle {
     border-color: transparent;
     color: #fff !important;

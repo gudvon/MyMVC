@@ -2,22 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25aa8c26-38a4-48cd-b3ab-e42f2d6ba02c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/defaults/0007.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/defaults/0008.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/defaults/0009.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/forum/01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/forum/02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/css/forums/comments.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webroot/img/forum/1.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/webroot/css/forum.css" afterPath="$PROJECT_DIR$/webroot/css/forums/forum.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/blog/squares.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/defaults/2031.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/defaults/260.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/defaults/design.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/defaults/user_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/css/defaults/user_index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/js/defaults/user_defaults.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/forums/admin_general.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/forums/user_general.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/forums/user_junk.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/webroot/blog/user_blog.css" afterPath="$PROJECT_DIR$/webroot/css/blogs/user_blog.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/blogs.controller.php" afterPath="$PROJECT_DIR$/controllers/blogs.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/contacts.controller.php" afterPath="$PROJECT_DIR$/controllers/contacts.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/defaults.controller.php" afterPath="$PROJECT_DIR$/controllers/defaults.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/profiles.controller.php" afterPath="$PROJECT_DIR$/controllers/profiles.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/users.controller.php" afterPath="$PROJECT_DIR$/controllers/users.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/blog.php" afterPath="$PROJECT_DIR$/models/blog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/forum.php" afterPath="$PROJECT_DIR$/models/forum.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/message.php" afterPath="$PROJECT_DIR$/models/message.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/profile.php" afterPath="$PROJECT_DIR$/models/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/user.php" afterPath="$PROJECT_DIR$/models/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/category.html" afterPath="$PROJECT_DIR$/views/blogs/category.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_add.html" afterPath="$PROJECT_DIR$/views/blogs/user_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_blog_view.html" afterPath="$PROJECT_DIR$/views/blogs/user_blog_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_category.html" afterPath="$PROJECT_DIR$/views/blogs/user_category.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_edit_comments.html" afterPath="$PROJECT_DIR$/views/blogs/user_edit_comments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_index.html" afterPath="$PROJECT_DIR$/views/blogs/user_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_pages.html" afterPath="$PROJECT_DIR$/views/blogs/user_pages.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blogs/user_search.html" afterPath="$PROJECT_DIR$/views/blogs/user_search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/contacts/user_index.html" afterPath="$PROJECT_DIR$/views/contacts/user_index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default.html" afterPath="$PROJECT_DIR$/views/default.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/defaults/index.html" afterPath="$PROJECT_DIR$/views/defaults/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/comments.html" afterPath="$PROJECT_DIR$/views/forums/comments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/discussions.html" afterPath="$PROJECT_DIR$/views/forums/discussions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/index.html" afterPath="$PROJECT_DIR$/views/forums/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/index.html" afterPath="$PROJECT_DIR$/views/pages/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/js/defaults/defaults.js" afterPath="$PROJECT_DIR$/webroot/js/defaults/defaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_add_discussions.html" afterPath="$PROJECT_DIR$/views/forums/user_add_discussions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_comments.html" afterPath="$PROJECT_DIR$/views/forums/user_comments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_discussions.html" afterPath="$PROJECT_DIR$/views/forums/user_discussions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_edit_comments.html" afterPath="$PROJECT_DIR$/views/forums/user_edit_comments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_edit_discussions.html" afterPath="$PROJECT_DIR$/views/forums/user_edit_discussions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forums/user_index.html" afterPath="$PROJECT_DIR$/views/forums/user_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profiles/user_edit.html" afterPath="$PROJECT_DIR$/views/profiles/user_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profiles/user_index.html" afterPath="$PROJECT_DIR$/views/profiles/user_index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profiles/user_user.html" afterPath="$PROJECT_DIR$/views/profiles/user_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/user.html" afterPath="$PROJECT_DIR$/views/user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/default.css" afterPath="$PROJECT_DIR$/webroot/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/defaults/index.css" afterPath="$PROJECT_DIR$/webroot/css/defaults/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/user.css" afterPath="$PROJECT_DIR$/webroot/css/user.css" />
     </list>
     <ignored path="MyMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +81,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="defaults.controller.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/defaults.controller.php">
+      <file leaf-file-name="user_add_discussions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_add_discussions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2035928">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-26.884615">
+              <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_comments.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_comments.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34610778">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_discussions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_discussions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-26.884615">
+              <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_edit_comments.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_edit_comments.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-26.884615">
+              <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_edit_discussions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_edit_discussions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-26.884615">
+              <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/forums/user_index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.0">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -67,8 +147,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,43 +158,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/blogs/admin_add.html" />
-        <option value="$PROJECT_DIR$/views/blogs/user_add.html" />
-        <option value="$PROJECT_DIR$/webroot/blog/user_blog.css" />
-        <option value="$PROJECT_DIR$/views/blogs/user_index.html" />
-        <option value="$PROJECT_DIR$/views/blogs/user_pages.html" />
-        <option value="$PROJECT_DIR$/views/blogs/user_blog_view.html" />
-        <option value="$PROJECT_DIR$/views/blogs/user_category.html" />
-        <option value="$PROJECT_DIR$/views/blogs/user_search.html" />
-        <option value="$PROJECT_DIR$/webroot/blog/blog.css" />
-        <option value="$PROJECT_DIR$/webroot/canvas/normalize.css" />
-        <option value="$PROJECT_DIR$/views/contacts/user_index.html" />
-        <option value="$PROJECT_DIR$/views/pages/admin_index.html" />
-        <option value="$PROJECT_DIR$/controllers/default.controller.php" />
-        <option value="$PROJECT_DIR$/views/index.html" />
-        <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/lib/controller.class.php" />
-        <option value="$PROJECT_DIR$/controllers/defaults.controller.php" />
-        <option value="$PROJECT_DIR$/views/admin.html" />
-        <option value="$PROJECT_DIR$/webroot/blog/admin_blog.css" />
-        <option value="$PROJECT_DIR$/views/blogs/admin_index.html" />
-        <option value="$PROJECT_DIR$/webroot/css/admin_defaults.css" />
-        <option value="$PROJECT_DIR$/views/defaults/admin_index.html" />
-        <option value="$PROJECT_DIR$/webroot/css/defaults_defaults.css" />
-        <option value="$PROJECT_DIR$/webroot/css/admin.css" />
-        <option value="$PROJECT_DIR$/models/blog.php" />
-        <option value="$PROJECT_DIR$/controllers/blogs.controller.php" />
-        <option value="$PROJECT_DIR$/views/blogs/index.html" />
-        <option value="$PROJECT_DIR$/views/blogs/category.html" />
-        <option value="$PROJECT_DIR$/views/blogs/search.html" />
-        <option value="$PROJECT_DIR$/views/blogs/blog_view.html" />
-        <option value="$PROJECT_DIR$/webroot/css/blogs/blog.css" />
-        <option value="$PROJECT_DIR$/views/contacts/index.html" />
-        <option value="$PROJECT_DIR$/views/blogs/pages.html" />
-        <option value="$PROJECT_DIR$/webroot/canvas/prefixfree.min.js" />
-        <option value="$PROJECT_DIR$/views/users/login.html" />
         <option value="$PROJECT_DIR$/views/users/registration.html" />
-        <option value="$PROJECT_DIR$/webroot/css/defaults/index.css" />
         <option value="$PROJECT_DIR$/webroot/blog/chaos-delaunay/css/style.css" />
         <option value="$PROJECT_DIR$/views/pages/index.html" />
         <option value="$PROJECT_DIR$/webroot/css/forum.css" />
@@ -126,9 +170,45 @@
         <option value="$PROJECT_DIR$/webroot/css/forums/comments.css" />
         <option value="$PROJECT_DIR$/views/forums/comments.html" />
         <option value="$PROJECT_DIR$/webroot/js/defaults/defaults.js" />
+        <option value="$PROJECT_DIR$/webroot/css/defaults/index.css" />
+        <option value="$PROJECT_DIR$/controllers/defaults.controller.php" />
         <option value="$PROJECT_DIR$/webroot/css/default.css" />
+        <option value="$PROJECT_DIR$/models/message.php" />
+        <option value="$PROJECT_DIR$/controllers/contacts.controller.php" />
+        <option value="$PROJECT_DIR$/controllers/users.controller.php" />
+        <option value="$PROJECT_DIR$/views/pages/user_index.html" />
         <option value="$PROJECT_DIR$/views/default.html" />
+        <option value="$PROJECT_DIR$/webroot/js/defaults/user_defaults.js" />
         <option value="$PROJECT_DIR$/views/defaults/index.html" />
+        <option value="$PROJECT_DIR$/webroot/css/user.css" />
+        <option value="$PROJECT_DIR$/webroot/css/defaults/user_index.css" />
+        <option value="$PROJECT_DIR$/webroot/css/blogs/user_blog.css" />
+        <option value="$PROJECT_DIR$/views/blogs/user_pages.html" />
+        <option value="$PROJECT_DIR$/views/blogs/user_blog_view.html" />
+        <option value="$PROJECT_DIR$/views/blogs/user_index.html" />
+        <option value="$PROJECT_DIR$/views/blogs/user_add.html" />
+        <option value="$PROJECT_DIR$/views/blogs/user_edit_comments.html" />
+        <option value="$PROJECT_DIR$/views/blogs/user_search.html" />
+        <option value="$PROJECT_DIR$/views/blogs/user_category.html" />
+        <option value="$PROJECT_DIR$/controllers/blogs.controller.php" />
+        <option value="$PROJECT_DIR$/views/blogs/category.html" />
+        <option value="$PROJECT_DIR$/views/user.html" />
+        <option value="$PROJECT_DIR$/views/defaults/user_index.html" />
+        <option value="$PROJECT_DIR$/views/contacts/user_index.html" />
+        <option value="$PROJECT_DIR$/views/profiles/user_edit.html" />
+        <option value="$PROJECT_DIR$/models/blog.php" />
+        <option value="$PROJECT_DIR$/views/profiles/user_index.html" />
+        <option value="$PROJECT_DIR$/controllers/profiles.controller.php" />
+        <option value="$PROJECT_DIR$/models/profile.php" />
+        <option value="$PROJECT_DIR$/views/profiles/user_user.html" />
+        <option value="$PROJECT_DIR$/views/forums/user_index.html" />
+        <option value="$PROJECT_DIR$/views/forums/user_discussions.html" />
+        <option value="$PROJECT_DIR$/views/forums/user_edit_comments.html" />
+        <option value="$PROJECT_DIR$/views/forums/user_edit_discussions.html" />
+        <option value="$PROJECT_DIR$/views/forums/user_add_discussions.html" />
+        <option value="$PROJECT_DIR$/models/forum.php" />
+        <option value="$PROJECT_DIR$/models/user.php" />
+        <option value="$PROJECT_DIR$/views/forums/user_comments.html" />
       </list>
     </option>
   </component>
@@ -142,8 +222,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="221" />
-    <option name="width" value="1706" />
+    <option name="x" value="301" />
+    <option name="width" value="1626" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -196,6 +276,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -212,6 +293,274 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="defaults" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="defaults" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forums" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="defaults" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blogs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyMVC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forums" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -245,7 +594,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,11 +607,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\webroot\css\blogs" />
       <recent name="C:\xampp\htdocs\webroot\img\defaults" />
+      <recent name="C:\xampp\htdocs\webroot\img\blog" />
       <recent name="C:\xampp\htdocs\webroot\css" />
       <recent name="C:\xampp\htdocs\webroot\css\forums" />
-      <recent name="C:\xampp\htdocs\webroot\img\forum" />
-      <recent name="C:\xampp\htdocs\webroot\blog" />
     </key>
   </component>
   <component name="RunManager">
@@ -319,10 +667,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="221" y="0" width="1706" height="1047" extended-state="1" />
+    <frame x="301" y="0" width="1626" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15006076" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="774" y="19" width="606" height="960" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16347381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="774" y="19" width="606" height="960" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -360,378 +708,141 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/app.class.php">
+    <entry file="file://$PROJECT_DIR$/views/pages/user_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/static.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22584541">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.32608697">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5338164">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24637681">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/admin_blog_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.085749">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/profiles/admin_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/blog/admin_blog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6099034">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/defaults/admin_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5277778">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/admin_defaults.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.153847">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/js/defaults/circle-progress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39812645">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="10" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/blog/user_blog.css">
+    <entry file="file://$PROJECT_DIR$/webroot/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1497585">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.4">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/admin.css">
+    <entry file="file://$PROJECT_DIR$/views/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.307692">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/admin_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.115383">
-          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0">
-          <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <marker date="1459554391096" expanded="true" signature="249:287" placeholder="select * fro... blogs" />
-            <marker date="1459554391096" expanded="true" signature="249:295" placeholder="select * fro... blogs" />
-            <marker date="1459554391096" expanded="true" signature="406:468" placeholder="select SUBST... blogs" />
-            <marker date="1459554391096" expanded="true" signature="1414:1538" placeholder="insert into blogs... " />
-            <marker date="1459554391096" expanded="true" signature="1414:1547" placeholder="insert into blogs... " />
-            <marker date="1459554391096" expanded="true" signature="1414:1563" placeholder="insert into blogs... " />
-            <marker date="1459554391096" expanded="true" signature="1603:1746" placeholder="update blogs... " />
-            <marker date="1459554391096" expanded="true" signature="1894:1944" placeholder="select from tags" />
-            <marker date="1459554391096" expanded="true" signature="2057:2109" placeholder="select na fr... tags" />
-            <marker date="1459554391096" expanded="true" signature="2224:2344" placeholder="SELECT tags,... blogs" />
-            <marker date="1459554391096" expanded="true" signature="2460:2594" placeholder="SELECT count... blogs" />
-            <marker date="1459554391096" expanded="true" signature="2705:2804" placeholder="SELECT tags.... blogs" />
-            <marker date="1459554391096" expanded="true" signature="2931:2974" placeholder="select * fro... blogs" />
-            <marker date="1459554391096" expanded="true" signature="3108:3145" placeholder="select * fro... tags" />
-            <marker date="1459554391096" expanded="true" signature="3268:3314" placeholder="select * fro... blogs" />
-            <marker date="1459554391096" expanded="true" signature="3509:3562" placeholder="select * fro... blogs_comments" />
-            <marker date="1459554391096" expanded="true" signature="3692:3739" placeholder="select * fro... blogs_comments" />
-            <marker date="1459554391096" expanded="true" signature="4043:4156" placeholder="insert into blogs_comments... " />
-            <marker date="1459554391096" expanded="true" signature="4422:4498" placeholder="update blogs... " />
-            <marker date="1459554391096" expanded="true" signature="4633:4678" placeholder="delete from " />
-            <marker date="1459554391096" expanded="true" signature="4792:4846" placeholder="select id fr... blogs_comments" />
-            <marker date="1459554391096" expanded="true" signature="4967:5003" placeholder="delete from " />
-            <marker date="1459554391096" expanded="true" signature="5201:5254" placeholder="SELECT * FRO... blogs" />
-            <marker date="1459554391096" expanded="true" signature="5449:5476" placeholder="select COUNT... blogs" />
-            <marker date="1459554391096" expanded="true" signature="5851:5878" placeholder="select COUNT... blogs" />
-            <marker date="1459554391096" expanded="true" signature="6163:6316" placeholder="SELECT blogs... blogs" />
-            <marker date="1459554391096" expanded="true" signature="6422:6630" placeholder="SELECT users... users" />
-            <marker date="1459554391096" expanded="true" signature="6738:6765" placeholder="select COUNT... blogs" />
-            <marker date="1459554391096" expanded="true" signature="6881:6917" placeholder="select COUNT... blogs" />
-            <marker date="1459554391096" expanded="true" signature="7032:7060" placeholder="select COUNT... blogs_comments" />
-            <marker date="1459554391096" expanded="true" signature="7032:7087" placeholder="select * fro... blogs_comments" />
-            <marker date="1459554391096" expanded="true" signature="7530:7735" placeholder="SELECT `page... table_name" />
-            <marker date="1459554391096" expanded="true" signature="7530:7736" placeholder="SELECT * FRO... blogs" />
-            <marker date="1459554391096" expanded="true" signature="7530:7758" placeholder="SELECT DISTI... blogs" />
-            <marker date="1459554391096" expanded="true" signature="8057:8086" placeholder="insert into tags... " />
-            <marker date="1459554391096" expanded="true" signature="8057:8094" placeholder="insert into blogs... " />
-            <marker date="1459554391096" expanded="true" signature="8197:8215" placeholder="select * fro... tags" />
-            <marker date="1459554391096" expanded="true" signature="8346:8381" placeholder="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7098322">
-          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83693045">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/canvas/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/canvas/prefixfree.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21744186">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/canvas/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3261391">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/canvas/normalize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20383693">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/pages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20383693">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/img/defaults/0003.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/img/defaults/0001.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/img/03.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2035928">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/blog_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/contacts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52934134">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/user_comments.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/blogs/blog.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/comments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30538923">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/forums/forum.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06347305">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/forums/comments.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18323353">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/profiles/user_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18323353">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.542515">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/forums/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30538923">
+        <state vertical-scroll-proportion="-0.061077844">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/forums/discussions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.26923">
-          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/index.html">
+    <entry file="file://$PROJECT_DIR$/webroot/img/blog/pagetitle4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/img/blog/pagetitle3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/img/blog/pagetitle2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/img/blog/widget-title.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/img/blog/pagetitle6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/img/blog/pagetitle5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/defaults/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#2;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/css/defaults/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14251497">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/js/defaults/user_defaults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/css/user.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.020359281">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-85.0">
+          <caret line="142" column="63" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/pages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.384615">
+          <caret line="87" column="46" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4251497">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42754492">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
@@ -739,79 +850,384 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/js/defaults/defaults.js">
+    <entry file="file://$PROJECT_DIR$/webroot/css/blogs/user_blog.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blogs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56287426">
-          <caret line="111" column="38" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.115385">
-          <caret line="32" column="1" selection-start-line="29" selection-start-column="15" selection-end-line="32" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.807692">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/defaults/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-41.846153">
-          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#2;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/css/defaults/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4814372">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.22634731">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/blogs.controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37964073">
-          <caret line="309" column="38" selection-start-line="309" selection-start-column="38" selection-end-line="309" selection-end-column="38" />
+        <state vertical-scroll-proportion="-15.115385">
+          <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/defaults.controller.php">
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2035928">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.7916168">
+          <caret line="88" column="111" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69221556">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_edit_comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18562874">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_pages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48862275">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/defaults/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36646706">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#a#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33892214">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/contacts/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2239521">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/contacts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7532934">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/profiles/user_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5497006">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/blog/admin_blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46826348">
+          <caret line="122" column="46" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blogs/user_blog_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2622755">
+          <caret line="107" column="111" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/profiles/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-47.807693">
+          <caret line="191" column="10" selection-start-line="120" selection-start-column="4" selection-end-line="191" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/users.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8754491">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/profiles.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.961538">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/profiles/user_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26467067">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38682634">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding>
+            <marker date="1459721434711" expanded="true" signature="249:295" placeholder="select * fro... blogs" />
+            <marker date="1459721434711" expanded="true" signature="406:468" placeholder="select SUBST... blogs" />
+            <marker date="1459721434711" expanded="true" signature="581:643" placeholder="select SUBST... blogs" />
+            <marker date="1459721434711" expanded="true" signature="1589:1738" placeholder="insert into blogs... " />
+            <marker date="1459721434711" expanded="true" signature="1778:1921" placeholder="update blogs... " />
+            <marker date="1459721434711" expanded="true" signature="2069:2119" placeholder="select `name... tags" />
+            <marker date="1459721434711" expanded="true" signature="2232:2284" placeholder="select id fr... tags" />
+            <marker date="1459721434711" expanded="true" signature="2399:2519" placeholder="SELECT tags.... blogs" />
+            <marker date="1459721434711" expanded="true" signature="2635:2769" placeholder="SELECT count... blogs" />
+            <marker date="1459721434711" expanded="true" signature="2880:2979" placeholder="SELECT tags.... blogs" />
+            <marker date="1459721434711" expanded="true" signature="3106:3149" placeholder="select * fro... blogs" />
+            <marker date="1459721434711" expanded="true" signature="3283:3320" placeholder="select * fro... tags" />
+            <marker date="1459721434711" expanded="true" signature="3443:3489" placeholder="select * fro... blogs" />
+            <marker date="1459721434711" expanded="true" signature="3684:3737" placeholder="select * fro... blogs_comments" />
+            <marker date="1459721434711" expanded="true" signature="3867:3914" placeholder="select * fro... blogs_comments" />
+            <marker date="1459721434711" expanded="true" signature="4218:4331" placeholder="insert into blogs_comments... " />
+            <marker date="1459721434711" expanded="true" signature="4597:4673" placeholder="update blogs... " />
+            <marker date="1459721434711" expanded="true" signature="4808:4853" placeholder="delete from " />
+            <marker date="1459721434711" expanded="true" signature="4967:5021" placeholder="select id fr... blogs_comments" />
+            <marker date="1459721434711" expanded="true" signature="5142:5178" placeholder="delete from " />
+            <marker date="1459721434711" expanded="true" signature="5376:5429" placeholder="SELECT * FRO... blogs" />
+            <marker date="1459721434711" expanded="true" signature="5624:5651" placeholder="select COUNT... blogs" />
+            <marker date="1459721434711" expanded="true" signature="6026:6053" placeholder="select COUNT... blogs" />
+            <marker date="1459721434711" expanded="true" signature="6338:6491" placeholder="SELECT blogs... blogs" />
+            <marker date="1459721434711" expanded="true" signature="6597:6805" placeholder="SELECT users... users" />
+            <marker date="1459721434711" expanded="true" signature="6913:6940" placeholder="select COUNT... blogs" />
+            <marker date="1459721434711" expanded="true" signature="7056:7092" placeholder="select COUNT... blogs_comments" />
+            <marker date="1459721434711" expanded="true" signature="7207:7262" placeholder="select * fro... blogs_comments" />
+            <marker date="1459721434711" expanded="true" signature="7368:7414" placeholder="select * fro... blogs" />
+            <marker date="1459721434711" expanded="true" signature="7857:8085" placeholder="SELECT DISTI... blogs" />
+            <marker date="1459721434711" expanded="true" signature="8384:8421" placeholder="insert into tags... " />
+            <marker date="1459721434711" expanded="true" signature="8524:8542" placeholder="select * fro... tags" />
+            <marker date="1459721434711" expanded="true" signature="8673:8708" placeholder="delete from " />
+            <marker date="1459721434711" expanded="true" signature="8816:8834" placeholder="select * fro... tags" />
+            <marker date="1459721434711" expanded="true" signature="8816:8853" placeholder="select * fro... tags" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/css/defaults/user_index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="80" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/css/blogs/blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="22" selection-start-line="7" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_edit_comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.884615">
+          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_edit_discussions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.884615">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_discussions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.884615">
+          <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25748503">
+          <caret line="64" column="70" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
+          <folding>
+            <marker date="1459723021888" expanded="true" signature="249:301" placeholder="select * fro... users" />
+            <marker date="1459723021888" expanded="true" signature="548:600" placeholder="select * fro... users" />
+            <marker date="1459723021888" expanded="true" signature="843:897" placeholder="select * fro... users" />
+            <marker date="1459723021888" expanded="true" signature="1140:1194" placeholder="select role users" />
+            <marker date="1459723021888" expanded="true" signature="1545:1623" placeholder="INSERT INTO users... " />
+            <marker date="1459723021888" expanded="true" signature="1715:1742" placeholder="select COUNT... users" />
+            <marker date="1459723021888" expanded="true" signature="1852:1871" placeholder="select * fro... blogs" />
+            <marker date="1459723021888" expanded="true" signature="1852:1888" placeholder="select * fro... blogs" />
+            <marker date="1459723021888" expanded="true" signature="1852:1912" placeholder="select * fro... blogs" />
+            <marker date="1459723021888" expanded="true" signature="2023:2065" placeholder="select * fro... discussions" />
+            <marker date="1459723021888" expanded="true" signature="2023:2091" placeholder="select * fro... discussions" />
+            <marker date="1459723021888" expanded="true" signature="2227:2254" placeholder="select COUNT... blogs" />
+            <marker date="1459723021888" expanded="true" signature="2227:2271" placeholder="select COUNT... blogs" />
+            <marker date="1459723021888" expanded="true" signature="2413:2463" placeholder="select COUNT... discussions" />
+            <marker date="1459723021888" expanded="true" signature="2611:2655" placeholder="select COUNT... comments" />
+            <marker date="1459723021888" expanded="true" signature="2611:2658" placeholder="select COUNT... comments" />
+            <marker date="1459723021888" expanded="true" signature="2611:2663" placeholder="select COUNT... comments" />
+            <marker date="1459723021888" expanded="true" signature="2808:2861" placeholder="select COUNT... blogs_comments" />
+            <marker date="1459723021888" expanded="true" signature="2808:2866" placeholder="select COUNT... blogs_comments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74850297">
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <marker date="1459722395527" expanded="true" signature="870:1132" placeholder="update users... " />
+            <marker date="1459722395527" expanded="true" signature="1242:1269" placeholder="select * fro... users" />
+            <marker date="1459722395527" expanded="true" signature="1414:1468" placeholder="select * fro... users" />
+            <marker date="1459722395527" expanded="true" signature="1695:1756" placeholder="UPDATE users... " />
+            <marker date="1459722395527" expanded="true" signature="1950:1994" placeholder="select * fro... users" />
+            <marker date="1459722395527" expanded="true" signature="2118:2156" placeholder="select * fro... users" />
+            <marker date="1459722395527" expanded="true" signature="2259:2295" placeholder="delete from " />
+            <marker date="1459722395527" expanded="true" signature="2315:2359" placeholder="delete from " />
+            <marker date="1459722395527" expanded="true" signature="2379:2426" placeholder="delete from " />
+            <marker date="1459722395527" expanded="true" signature="2446:2487" placeholder="delete from " />
+            <marker date="1459722395527" expanded="true" signature="2507:2557" placeholder="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/forum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53532934">
+          <caret line="186" column="90" selection-start-line="186" selection-start-column="70" selection-end-line="186" selection-end-column="90" />
+          <folding>
+            <marker date="1459722933450" expanded="true" signature="735:977" placeholder="insert into categories... " />
+            <marker date="1459722933450" expanded="true" signature="1047:1268" placeholder="update categ... " />
+            <marker date="1459722933450" expanded="true" signature="1397:1421" placeholder="select * fro... categories" />
+            <marker date="1459722933450" expanded="true" signature="1524:1549" placeholder="select id fr... categories" />
+            <marker date="1459722933450" expanded="true" signature="1672:1723" placeholder="select * fro... categories" />
+            <marker date="1459722933450" expanded="true" signature="1912:1953" placeholder="delete from " />
+            <marker date="1459722933450" expanded="true" signature="1974:2025" placeholder="delete from " />
+            <marker date="1459722933450" expanded="true" signature="2219:2273" placeholder="select id fr... discussions" />
+            <marker date="1459722933450" expanded="true" signature="2413:2542" placeholder="select comme... comments" />
+            <marker date="1459722933450" expanded="true" signature="2686:2850" placeholder="select comme... comments" />
+            <marker date="1459722933450" expanded="true" signature="2997:3164" placeholder="select discu... comments" />
+            <marker date="1459722933450" expanded="true" signature="3678:3737" placeholder="insert into topics... " />
+            <marker date="1459722933450" expanded="true" signature="3777:3843" placeholder="update topic... " />
+            <marker date="1459722933450" expanded="true" signature="3957:3977" placeholder="select * fro... topics" />
+            <marker date="1459722933450" expanded="true" signature="4105:4152" placeholder="select * fro... topics" />
+            <marker date="1459722933450" expanded="true" signature="4336:4366" placeholder="delete from " />
+            <marker date="1459722933450" expanded="true" signature="4594:4646" placeholder="select * fro... discussions" />
+            <marker date="1459722933450" expanded="true" signature="4757:4814" placeholder="select * fro... discussions" />
+            <marker date="1459722933450" expanded="true" signature="5366:5519" placeholder="insert into discussions... " />
+            <marker date="1459722933450" expanded="true" signature="5943:6056" placeholder="update discu... " />
+            <marker date="1459722933450" expanded="true" signature="6191:6265" placeholder="select * fro... discussions" />
+            <marker date="1459722933450" expanded="true" signature="6397:6441" placeholder="select * fro... discussions" />
+            <marker date="1459722933450" expanded="true" signature="6575:6636" placeholder="select * fro... discussions" />
+            <marker date="1459722933450" expanded="true" signature="6770:6820" placeholder="delete from " />
+            <marker date="1459722933450" expanded="true" signature="6840:6882" placeholder="delete from " />
+            <marker date="1459722933450" expanded="true" signature="7040:7065" placeholder="select * fro... discussions" />
+            <marker date="1459722933450" expanded="true" signature="7288:7340" placeholder="select * fro... comments" />
+            <marker date="1459722933450" expanded="true" signature="7469:7510" placeholder="select * fro... comments" />
+            <marker date="1459722933450" expanded="true" signature="7814:7926" placeholder="insert into comments... " />
+            <marker date="1459722933450" expanded="true" signature="8196:8266" placeholder="update comme... " />
+            <marker date="1459722933450" expanded="true" signature="8379:8417" placeholder="select * fro... users" />
+            <marker date="1459722933450" expanded="true" signature="8531:8584" placeholder="select id fr... comments" />
+            <marker date="1459722933450" expanded="true" signature="8705:8752" placeholder="select id fr... comments" />
+            <marker date="1459722933450" expanded="true" signature="8867:8962" placeholder="select user_... comments" />
+            <marker date="1459722933450" expanded="true" signature="9091:9130" placeholder="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/forums.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.239521">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_add_discussions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.884615">
+          <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/forums/user_comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34610778">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
           <folding />
         </state>
       </provider>

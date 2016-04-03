@@ -30,6 +30,13 @@
 
 <body>
 
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
 <div class="col-sm-9">
     <?php foreach($data['discussions'] as $page_data) { ?>
     <h2><b><?=$page_data['title']?></b></h2>
@@ -41,7 +48,7 @@
         <?=$page_data['date']?>.
     </h5>
     <?php } ?>
-    <h5><span class="label label-success">Lorem</span></h5><br>
+    <br>
     <p><?=$page_data['content']?></p>
     <hr>
     <?php } ?>
@@ -90,6 +97,7 @@
     </section>
     <br><br>
     <br><br>
+</div>
 </div>
 
 </body>

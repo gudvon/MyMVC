@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/webroot/css/defaults/user_index.css">
+
+</head>
+
+<body id="main">
+
+<br>
+<br>
+
+<div class="top" id="top" style="padding-top: 50px;">
+<!-- Carousel
+================================================== -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="/user/blogs/blog_view/<?=Blog::getTopCommentedBlogs()[0]['id']?>">
+                            <img src="<?=Blog::getTopCommentedBlogs()[0]['photo']?>" style="width:100%" class="img-responsive">
+                        </a>
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1 class="text-center" style="background: black; color: #FFA500"><?=Blog::getTopCommentedBlogs()[0]['title']?></h1>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="/user/blogs/blog_view/<?=Blog::getTopCommentedBlogs()[1]['id']?>">
+                            <img src="<?=Blog::getTopCommentedBlogs()[1]['photo']?>" style="width:100%" class="img-responsive">
+                        </a>
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1 style="background: black; color: #FFA500"><?=Blog::getTopCommentedBlogs()[1]['title']?></h1>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="/user/blogs/blog_view/<?=Blog::getTopCommentedBlogs()[2]['id']?>">
+                            <img src="<?=Blog::getTopCommentedBlogs()[2]['photo']?>" style="width:100%" class="img-responsive">
+                        </a>
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1 style="background: black; color: #FFA500"><?=Blog::getTopCommentedBlogs()[2]['title']?></h1>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12">
+                <a href="/user/blogs/blog_view/<?=Blog::getTopCommentedBlogs()[3]['id']?>">
+                    <img src="<?=Blog::getTopCommentedBlogs()[3]['photo']?>" style="width:100%" class="img-responsive">
+                    <h3 style="background: black; color: #FFA500; position: absolute; top: 50%; left: 5%; width: 90%;"><?=Blog::getTopCommentedBlogs()[3]['title']?></h3>
+                    <p></p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4" style="bottom: -13px">
+            <div class="col-md-12">
+                <a href="/user/blogs/blog_view/<?=Blog::getTopCommentedBlogs()[4]['id']?>">
+                    <img src="<?=Blog::getTopCommentedBlogs()[4]['photo']?>" style="width:100%" class="img-responsive">
+                    <h3 style="background: black; color: #FFA500; position: absolute; top: 50%; left: 5%; width: 90%;"><?=Blog::getTopCommentedBlogs()[4]['title']?></h3>
+                    <p></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.carousel -->
+</div>
+<!--main-->
+<div id="blogs">
+<div class="container" >
+    <div class="row">
+        <!--right-->
+        <div class="col-md-12">
+            <div class="row" >
+                <h2 class="text-center"><span class="colored-title" style="color: lightsalmon;"><b>Recent</b></span><b> Blogs</b></h2>
+                <br>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <img src="<?=Blog::getLastBlog()[0]['photo']?>" style="width:100%" class="img-rounded">
+                        </div>
+                        <div class="panel-body">
+                            <?=htmlspecialchars_decode(Blog::getAliasBlog(Blog::getLastBlog()[0]['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...
+                            <a class="btn btn-xs btn-default" href="/user/blogs/blog_view/<?=Blog::getLastBlog()[0]['id']?>">See More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <img src="<?=Blog::getLastBlog()[1]['photo']?>" style="width:100%" class="img-rounded">
+                        </div>
+                        <div class="panel-body"><?=htmlspecialchars_decode(Blog::getAliasBlog(Blog::getLastBlog()[1]['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...
+                            <a class="btn btn-xs btn-default" href="/user/blogs/blog_view/<?=Blog::getLastBlog()[1]['id']?>">See More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <img src="<?=Blog::getLastBlog()[2]['photo']?>" style="width:100%" class="img-rounded">
+                        </div>
+                        <div class="panel-body"><?=htmlspecialchars_decode(Blog::getAliasBlog(Blog::getLastBlog()[2]['id'])[0]["SUBSTR(`content`, 1, 500)"])?>...
+                            <a class="btn btn-xs btn-default" href="/user/blogs/blog_view/<?=Blog::getLastBlog()[2]['id']?>">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+</div>
+
+<div id="discussions">
+    <div class="container" >
+        <div class="row">
+            <hr>
+            <h2 class="text-center"><span class="colored-title" style="color: lightsalmon;"><b>Recent</b></span><b> Discussions</b></h2>
+            <br>
+            <div class="panel-inner">
+                <table class="table table-primary table-hover tablet">
+                    <thead>
+                    <tr>
+                        <th data-class="expand" class="footable-visible footable-first-column">Title</th>
+                        <th class="large110 footable-visible" data-hide="phone">Statistics</th>
+                        <th class="large21 footable-visible footable-last-column" data-hide="phone">Last post</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach(Forum::getLastDiscussions() as $page_data) { ?>
+                    <tr>
+                        <td class="expand footable-visible footable-first-column" style="width: 65%;"><span class="footable-toggle"></span>
+                    <span class="icon-wrapper">
+			    <i class="row-icon-font icon-moon-default2 icon-moon-voice2 forum-read" title="No unread posts"></i>
+				</span>
+                            <i class="row-icon-font-mini" title="No unread posts"></i>
+                            <div class="desc-wrapper">
+                                <a href="/user/forums/comments/<?=$page_data['id']?>" style="color: black;" class="topictitle" data-original-title="" title="<?=$page_data['alias']?>">&nbsp;<?=$page_data['title']?></a>
+                                <br>
+                                <?php foreach(Forum::getUser($page_data['user_id']) as $user_data) {?>
+                                by&nbsp;<span class="glyphicon glyphicon-user"></span> <a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
+                                <?php } ?>
+                                &nbsp;&nbsp;
+                                <span class="glyphicon glyphicon-time"></span>&nbsp;<small><?=$page_data['date']?></small>
+                                <?php if($page_data['user_id'] == Session::get('id')) { ?>
+                                <a href="/user/forums/edit_discussions/<?=$page_data['id']?>"><button class="btn btn-xs btn-default btn-xs">&#9998;</button></a>
+                                <?php } ?>
+                            </div>
+                        </td>
+                        <td class="stats-col footable-visible active" style="width: 15%;">
+                            <span class="stats-wrapper "><?=count(Forum::getCommentsCount($page_data['id']))?>&nbsp;Comments&nbsp;<br></span>
+                        </td>
+                        <?php foreach(Forum::getLastComment($page_data['id']) as $comment_data) {?>
+                        <td class="footable-visible footable-last-column">
+			<span class="last-wrapper text-overflow">
+                <?php foreach(Forum::getUser($comment_data['user_id']) as $user_data) {?>
+                by&nbsp;<a href="/user/profiles/user/<?=$user_data['id']?>" style="color: #AA0000;" class="username-coloured" data-original-title="" title=""><?=$user_data['nickname']?></a>
+                <?php } ?>
+                <br>
+                <span class="glyphicon glyphicon-time"></span>&nbsp;<small><?=$comment_data['date']?></small>
+			</span>
+                        </td>
+                        <?php } ?>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+<div id="data_text">
+    <div class="container" >
+        <div class="row">
+            <hr>
+            <h2 class="text-center"><span class="colored-title" style="color: lightsalmon;"><b>Some</b></span><b> Data-text</b></h2>
+            <br>
+            <div class="row">
+                <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+                <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+                <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+            </div>
+            <hr>
+            <h2 id="sec3">Some Section</h2>
+            <p>
+                Images are responsive sed @mdo but sum are more fun peratis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..
+                Images are responsive sed @mdo but sum are more fun peratis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..
+                Images are responsive sed @mdo but sum are more fun peratis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..
+            </p>
+            <p>
+                Fos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..</p>
+            <hr>
+        </div><!--/right-->
+    </div><!--/row-->
+</div><!--/container-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="footer" class="footer">
+    <div class="container text-center">
+        <ul class="list-inline center-block">
+            <li><a href="https://ua.linkedin.com/in/kirill-kovalenko-398259ab" class=""><img src="/webroot/img/social/in.jpg" class=""></a></li>
+            <li><a href="https://github.com/gudvon/MyMVC" class=""><img src="/webroot/img/social/g.jpg" class=""></a></li>
+            <li><a href="https://www.facebook.com/id15275601" class=""><img src="/webroot/img/social/f.jpg" class=""></a></li>
+            <li><a href="https://vk.com/is4ibertay" class=""><img src="/webroot/img/social/b.jpg" class=""></a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+<script src="/webroot/js/defaults/user_defaults.js"></script>
+
+</html>

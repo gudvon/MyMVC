@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/webroot/js/tinymce/tinymce.min.js"></script>
-    <link rel="stylesheet" href="/webroot/blog/user_blog.css">
+    <link rel="stylesheet" href="/webroot/css/blogs/user_blog.css">
     <style>
         body{background:  url('/webroot/img/blog/buttons.jpg') repeat;}
     </style>
@@ -22,9 +20,12 @@
 </head>
 <body>
 
+<br>
+<br>
+<br>
+<br>
 
-
-
+<div class="container">
 
 <div class="col-sm-8 blog-main" >
 
@@ -81,6 +82,7 @@
                 <a href="/user/blogs/edit_comments/<?=$page_data['id']?>"><button class="btn btn-sm btn-default btn-xs">&#9998;</button></a>
                 <a href="/user/blogs/delete_comments/<?=$page_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-xs btn-default btn-right icon-remove">&#10008;</button></a>
                 <?php } ?>
+                <hr>
             </div>
             <?php } ?>
             <?php } ?>
@@ -194,6 +196,7 @@
         <hr>
         <hr>
     </div>
+</div>
 </div>
 
 

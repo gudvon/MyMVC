@@ -2,8 +2,7 @@
 
 class UsersController extends Controller{
 
-    public function __construct($data = array())
-    {
+    public function __construct($data = array()) {
         parent::__construct($data);
         $this->model = new User();
     }
@@ -38,7 +37,6 @@ class UsersController extends Controller{
                 Session::set('nickname', $userlog['nickname']);
                 Router::redirect('/user/');
             } else {
-                Router::redirect('/users/login');
                 Session::setFlash("The entered login Wrong");
             }
         }
@@ -55,12 +53,17 @@ class UsersController extends Controller{
                 Session::setFlash("The entered login already exists");
                 return false;
             }
+
             $login = stripslashes($_POST['login']);
+            $login = trim($login);
             $login = htmlspecialchars($login);
             $email = stripslashes($_POST['email']);
+            $email = trim($email);
             $email = htmlspecialchars($email);
             $password = stripslashes($_POST['password']);
+            $password = trim($password);
             $password = htmlspecialchars($password);
+
             $dataarray = array(
                 'login' => $login,
                 'email' => $email,

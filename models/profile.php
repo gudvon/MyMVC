@@ -74,10 +74,14 @@ class Profile extends Model{
         $sql1 = "delete from users WHERE id = '{$id}'";
         $sql2 = "delete from comments WHERE user_id = '{$id}'";
         $sql3 = "delete from discussions WHERE user_id = '{$id}'";
+        $sql4 = "delete from blogs WHERE user_id = '{$id}'";
+        $sql5 = "delete from blogs_comments WHERE user_id = '{$id}'";
         $this->db->query($sql1);
         $this->db->query($sql2);
         $this->db->query($sql3);
-        return $sql3;
+        $this->db->query($sql4);
+        $this->db->query($sql5);
+        return $sql5;
     }
 
 }

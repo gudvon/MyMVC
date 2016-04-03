@@ -12,6 +12,10 @@ class DefaultsController extends Controller{
 
     }
 
+    public function user_index(){
+
+    }
+
     public function admin_index(){
 
     }

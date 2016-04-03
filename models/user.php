@@ -3,6 +3,11 @@
 class User extends Model{
 
     public function getByLogin($login){
+
+        $login = trim($login);
+        $login = stripslashes($login);
+        $login = htmlspecialchars($login);
+
         $login = $this->db->escape($login);
         $sql = "select * from users where login = '{$login}' limit 1";
         $result = $this->db->query($sql);
@@ -56,4 +61,37 @@ class User extends Model{
         return App::$db->query($sql);
     }
 
+    public static function getUserBlogs($id){
+        $sql = "select * from blogs where user_id = {$id} ORDER BY `id` DESC";
+        return App::$db->query($sql);
+    }
+
+    public static function getUserDiscus($id){
+        $sql = "select * from discussions where user_id = {$id} ORDER BY `date` DESC";
+        return App::$db->query($sql);
+    }
+
+    public static function CountUserBlogs($id){
+        $id = (int)$id;
+        $sql = "select COUNT(id) from blogs where user_id = {$id}";
+        return App::$db->query($sql);
+    }
+
+    public static function CountUserDiscus($id){
+        $id = (int)$id;
+        $sql = "select COUNT(id) from discussions where user_id = {$id}";
+        return App::$db->query($sql);
+    }
+
+    public static function CountUserBlogComments($id){
+        $id = (int)$id;
+        $sql = "select COUNT(id) from comments where user_id = {$id}";
+        return App::$db->query($sql);
+    }
+
+    public static function CountUserDiscusComments($id){
+        $id = (int)$id;
+        $sql = "select COUNT(id) from blogs_comments where user_id = {$id}";
+        return App::$db->query($sql);
+    }
 }

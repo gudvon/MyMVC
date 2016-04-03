@@ -30,10 +30,12 @@
         <div id="navbar" class="collapse navbar-collapse">
             <?php if (Session::get('login')) { ?>
             <ul class="nav navbar-nav">
-                <li><a <?php if ( App::getRouter()->getController() == 'pages' ) {?>class="active"<?php } ?> href="/user/pages">Pages</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'blogs' ) {?>class="active"<?php } ?> href="/user/blogs">Blog</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'forums' ) {?>class="active"<?php } ?> href="/user/forums">Forum</a></li>
-                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'blogs' ) {?>class="active"<?php } ?> href="/user/blogs">
+                    <span class="glyphicon glyphicon-comment"></span> Blog</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'forums' ) {?>class="active"<?php } ?> href="/user/forums">
+                    <span class="glyphicon glyphicon-th-list"></span> Forum</a></li>
+                <li><a <?php if ( App::getRouter()->getController() == 'contacts' ) {?>class="active"<?php } ?> href="/user/contacts">
+                    <span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a <?php if ( App::getRouter()->getController() == 'profiles' ) {?>class="active"<?php } ?>href="/user/profiles">
@@ -56,16 +58,16 @@
     </div>
 </nav>
 
-<div class="container">
-    <div class="starter-template">
-        <?php if( Session::hasFlash() ){ ?>
-        <div class="alert alert-info" role="alert">
-            <?php Session::flash(); ?>
-        </div>
-        <?php } ?>
-        <?=$data['content']?>
+
+<div class="starter-template">
+    <?php if( Session::hasFlash() ){ ?>
+    <div class="alert alert-info" role="alert">
+        <?php Session::flash(); ?>
     </div>
+    <?php } ?>
+    <?=$data['content']?>
 </div>
+
 
 </body>
 

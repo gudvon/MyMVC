@@ -2,18 +2,9 @@
 
 <html lang="en">
 
-
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/webroot/bootstrap/css/bootstrap-theme.min.css">
-    <script src="/webroot/bootstrap/js/jquery.min.js"></script>
-    <script src="/webroot/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/webroot/blog/user_blog.css">
+    <link rel="stylesheet" href="/webroot/css/blogs/user_blog.css">
     <script>
         $(function() {
             $(window).scroll(function() {
@@ -31,6 +22,13 @@
 </head>
 
 <body>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
 
 <div class="row rowmain" style="">
     <div class="add_comment" style="text-align:center;">
@@ -112,23 +110,12 @@
 <div class="text-center">
     <div class="text-center">
         <ul class="pagination ">
-            <li><a href="#">&laquo;</a></li>
+            <li><a href="/user/blogs">&laquo;</a></li>
             <li><a href="/user/blogs">1</a></li>
             <?php foreach(Blog::getPages() as $pages) { ?>
             <li><a href="/user/blogs/pages/<?=$pages?>"><?=$pages?></a></li>
             <?php } ?>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
-    </div>
-</div>
-
-<div id="footer" class="rowbot">
-    <div class="container text-center">
-        <ul class="list-inline center-block">
-            <li><a href="https://ua.linkedin.com/in/kirill-kovalenko-398259ab" class=""><img src="/webroot/img/social/in.jpg" class=""></a></li>
-            <li><a href="https://github.com/gudvon/MyMVC" class=""><img src="/webroot/img/social/g.jpg" class=""></a></li>
-            <li><a href="https://www.facebook.com/id15275601" class=""><img src="/webroot/img/social/f.jpg" class=""></a></li>
-            <li><a href="https://vk.com/is4ibertay" class=""><img src="/webroot/img/social/b.jpg" class=""></a></li>
+            <li><a href="<?=Blog::getLastPages()?>">&raquo;</a></li>
         </ul>
     </div>
 </div>
@@ -137,6 +124,8 @@
     <li><a href="#" title="Scroll to top" class=""><i class="glyphicon glyphicon-chevron-up"></i></a>
     </li>
 </ul>
+
+</div>
 
 </body>
 

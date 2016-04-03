@@ -39,7 +39,7 @@
                     <span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/admin/"><span class=""></span></a></li>
+                <li><a class="a_admin" href="/admin/"><span class=""></span></a></li>
                 <li><a href="/users/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
@@ -61,18 +61,17 @@
 
 <?php } else { ?>
 
-
-    <div class="starter-template">
-        <?php if( Session::hasFlash() ){ ?>
-        <div class="alert alert-info" role="alert">
-            <?php Session::flash(); ?>
-        </div>
-        <?php } ?>
-        <?=$data['content']?>
+<div class="starter-template">
+    <?php if( Session::hasFlash() ){ ?>
+    <div class="alert alert-info" role="alert">
+        <?php Session::flash(); ?>
     </div>
-
+    <?php } ?>
+    <?=$data['content']?>
+</div>
 
 <?php } ?>
+
 
 
 
@@ -89,8 +88,9 @@
             <li><a href="https://vk.com/is4ibertay" class=""><img src="/webroot/img/social/b.jpg" class=""></a></li>
         </ul>
     </div>
-
 </div>
+
+
 
 
 

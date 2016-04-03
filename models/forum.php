@@ -143,6 +143,11 @@ class Forum extends Model{
 
     //........................ discussions ..!!.. discussions ..!!.. discussions ..!!.. discussions ..!!..
 
+    public static function getLastDiscussions(){
+        $sql = "select * from discussions ORDER BY `id` DESC LIMIT 5";
+        return App::$db->query($sql);
+    }
+
     public function checkCategory_id($cat_id){
         $sql = "select * from discussions WHERE category_id = '{$cat_id}'";
         $result = $this->db->query($sql);
@@ -179,7 +184,7 @@ class Forum extends Model{
 
     public function getDiscussions($id){
         $id = (int)$id;
-        $sql = "select * from discussions WHERE category_id = '{$id}' ORDER BY `id` DESC";
+        $sql = "select * from discussions WHERE category_id = '{$id}' ORDER BY `date` DESC";
         return $this->db->query($sql);
     }
 

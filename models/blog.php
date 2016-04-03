@@ -21,6 +21,11 @@ class Blog extends Model{
         return App::$db->query($sql);
     }
 
+    public static function getAliasBlog350($id){
+        $sql = "select SUBSTR(`content`, 1, 350) from blogs WHERE id = '{$id}'";
+        return App::$db->query($sql);
+    }
+
     public function add_Blog($data, $id = null){
         if (!isset($data['title']) || !isset($data['content']) || !isset($data['category'])){
             return false;
@@ -176,7 +181,7 @@ class Blog extends Model{
     }
 
     public static function getTopCommentedBlogs(){
-        $sql = "SELECT blogs.* FROM blogs, blogs_comments WHERE blogs_comments.blogs_id = blogs.id GROUP BY blogs.id ORDER BY count(blogs_comments.blogs_id) DESC limit 3";
+        $sql = "SELECT blogs.* FROM blogs, blogs_comments WHERE blogs_comments.blogs_id = blogs.id GROUP BY blogs.id ORDER BY count(blogs_comments.blogs_id) DESC limit 5";
         return App::$db->query($sql);
     }
 
@@ -197,6 +202,11 @@ class Blog extends Model{
 
     public static function getLastBlogsComments(){
         $sql = "select * from blogs_comments ORDER BY `id` DESC LIMIT 3";
+        return App::$db->query($sql);
+    }
+
+    public static function getLastBlog(){
+        $sql = "select * from blogs ORDER BY `id` DESC LIMIT 3";
         return App::$db->query($sql);
     }
 
@@ -240,6 +250,11 @@ class Blog extends Model{
     public function delete_Category($id){
         $id = (int)$id;
         $sql = "delete from tags WHERE id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getOneCategories($id){
+        $sql = "select * from tags WHERE id = '{$id}'";
         return $this->db->query($sql);
     }
 

@@ -60,7 +60,11 @@ class ProfilesController extends Controller {
     }
 
     public function user_user(){
-        $this->data = $this->model->showUser($this->params[0]);
+        if (isset($this->params[0])) {
+            $this->data = $this->model->showUser($this->params[0]);
+        } else {
+            Session::setFlash('Error');
+        }
     }
 
 }

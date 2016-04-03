@@ -64,9 +64,6 @@
 #information .panel {
     opacity: 0.85;
 }
-#google_map {
-    height: 500px;
-}
 
 #splash {
     background: url(/webroot/img/defaults/4.jpg) no-repeat center center fixed;
