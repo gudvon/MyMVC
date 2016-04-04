@@ -157,6 +157,7 @@ class BlogsController extends Controller{
     public function admin_category(){
         if (isset($this->params[0])) {
             $this->data['category'] = $this->model->getCategory($this->params[0]);
+            $this->data['one_category'] = $this->model->getOneCategories($this->params[0]);
         } else {
             Router::redirect('/admin/blogs');
         }

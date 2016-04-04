@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <td>Gender</td>
-                        <td>Male</td>
+                        <td><?=$item['gender']?></td>
                     </tr>
                     <tr>
                         <td>Phone:</td>
@@ -99,6 +99,68 @@
         </div>
     </div>
 </form>
+
+<div class="main">
+    <div class="col-sm-2" >
+        <h3><span class="colored-title" style="color: #98ab41;"><b>Counter</b></span><b></b></h3>
+        <hr>
+        <h3>Comments: <span class="label label-default"><?=(int)User::CountUserBlogComments($item['id'])[0]["COUNT(id)"]+(int)User::CountUserDiscusComments($item['id'])[0]["COUNT(id)"]?></span></h3>
+        <h3>Blog-Vlogs: <span class="label label-success"> <?=User::CountUserBlogs($item['id'])[0]["COUNT(id)"]?></span></h3>
+        <h3>Discussions: <span class="label label-info"> <?=User::CountUserDiscus($item['id'])[0]["COUNT(id)"]?></span></h3>
+    </div>
+    <div class="col-sm-3" >
+        <h3 class="text-center"><span class="colored-title" style="color: #98ab41;"><b>Discus</b></span><b>sions</b></h3>
+        <br>
+        <table class="table table-primary table-hover tablet">
+            <tbody>
+            <?php foreach(User::getUserDiscus($item['id']) as $page_data) { ?>
+            <tr>
+                <td class="expand footable-visible footable-first-column" style="width: 65%;"><span class="footable-toggle"></span>
+                    <span class="icon-wrapper">
+			    <i class="row-icon-font icon-moon-default2 icon-moon-voice2 forum-read" title="No unread posts"></i>
+				</span>
+                    <i class="row-icon-font-mini" title="No unread posts"></i>
+                    <div class="desc-wrapper">
+                        <a href="/admin/forums/comments/<?=$page_data['id']?>" style="color: black;" class="topictitle" data-original-title="" title="<?=$page_data['alias']?>">&nbsp;<?=$page_data['title']?></a>
+                        <br>&nbsp;
+                        <span class="glyphicon glyphicon-time"></span><small> <?=$page_data['date']?></small>
+                    </div>
+                </td>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-7 text-center">
+        <h3><span class="colored-title" style="color: #98ab41;"><b>Blog</b></span><b>-Vlogs</b></h3>
+        <hr>
+        <?php foreach(User::getUserBlogs($item['id']) as $blog_data) { ?>
+        <div class="row featurette">
+            <div class="col-md-6 col-md-push-6">
+                <h4 class="featurette-heading">
+                    <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>"
+                       title="<?=$blog_data['title']?>"><b><?=$blog_data['title']?></b></a>
+                </h4>
+                <span class="text-muted">
+                    <span class="glyphicon glyphicon-time"></span> <?=$blog_data['date']?>
+                    &nbsp;&nbsp;&nbsp;
+
+                    <span class="glyphicon glyphicon-pencil"></span> <?=count(Blog::getCommentCount($blog_data['id']))?>
+                    Comments
+                </span>
+                <p class="lead"><?=htmlspecialchars_decode(Blog::getAliasBlog350($blog_data['id'])[0]["SUBSTR(`content`, 1, 350)"])?>...</p>
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+                <a href="/admin/blogs/blog_view/<?=$blog_data['id']?>">
+                    <img class="featurette-image img-responsive center-block img-thumbnail"
+                         href="/admin/blogs/blog_view/<?=$blog_data['id']?>" src="<?=$blog_data['photo']?>"
+                         data-holder-rendered="true">
+                </a>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <?php } ?>
+    </div>
+</div>
 
 </body>
 

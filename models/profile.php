@@ -3,7 +3,7 @@
 class Profile extends Model{
 
     public function save($data){
-        if (!isset($data['nickname']) || !isset($data['name']) || !isset($data['phone']) || !isset($data['vk']) || !isset($data['facebook'])){
+        if (!isset($data['nickname']) || !isset($data['name']) || !isset($data['phone']) || !isset($data['vk']) || !isset($data['facebook'])  || !isset($data['gender'])){
             return false;
         }
 
@@ -12,6 +12,7 @@ class Profile extends Model{
         $phone = $this->db->escape($data['phone']);
         $vk = $this->db->escape($data['vk']);
         $facebook = $this->db->escape($data['facebook']);
+        $gender = $this->db->escape($data['gender']);
         $login = Session::get('login');
         $id = Session::get('id');
 
@@ -28,7 +29,8 @@ class Profile extends Model{
                phone = '{$phone}',
                vk = '{$vk}',
              facebook = '{$facebook}',
-             avatar = '{$avatar}'
+             avatar = '{$avatar}',
+             gender = '{$gender}'
              WHERE login = '{$login}'
             ";
 

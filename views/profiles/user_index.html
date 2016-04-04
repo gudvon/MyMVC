@@ -84,6 +84,16 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-lg-3 control-label">Your Gender:</label>
+                        <div class="col-lg-7">
+                        <select class="form-control" id="gender" name="gender">
+                            <option data-icon="glyphicon-heart"><?=$item['gender']?></option>
+                            <option data-icon="glyphicon-heart">Male</option>
+                            <option data-icon="glyphicon-heart">Female</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-lg-3 control-label">Your Phone:</label>
                         <div class="col-lg-7">
                             <input class="form-control" name="phone" type="text" id="phone" placeholder="Phone" value="<?=$item['phone']?>" />
